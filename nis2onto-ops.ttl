@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/nis2onto-ops#> .
+@prefix : <https://w3id.org/nis2onto-ops#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -17,7 +17,7 @@
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/nis2onto-ops#achievesAttackTactic
+###  https://w3id.org/nis2onto-ops#achievesAttackTactic
 :achievesAttackTactic rdf:type owl:ObjectProperty ;
                       owl:inverseOf :isAchievedByAttackTechnique ;
                       rdfs:domain :AttackTechnique ;
@@ -26,7 +26,7 @@
                       rdfs:label "achieves attack tactic"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#assessedByEvidenceRecord
+###  https://w3id.org/nis2onto-ops#assessedByEvidenceRecord
 :assessedByEvidenceRecord rdf:type owl:ObjectProperty ;
                           rdfs:domain :Asset ;
                           rdfs:range :EvidenceRecord ;
@@ -34,7 +34,7 @@
                           rdfs:label "assessed by evidence record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#assessesAsset
+###  https://w3id.org/nis2onto-ops#assessesAsset
 :assessesAsset rdf:type owl:ObjectProperty ;
                rdfs:domain :EvidenceRecord ;
                rdfs:range :Asset ;
@@ -42,7 +42,7 @@
                rdfs:label "assesses asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#causedByVulnerability
+###  https://w3id.org/nis2onto-ops#causedByVulnerability
 :causedByVulnerability rdf:type owl:ObjectProperty ;
                        owl:inverseOf :hasCausalWeakness ;
                        rdfs:domain :CWE ;
@@ -51,7 +51,7 @@
                        rdfs:label "caused by vulnerability"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#communicatesWith
+###  https://w3id.org/nis2onto-ops#communicatesWith
 :communicatesWith rdf:type owl:ObjectProperty ,
                            owl:SymmetricProperty ;
                   rdfs:domain :Asset ;
@@ -60,7 +60,7 @@
                   rdfs:label "communicates with"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#evidencedBy
+###  https://w3id.org/nis2onto-ops#evidencedBy
 :evidencedBy rdf:type owl:ObjectProperty ;
              owl:inverseOf :evidences ;
              rdfs:domain :ControlRuling ;
@@ -69,7 +69,7 @@
              rdfs:label "evidenced by"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#evidences
+###  https://w3id.org/nis2onto-ops#evidences
 :evidences rdf:type owl:ObjectProperty ;
            rdfs:domain :EvidenceRecord ;
            rdfs:range :ControlRuling ;
@@ -77,7 +77,7 @@
            rdfs:label "evidences"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#followedByEvent
+###  https://w3id.org/nis2onto-ops#followedByEvent
 :followedByEvent rdf:type owl:ObjectProperty ;
                  owl:inverseOf :followsEvent ;
                  rdfs:domain nis2onto:Event ;
@@ -86,7 +86,7 @@
                  rdfs:label "followed by event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#followedByEvidenceRecord
+###  https://w3id.org/nis2onto-ops#followedByEvidenceRecord
 :followedByEvidenceRecord rdf:type owl:ObjectProperty ;
                           owl:inverseOf :followsEvidenceRecord ;
                           rdfs:domain :EvidenceRecord ;
@@ -95,7 +95,7 @@
                           rdfs:label "followed by evidence record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#followsEvent
+###  https://w3id.org/nis2onto-ops#followsEvent
 :followsEvent rdf:type owl:ObjectProperty ;
               rdfs:domain nis2onto:Event ;
               rdfs:range nis2onto:Event ;
@@ -103,7 +103,7 @@
               rdfs:label "follows event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#followsEvidenceRecord
+###  https://w3id.org/nis2onto-ops#followsEvidenceRecord
 :followsEvidenceRecord rdf:type owl:ObjectProperty ;
                        rdfs:domain :EvidenceRecord ;
                        rdfs:range :EvidenceRecord ;
@@ -111,13 +111,13 @@
                        rdfs:label "follows evidence record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#governedBy
+###  https://w3id.org/nis2onto-ops#governedBy
 :governedBy rdf:type owl:ObjectProperty ;
             rdfs:comment "Entity governed by NIS2 article."@en ;
             rdfs:label "governed by"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasCausalWeakness
+###  https://w3id.org/nis2onto-ops#hasCausalWeakness
 :hasCausalWeakness rdf:type owl:ObjectProperty ;
                    rdfs:domain :CVE ;
                    rdfs:range :CWE ;
@@ -125,7 +125,7 @@
                    rdfs:label "has causal weakness"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasComponent
+###  https://w3id.org/nis2onto-ops#hasComponent
 :hasComponent rdf:type owl:ObjectProperty ;
               owl:inverseOf :isComponentOf ;
               rdfs:domain :Asset ;
@@ -134,7 +134,7 @@
               rdfs:label "has component"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasControlScope
+###  https://w3id.org/nis2onto-ops#hasControlScope
 :hasControlScope rdf:type owl:ObjectProperty ;
                  rdfs:domain :ControlRuling ;
                  rdfs:range :ControlScope ;
@@ -142,7 +142,7 @@
                  rdfs:label "has control scope"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasControlStatus
+###  https://w3id.org/nis2onto-ops#hasControlStatus
 :hasControlStatus rdf:type owl:ObjectProperty ;
                   rdfs:domain :ControlRuling ;
                   rdfs:range :ControlStatus ;
@@ -150,7 +150,7 @@
                   rdfs:label "has control status"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasCriticality
+###  https://w3id.org/nis2onto-ops#hasCriticality
 :hasCriticality rdf:type owl:ObjectProperty ;
                 rdfs:domain :Asset ;
                 rdfs:range :Criticality ;
@@ -158,7 +158,7 @@
                 rdfs:label "has criticality"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasFileFormat
+###  https://w3id.org/nis2onto-ops#hasFileFormat
 :hasFileFormat rdf:type owl:ObjectProperty ;
                rdfs:domain :Document ;
                rdfs:range :FileFormat ;
@@ -166,14 +166,14 @@
                rdfs:label "has file format"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasHashDigest
+###  https://w3id.org/nis2onto-ops#hasHashDigest
 :hasHashDigest rdf:type owl:ObjectProperty ;
                rdfs:range :HashDigest ;
                rdfs:comment "Entity was hashed and has a hash digest."@en ;
                rdfs:label "has hash digest"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasInScopeAsset
+###  https://w3id.org/nis2onto-ops#hasInScopeAsset
 :hasInScopeAsset rdf:type owl:ObjectProperty ;
                  owl:inverseOf :isAssetInScope ;
                  rdfs:domain :ControlScope ;
@@ -182,7 +182,7 @@
                  rdfs:label "has in-scope asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasInScopeControlTheme
+###  https://w3id.org/nis2onto-ops#hasInScopeControlTheme
 :hasInScopeControlTheme rdf:type owl:ObjectProperty ;
                         owl:inverseOf :isControlThemeInScope ;
                         rdfs:domain :ControlScope ;
@@ -191,21 +191,21 @@
                         rdfs:label "has in-scope control theme"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasOwner
+###  https://w3id.org/nis2onto-ops#hasOwner
 :hasOwner rdf:type owl:ObjectProperty ;
           rdfs:domain :Asset ;
           rdfs:comment "Asset is owned by an entity."@en ;
           rdfs:label "has owner"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasPostureScore
+###  https://w3id.org/nis2onto-ops#hasPostureScore
 :hasPostureScore rdf:type owl:ObjectProperty ;
                  rdfs:range :PostureScore ;
                  rdfs:comment "Entity has a posture score."@en ;
                  rdfs:label "has posture score"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasPreviousControlRuling
+###  https://w3id.org/nis2onto-ops#hasPreviousControlRuling
 :hasPreviousControlRuling rdf:type owl:ObjectProperty ;
                           rdfs:domain :ControlRuling ;
                           rdfs:range :ControlRuling ;
@@ -213,7 +213,7 @@
                           rdfs:label "has previous control ruling"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasRemediationScore
+###  https://w3id.org/nis2onto-ops#hasRemediationScore
 :hasRemediationScore rdf:type owl:ObjectProperty ;
                      rdfs:domain :ControlRuling ;
                      rdfs:range :RemediationScore ;
@@ -221,14 +221,14 @@
                      rdfs:label "has remediation score"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasSeverity
+###  https://w3id.org/nis2onto-ops#hasSeverity
 :hasSeverity rdf:type owl:ObjectProperty ;
              rdfs:range :Severity ;
              rdfs:comment "Entity has a severity classification."@en ;
              rdfs:label "has severity"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasSoftwareDependency
+###  https://w3id.org/nis2onto-ops#hasSoftwareDependency
 :hasSoftwareDependency rdf:type owl:ObjectProperty ;
                        owl:inverseOf :isSoftwareDependencyOf ;
                        rdfs:domain :SoftwareAsset ;
@@ -237,7 +237,7 @@
                        rdfs:label "has software dependency"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hashedUsing
+###  https://w3id.org/nis2onto-ops#hashedUsing
 :hashedUsing rdf:type owl:ObjectProperty ;
              rdfs:domain :HashDigest ;
              rdfs:range :HashAlgorithm ;
@@ -245,7 +245,7 @@
              rdfs:label "hashed using"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#isAchievedByAttackTechnique
+###  https://w3id.org/nis2onto-ops#isAchievedByAttackTechnique
 :isAchievedByAttackTechnique rdf:type owl:ObjectProperty ;
                              rdfs:domain :AttackTactic ;
                              rdfs:range :AttackTechnique ;
@@ -253,7 +253,7 @@
                              rdfs:label "is achieved by attack technique"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#isAssetInScope
+###  https://w3id.org/nis2onto-ops#isAssetInScope
 :isAssetInScope rdf:type owl:ObjectProperty ;
                 rdfs:domain :Asset ;
                 rdfs:range :ControlScope ;
@@ -261,7 +261,7 @@
                 rdfs:label "has asset in scope"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#isComponentOf
+###  https://w3id.org/nis2onto-ops#isComponentOf
 :isComponentOf rdf:type owl:ObjectProperty ;
                rdfs:domain :Asset ;
                rdfs:range :Asset ;
@@ -269,7 +269,7 @@
                rdfs:label "is component of"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#isControlThemeInScope
+###  https://w3id.org/nis2onto-ops#isControlThemeInScope
 :isControlThemeInScope rdf:type owl:ObjectProperty ;
                        rdfs:domain :ControlTheme ;
                        rdfs:range :ControlScope ;
@@ -277,7 +277,7 @@
                        rdfs:label "has control theme in scope"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#isSoftwareDependencyOf
+###  https://w3id.org/nis2onto-ops#isSoftwareDependencyOf
 :isSoftwareDependencyOf rdf:type owl:ObjectProperty ;
                         rdfs:domain :SoftwareAsset ;
                         rdfs:range :SoftwareAsset ;
@@ -285,33 +285,33 @@
                         rdfs:label "is software dependency of"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#owns
+###  https://w3id.org/nis2onto-ops#owns
 :owns rdf:type owl:ObjectProperty ;
       rdfs:range :Asset ;
       rdfs:comment "Entity owns an asset."@en ;
       rdfs:label "owns"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#producedBy
+###  https://w3id.org/nis2onto-ops#producedBy
 :producedBy rdf:type owl:ObjectProperty ;
             owl:inverseOf :produces ;
             rdfs:domain :EvidenceRecord ;
             rdfs:range [ rdf:type owl:Class ;
-                         owl:unionOf ( :SoftwareApplication
+                         owl:unionOf ( nis2onto:Assessment
+                                       :SoftwareApplication
                                        :SoftwareModule
-                                       nis2onto:Assessment
                                      )
                        ] ;
             rdfs:comment "Source of evidence record."@en ;
             rdfs:label "produced by"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#produces
+###  https://w3id.org/nis2onto-ops#produces
 :produces rdf:type owl:ObjectProperty ;
           rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :SoftwareApplication
+                        owl:unionOf ( nis2onto:Assessment
+                                      :SoftwareApplication
                                       :SoftwareModule
-                                      nis2onto:Assessment
                                     )
                       ] ;
           rdfs:range :EvidenceRecord ;
@@ -319,14 +319,14 @@
                      "produces"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#recordedOnLedger
+###  https://w3id.org/nis2onto-ops#recordedOnLedger
 :recordedOnLedger rdf:type owl:ObjectProperty ;
                   rdfs:range :Ledger ;
                   rdfs:comment "Entity is recorded on a ledger for integrity."@en ;
                   rdfs:label "recorded on ledger"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#recordsDocument
+###  https://w3id.org/nis2onto-ops#recordsDocument
 :recordsDocument rdf:type owl:ObjectProperty ;
                  rdfs:domain :EvidenceRecord ;
                  rdfs:range :Document ;
@@ -334,7 +334,7 @@
                  rdfs:label "records document"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#recordsEvent
+###  https://w3id.org/nis2onto-ops#recordsEvent
 :recordsEvent rdf:type owl:ObjectProperty ;
               rdfs:domain :EvidenceRecord ;
               rdfs:range nis2onto:Event ;
@@ -342,7 +342,7 @@
               rdfs:label "records event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#recordsExecutionOf
+###  https://w3id.org/nis2onto-ops#recordsExecutionOf
 :recordsExecutionOf rdf:type owl:ObjectProperty ;
                     rdfs:domain :EvidenceRecord ;
                     rdfs:range :DCOPlaybook ;
@@ -350,7 +350,7 @@
                     rdfs:label "records execution of"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#recordsMonitoringOutcome
+###  https://w3id.org/nis2onto-ops#recordsMonitoringOutcome
 :recordsMonitoringOutcome rdf:type owl:ObjectProperty ;
                           rdfs:domain :EvidenceRecord ;
                           rdfs:range :MonitoringOutcome ;
@@ -358,7 +358,7 @@
                           rdfs:label "records monitoring outcome"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#recordsVulnerability
+###  https://w3id.org/nis2onto-ops#recordsVulnerability
 :recordsVulnerability rdf:type owl:ObjectProperty ;
                       rdfs:domain :EvidenceRecord ;
                       rdfs:range :CVE ;
@@ -366,7 +366,7 @@
                       rdfs:label "records vulnerability"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#recordsWeakness
+###  https://w3id.org/nis2onto-ops#recordsWeakness
 :recordsWeakness rdf:type owl:ObjectProperty ;
                  rdfs:domain :EvidenceRecord ;
                  rdfs:range :CWE ;
@@ -374,7 +374,7 @@
                  rdfs:label "records weakness"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#relatedToAttackTactic
+###  https://w3id.org/nis2onto-ops#relatedToAttackTactic
 :relatedToAttackTactic rdf:type owl:ObjectProperty ;
                        rdfs:domain :Attack ;
                        rdfs:range :AttackTactic ;
@@ -382,7 +382,7 @@
                        rdfs:label "related to attack tactic"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#relatedToAttackTechnique
+###  https://w3id.org/nis2onto-ops#relatedToAttackTechnique
 :relatedToAttackTechnique rdf:type owl:ObjectProperty ;
                           rdfs:domain :Attack ;
                           rdfs:range :AttackTechnique ;
@@ -390,7 +390,7 @@
                           rdfs:label "related to attack technique"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#simulatedOn
+###  https://w3id.org/nis2onto-ops#simulatedOn
 :simulatedOn rdf:type owl:ObjectProperty ;
              owl:inverseOf :simulates ;
              rdfs:domain :Asset ;
@@ -399,7 +399,7 @@
              rdfs:label "simulated on"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#simulates
+###  https://w3id.org/nis2onto-ops#simulates
 :simulates rdf:type owl:ObjectProperty ;
            rdfs:domain :SoftwareApplication ;
            rdfs:range :Asset ;
@@ -407,7 +407,7 @@
            rdfs:label "simulates"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#supportedByEvidenceRecord
+###  https://w3id.org/nis2onto-ops#supportedByEvidenceRecord
 :supportedByEvidenceRecord rdf:type owl:ObjectProperty ;
                            owl:inverseOf :supportsControlTheme ;
                            rdfs:domain :ControlTheme ;
@@ -416,7 +416,7 @@
                            rdfs:label "supported by evidence record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#supportsControlTheme
+###  https://w3id.org/nis2onto-ops#supportsControlTheme
 :supportsControlTheme rdf:type owl:ObjectProperty ;
                       rdfs:domain :EvidenceRecord ;
                       rdfs:range :ControlTheme ;
@@ -424,7 +424,7 @@
                       rdfs:label "supports control theme"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#usesRule
+###  https://w3id.org/nis2onto-ops#usesRule
 :usesRule rdf:type owl:ObjectProperty ;
           rdfs:range [ rdf:type owl:Class ;
                        owl:unionOf ( :ComplianceRule
@@ -439,7 +439,7 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/nis2onto-ops#hasBlockchainTxID
+###  https://w3id.org/nis2onto-ops#hasBlockchainTxID
 :hasBlockchainTxID rdf:type owl:DatatypeProperty ,
                             owl:FunctionalProperty ;
                    rdfs:range xsd:string ;
@@ -447,7 +447,7 @@
                    rdfs:label "has blockchain transaction ID"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasEndpoint
+###  https://w3id.org/nis2onto-ops#hasEndpoint
 :hasEndpoint rdf:type owl:DatatypeProperty ;
              rdfs:domain :SoftwareAsset ;
              rdfs:range xsd:string ;
@@ -455,13 +455,13 @@
              rdfs:label "has endpoint"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasFileName
+###  https://w3id.org/nis2onto-ops#hasFileName
 :hasFileName rdf:type owl:DatatypeProperty ;
              rdfs:comment "File name string."@en ;
              rdfs:label "has file name"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasHashValue
+###  https://w3id.org/nis2onto-ops#hasHashValue
 :hasHashValue rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
               rdfs:domain :HashDigest ;
@@ -470,7 +470,7 @@
               rdfs:label "has hash value"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasID
+###  https://w3id.org/nis2onto-ops#hasID
 :hasID rdf:type owl:DatatypeProperty ,
                 owl:FunctionalProperty ;
        rdfs:range xsd:string ;
@@ -478,7 +478,7 @@
        rdfs:label "has ID"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasScoreGrade
+###  https://w3id.org/nis2onto-ops#hasScoreGrade
 :hasScoreGrade rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
                rdfs:range xsd:string ;
@@ -486,7 +486,7 @@
                rdfs:label "has score grade"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasScoreValue
+###  https://w3id.org/nis2onto-ops#hasScoreValue
 :hasScoreValue rdf:type owl:DatatypeProperty ,
                         owl:FunctionalProperty ;
                rdfs:range xsd:float ;
@@ -494,7 +494,7 @@
                rdfs:label "has score value"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasTimestamp
+###  https://w3id.org/nis2onto-ops#hasTimestamp
 :hasTimestamp rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
               rdfs:range xsd:dateTime ;
@@ -502,21 +502,21 @@
               rdfs:label "has timestamp"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hasURL
+###  https://w3id.org/nis2onto-ops#hasURL
 :hasURL rdf:type owl:DatatypeProperty ;
         rdfs:range xsd:string ;
         rdfs:comment "URL string."@en ;
         rdfs:label "has URL"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#isConvertedToValue
+###  https://w3id.org/nis2onto-ops#isConvertedToValue
 :isConvertedToValue rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:float ;
                     rdfs:comment "Non-numerical entry converted to a numerical value."@en ;
                     rdfs:label "is converted to value"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#isSimulatedAsset
+###  https://w3id.org/nis2onto-ops#isSimulatedAsset
 :isSimulatedAsset rdf:type owl:DatatypeProperty ,
                            owl:FunctionalProperty ;
                   rdfs:domain :Asset ;
@@ -525,14 +525,14 @@
                   rdfs:label "is simulated asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#notes
+###  https://w3id.org/nis2onto-ops#notes
 :notes rdf:type owl:DatatypeProperty ;
        rdfs:range xsd:string ;
        rdfs:comment "Note field string."@en ;
        rdfs:label "notes"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#relatedToENISATechnicalGuideSection
+###  https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection
 :relatedToENISATechnicalGuideSection rdf:type owl:DatatypeProperty ;
                                      rdfs:range xsd:string ;
                                      rdfs:comment "ENISA technical guide section string."@en ;
@@ -543,7 +543,7 @@
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/nis2onto-ops#AlertEvidenceRecord
+###  https://w3id.org/nis2onto-ops#AlertEvidenceRecord
 :AlertEvidenceRecord rdf:type owl:Class ;
                      owl:equivalentClass [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasSeverity ;
@@ -567,21 +567,21 @@
                      rdfs:label "Alert Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AnomalyDetection
+###  https://w3id.org/nis2onto-ops#AnomalyDetection
 :AnomalyDetection rdf:type owl:Class ;
                   rdfs:subClassOf nis2onto:Assessment ;
                   rdfs:comment "Assessment method that identifies deviations from expected or normal behavior."@en ;
                   rdfs:label "Anomaly Detection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ArterySimulator
+###  https://w3id.org/nis2onto-ops#ArterySimulator
 :ArterySimulator rdf:type owl:Class ;
                  rdfs:subClassOf :CAVSimulator ;
                  rdfs:comment "Artery communication simulator (V2X)."@en ;
                  rdfs:label "Artery Simulator"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Asset
+###  https://w3id.org/nis2onto-ops#Asset
 :Asset rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :hasCriticality ;
@@ -595,21 +595,21 @@
        rdfs:label "Asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AssetAttack
+###  https://w3id.org/nis2onto-ops#AssetAttack
 :AssetAttack rdf:type owl:Class ;
              rdfs:subClassOf :Attack ;
              rdfs:comment "Attack directed at a specific asset."@en ;
              rdfs:label "Asset Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AssetEvent
+###  https://w3id.org/nis2onto-ops#AssetEvent
 :AssetEvent rdf:type owl:Class ;
             rdfs:subClassOf nis2onto:Event ;
             rdfs:comment "Event that occurs on, or involves, an asset."@en ;
             rdfs:label "Asset Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AssetEvidenceRecord
+###  https://w3id.org/nis2onto-ops#AssetEvidenceRecord
 :AssetEvidenceRecord rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                 [ rdf:type owl:Restriction ;
@@ -628,7 +628,7 @@
                      rdfs:label "Asset Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AssetInventoryAndManagement
+###  https://w3id.org/nis2onto-ops#AssetInventoryAndManagement
 :AssetInventoryAndManagement rdf:type owl:Class ;
                              rdfs:subClassOf :ControlTheme ,
                                              [ rdf:type owl:Restriction ;
@@ -643,14 +643,14 @@
                              rdfs:label "Asset Inventory and Management"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Attack
+###  https://w3id.org/nis2onto-ops#Attack
 :Attack rdf:type owl:Class ;
         rdfs:subClassOf nis2onto:Incident ;
         rdfs:comment "Malicious event that attempts to compromise the confidentiality, integrity, or availability of an asset."@en ;
         rdfs:label "Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AttackEvidenceRecord
+###  https://w3id.org/nis2onto-ops#AttackEvidenceRecord
 :AttackEvidenceRecord rdf:type owl:Class ;
                       owl:equivalentClass [ owl:intersectionOf ( :EventEvidenceRecord
                                                                  [ rdf:type owl:Restriction ;
@@ -669,21 +669,21 @@
                       rdfs:label "Attack Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AttackTactic
+###  https://w3id.org/nis2onto-ops#AttackTactic
 :AttackTactic rdf:type owl:Class ;
               rdfs:subClassOf :SecurityCatalogReference ;
               rdfs:comment "An adversary's tactical objective (the 'why' of an attack), drawn from the MITRE ATT&CK knowledge base."@en ;
               rdfs:label "Attack Tactic"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AttackTechnique
+###  https://w3id.org/nis2onto-ops#AttackTechnique
 :AttackTechnique rdf:type owl:Class ;
                  rdfs:subClassOf :SecurityCatalogReference ;
                  rdfs:comment "A documented, adversary behavior describing how an attacker achieves a tactical objective, drawn from the MITRE ATT&CK knowledge base."@en ;
                  rdfs:label "Attack Technique"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AuthenticationAndAccessControl
+###  https://w3id.org/nis2onto-ops#AuthenticationAndAccessControl
 :AuthenticationAndAccessControl rdf:type owl:Class ;
                                 rdfs:subClassOf :ControlTheme ,
                                                 [ rdf:type owl:Restriction ;
@@ -698,266 +698,266 @@
                                 rdfs:label "Authentication and Access Control"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#AuthenticationCheck
+###  https://w3id.org/nis2onto-ops#AuthenticationCheck
 :AuthenticationCheck rdf:type owl:Class ;
                      rdfs:subClassOf nis2onto:Assessment ;
                      rdfs:comment "Assessment method that verifies the identity or credentials of an entity."@en ;
                      rdfs:label "Authentication Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CARLASimulator
+###  https://w3id.org/nis2onto-ops#CARLASimulator
 :CARLASimulator rdf:type owl:Class ;
                 rdfs:subClassOf :CAVSimulator ;
                 rdfs:comment "CARLA (Car Learning to Act) physics and sensor simulator."@en ;
                 rdfs:label "CARLA Simulator"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAV
+###  https://w3id.org/nis2onto-ops#CAV
 :CAV rdf:type owl:Class ;
      rdfs:subClassOf :CAVAsset ;
      rdfs:comment "Connected & Autonomous Vehicle."@en ;
      rdfs:label "CAV"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAV2DSegmentationAIAttack
+###  https://w3id.org/nis2onto-ops#CAV2DSegmentationAIAttack
 :CAV2DSegmentationAIAttack rdf:type owl:Class ;
                            rdfs:subClassOf :CAVAttack ;
                            rdfs:comment "Attack that targets or degrades the CAV's 2D image segmentation AI module."@en ;
                            rdfs:label "CAV 2D Segmentation AI Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAV2DSegmentationAIEvent
+###  https://w3id.org/nis2onto-ops#CAV2DSegmentationAIEvent
 :CAV2DSegmentationAIEvent rdf:type owl:Class ;
                           rdfs:subClassOf :CAVEvent ;
                           rdfs:comment "Event related to the operation or output of the CAV's 2D image segmentation AI module."@en ;
                           rdfs:label "CAV 2D Segmentation AI Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAV2DSegmentationAIModule
+###  https://w3id.org/nis2onto-ops#CAV2DSegmentationAIModule
 :CAV2DSegmentationAIModule rdf:type owl:Class ;
                            rdfs:subClassOf :CAVSoftwareModule ;
                            rdfs:comment "Connected & Autonomous Vehicle 2D segmentation AI module."@en ;
                            rdfs:label "CAV 2D Segmentation AI Module"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVAsset
+###  https://w3id.org/nis2onto-ops#CAVAsset
 :CAVAsset rdf:type owl:Class ;
           rdfs:subClassOf :OTAsset ;
           rdfs:comment "Connected & Autonomous Vehicle component."@en ;
           rdfs:label "CAV Asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVAttack
+###  https://w3id.org/nis2onto-ops#CAVAttack
 :CAVAttack rdf:type owl:Class ;
            rdfs:subClassOf :AssetAttack ;
            rdfs:comment "Attack targeting a Connected & Autonomous Vehicle asset."@en ;
            rdfs:label "CAV Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVCVGLAttack
+###  https://w3id.org/nis2onto-ops#CAVCVGLAttack
 :CAVCVGLAttack rdf:type owl:Class ;
                rdfs:subClassOf :CAVAttack ;
                rdfs:comment "Attack targeting the CAV's Cross-View Geo-Localization (CVGL) service."@en ;
                rdfs:label "CAV CVGL Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVCVGLEvent
+###  https://w3id.org/nis2onto-ops#CAVCVGLEvent
 :CAVCVGLEvent rdf:type owl:Class ;
               rdfs:subClassOf :CAVEvent ;
               rdfs:comment "Event related to the CAV's Cross-View Geo-Localization (CVGL) service."@en ;
               rdfs:label "CAV CVGL Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVCVGLService
+###  https://w3id.org/nis2onto-ops#CAVCVGLService
 :CAVCVGLService rdf:type owl:Class ;
                 rdfs:subClassOf :CAVSoftwareModule ;
                 rdfs:comment "Connected & Autonomous Vehicle Cross-View Geo-Localization service."@en ;
                 rdfs:label "CAV CVGL Service"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVCamera
+###  https://w3id.org/nis2onto-ops#CAVCamera
 :CAVCamera rdf:type owl:Class ;
            rdfs:subClassOf :CAVSensor ;
            rdfs:comment "Connected & Autonomous Vehicle camera."@en ;
            rdfs:label "CAV Camera"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVCameraAttack
+###  https://w3id.org/nis2onto-ops#CAVCameraAttack
 :CAVCameraAttack rdf:type owl:Class ;
                  rdfs:subClassOf :CAVAttack ;
                  rdfs:comment "Attack targeting a CAV camera sensor."@en ;
                  rdfs:label "CAV Camera Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVCameraEvent
+###  https://w3id.org/nis2onto-ops#CAVCameraEvent
 :CAVCameraEvent rdf:type owl:Class ;
                 rdfs:subClassOf :CAVEvent ;
                 rdfs:comment "Event related to a CAV camera sensor."@en ;
                 rdfs:label "CAV Camera Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVECU
+###  https://w3id.org/nis2onto-ops#CAVECU
 :CAVECU rdf:type owl:Class ;
         rdfs:subClassOf :CAVAsset ;
         rdfs:comment "Connected & Autonomous Vehicle Electronic Control Unit for engine controls, braking, steering, and autonomous driving features."@en ;
         rdfs:label "CAV ECU"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVEvent
+###  https://w3id.org/nis2onto-ops#CAVEvent
 :CAVEvent rdf:type owl:Class ;
           rdfs:subClassOf :AssetEvent ;
           rdfs:comment "Event involving a Connected & Autonomous Vehicle asset."@en ;
           rdfs:label "CAV Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVGNSSAttack
+###  https://w3id.org/nis2onto-ops#CAVGNSSAttack
 :CAVGNSSAttack rdf:type owl:Class ;
                rdfs:subClassOf :CAVAttack ;
                rdfs:comment "Attack targeting the CAV's GNSS receiver."@en ;
                rdfs:label "CAV GNSS Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVGNSSEvent
+###  https://w3id.org/nis2onto-ops#CAVGNSSEvent
 :CAVGNSSEvent rdf:type owl:Class ;
               rdfs:subClassOf :CAVEvent ;
               rdfs:comment "Event related to the CAV's GNSS receiver."@en ;
               rdfs:label "CAV GNSS Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVGNSSReceiver
+###  https://w3id.org/nis2onto-ops#CAVGNSSReceiver
 :CAVGNSSReceiver rdf:type owl:Class ;
                  rdfs:subClassOf :CAVSensor ;
                  rdfs:comment "Connected & Autonomous Vehicle GNSS (Global Navigation Satellite System) receiver."@en ;
                  rdfs:label "CAV GNSS Receiver"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVLiDAR
+###  https://w3id.org/nis2onto-ops#CAVLiDAR
 :CAVLiDAR rdf:type owl:Class ;
           rdfs:subClassOf :CAVSensor ;
           rdfs:comment "Connected & Autonomous Vehicle LiDAR (Light Detection And Ranging) sensor."@en ;
           rdfs:label "CAV LiDAR"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVOBU
+###  https://w3id.org/nis2onto-ops#CAVOBU
 :CAVOBU rdf:type owl:Class ;
         rdfs:subClassOf :CAVAsset ;
         rdfs:comment "Connected & Autonomous Vehicle On-Board Unit for toll payments, traffic updates, and connections to other cars or smart roads (V2X)."@en ;
         rdfs:label "CAV OBU"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVRSU
+###  https://w3id.org/nis2onto-ops#CAVRSU
 :CAVRSU rdf:type owl:Class ;
         rdfs:subClassOf :CAVAsset ;
         rdfs:comment "Connected & Autonomous Vehicle Road-Side Unit."@en ;
         rdfs:label "CAV RSU"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVRadar
+###  https://w3id.org/nis2onto-ops#CAVRadar
 :CAVRadar rdf:type owl:Class ;
           rdfs:subClassOf :CAVSensor ;
           rdfs:comment "Connected & Autonomous Vehicle radar sensor."@en ;
           rdfs:label "CAV Radar"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVSensor
+###  https://w3id.org/nis2onto-ops#CAVSensor
 :CAVSensor rdf:type owl:Class ;
            rdfs:subClassOf :CAVAsset ;
            rdfs:comment "Connected & Autonomous Vehicle sensor that sees or measures the environment."@en ;
            rdfs:label "CAV Sensor"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVSimulator
+###  https://w3id.org/nis2onto-ops#CAVSimulator
 :CAVSimulator rdf:type owl:Class ;
               rdfs:subClassOf :CAVSoftwareApplication ;
               rdfs:comment "Connected & Autonomous Vehicle simulator software."@en ;
               rdfs:label "CAV Simulator"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVSoftwareApplication
+###  https://w3id.org/nis2onto-ops#CAVSoftwareApplication
 :CAVSoftwareApplication rdf:type owl:Class ;
                         rdfs:subClassOf :SoftwareApplication ;
                         rdfs:comment "Connected & Autonomous Vehicle software application."@en ;
                         rdfs:label "CAV Software Application"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVSoftwareModule
+###  https://w3id.org/nis2onto-ops#CAVSoftwareModule
 :CAVSoftwareModule rdf:type owl:Class ;
                    rdfs:subClassOf :SoftwareModule ;
                    rdfs:comment "Connected & Autonomous Vehicle software module."@en ;
                    rdfs:label "CAV Software Module"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVTeleoperationService
+###  https://w3id.org/nis2onto-ops#CAVTeleoperationService
 :CAVTeleoperationService rdf:type owl:Class ;
                          rdfs:subClassOf :CAVSoftwareModule ;
                          rdfs:comment "Connected & Autonomous Vehicle teleoperation service."@en ;
                          rdfs:label "CAV Teleoperation Service"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVTeleoperationServiceAttack
+###  https://w3id.org/nis2onto-ops#CAVTeleoperationServiceAttack
 :CAVTeleoperationServiceAttack rdf:type owl:Class ;
                                rdfs:subClassOf :CAVAttack ;
                                rdfs:comment "Attack targeting the CAV's teleoperation service."@en ;
                                rdfs:label "CAV Teleoperation Service Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVTeleoperationServiceEvent
+###  https://w3id.org/nis2onto-ops#CAVTeleoperationServiceEvent
 :CAVTeleoperationServiceEvent rdf:type owl:Class ;
                               rdfs:subClassOf :CAVEvent ;
                               rdfs:comment "Event related to the CAV's teleoperation service."@en ;
                               rdfs:label "CAV Teleoperation Service Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVTestingPlatform
+###  https://w3id.org/nis2onto-ops#CAVTestingPlatform
 :CAVTestingPlatform rdf:type owl:Class ;
                     rdfs:subClassOf :CAVSoftwareApplication ;
                     rdfs:comment "Connected & Autonomous Vehicle testing platform."@en ;
                     rdfs:label "CAV Testing Platform"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVUltrasonic
+###  https://w3id.org/nis2onto-ops#CAVUltrasonic
 :CAVUltrasonic rdf:type owl:Class ;
                rdfs:subClassOf :CAVSensor ;
                rdfs:comment "Connected & Autonomous Vehicle ultrasonic sensor."@en ;
                rdfs:label "CAV Ultrasonic"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVV2XCommunicationModule
+###  https://w3id.org/nis2onto-ops#CAVV2XCommunicationModule
 :CAVV2XCommunicationModule rdf:type owl:Class ;
                            rdfs:subClassOf :CAVAsset ;
                            rdfs:comment "Connected & Autonomous Vehicle V2X communication module."@en ;
                            rdfs:label "CAV V2X Communication Module"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVV2XCommunicationModuleAttack
+###  https://w3id.org/nis2onto-ops#CAVV2XCommunicationModuleAttack
 :CAVV2XCommunicationModuleAttack rdf:type owl:Class ;
                                  rdfs:subClassOf :CAVAttack ;
                                  rdfs:comment "Attack targeting the CAV's V2X communication module."@en ;
                                  rdfs:label "V2X Communication Module Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CAVV2XCommunicationModuleEvent
+###  https://w3id.org/nis2onto-ops#CAVV2XCommunicationModuleEvent
 :CAVV2XCommunicationModuleEvent rdf:type owl:Class ;
                                 rdfs:subClassOf :CAVEvent ;
                                 rdfs:comment "Event related to the CAV's V2X communication module."@en ;
                                 rdfs:label "CAV V2X Communication Module Event"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CVE
+###  https://w3id.org/nis2onto-ops#CVE
 :CVE rdf:type owl:Class ;
      rdfs:subClassOf :SecurityCatalogReference ;
      rdfs:comment "Common Vulnerabilities and Exposures (CVE) are publicly disclosed and uniquely identified cybersecurity vulnerabilities affecting software, hardware, or firmware systems."@en ;
      rdfs:label "CVE"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CWE
+###  https://w3id.org/nis2onto-ops#CWE
 :CWE rdf:type owl:Class ;
      rdfs:subClassOf :SecurityCatalogReference ;
      rdfs:comment "Common Weakness Enumeration (CWE) categorizes common software and hardware weaknesses that can contribute to the existence of one or more cybersecurity vulnerabilities."@en ;
      rdfs:label "CWE"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ComplianceMonitoring
+###  https://w3id.org/nis2onto-ops#ComplianceMonitoring
 :ComplianceMonitoring rdf:type owl:Class ;
                       rdfs:subClassOf :ControlTheme ,
                                       [ rdf:type owl:Restriction ;
@@ -972,20 +972,20 @@
                       rdfs:label "Compliance Monitoring"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ComplianceRule
+###  https://w3id.org/nis2onto-ops#ComplianceRule
 :ComplianceRule rdf:type owl:Class ;
                 rdfs:subClassOf :SecurityCatalogReference ;
                 rdfs:comment "Rule used to derive a control compliance ruling."@en ;
                 rdfs:label "Compliance Rule"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ControlGovernance
+###  https://w3id.org/nis2onto-ops#ControlGovernance
 :ControlGovernance rdf:type owl:Class ;
                    rdfs:comment "Organizational grouping for the concepts used to define, scope, and evaluate compliance controls."@en ;
                    rdfs:label "Control Governance"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ControlRuling
+###  https://w3id.org/nis2onto-ops#ControlRuling
 :ControlRuling rdf:type owl:Class ;
                rdfs:subClassOf :ControlGovernance ,
                                [ rdf:type owl:Restriction ;
@@ -1016,7 +1016,7 @@
                rdfs:label "Control Ruling"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ControlScope
+###  https://w3id.org/nis2onto-ops#ControlScope
 :ControlScope rdf:type owl:Class ;
               rdfs:subClassOf :ControlGovernance ,
                               [ rdf:type owl:Restriction ;
@@ -1031,28 +1031,28 @@
               rdfs:label "Control Scope"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ControlStatus
+###  https://w3id.org/nis2onto-ops#ControlStatus
 :ControlStatus rdf:type owl:Class ;
                rdfs:subClassOf :ControlGovernance ;
                rdfs:comment "Outcome classification of a control derivation."@en ;
                rdfs:label "Control Status"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ControlTheme
+###  https://w3id.org/nis2onto-ops#ControlTheme
 :ControlTheme rdf:type owl:Class ;
               rdfs:subClassOf :ControlGovernance ;
               rdfs:comment "A category of security controls, such as authentication or incident response, that compliance is evaluated against."@en ;
               rdfs:label "Control Theme"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Criticality
+###  https://w3id.org/nis2onto-ops#Criticality
 :Criticality rdf:type owl:Class ;
              rdfs:subClassOf :RiskRating ;
              rdfs:comment "Asset criticality classification: Critical, High, Medium, Low, or N/A."@en ;
              rdfs:label "Criticality"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CryptographicProtection
+###  https://w3id.org/nis2onto-ops#CryptographicProtection
 :CryptographicProtection rdf:type owl:Class ;
                          rdfs:subClassOf :ControlTheme ,
                                          [ rdf:type owl:Restriction ;
@@ -1067,28 +1067,28 @@
                          rdfs:label "Cryptographic Protection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CybersecuritySoftwareApplication
+###  https://w3id.org/nis2onto-ops#CybersecuritySoftwareApplication
 :CybersecuritySoftwareApplication rdf:type owl:Class ;
                                   rdfs:subClassOf :SoftwareApplication ;
                                   rdfs:comment "Software application dedicated to cybersecurity monitoring, detection, scanning, or protection."@en ;
                                   rdfs:label "Cybersecurity Software Application"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CybersecuritySoftwareModule
+###  https://w3id.org/nis2onto-ops#CybersecuritySoftwareModule
 :CybersecuritySoftwareModule rdf:type owl:Class ;
                              rdfs:subClassOf :SoftwareModule ;
                              rdfs:comment "Software module dedicated to cybersecurity monitoring, detection, scanning, or protection functions."@en ;
                              rdfs:label "Cybersecurity Software Module"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#DCOPlaybook
+###  https://w3id.org/nis2onto-ops#DCOPlaybook
 :DCOPlaybook rdf:type owl:Class ;
              rdfs:subClassOf :SecurityCatalogReference ;
              rdfs:comment "Defensive Cyber Operations playbook describing a predefined incident-response procedure."@en ;
              rdfs:label "DCO Playbook"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#DataIntegrityAndTamperResistance
+###  https://w3id.org/nis2onto-ops#DataIntegrityAndTamperResistance
 :DataIntegrityAndTamperResistance rdf:type owl:Class ;
                                   rdfs:subClassOf :ControlTheme ,
                                                   [ rdf:type owl:Restriction ;
@@ -1103,14 +1103,14 @@
                                   rdfs:label "Data Integrity and Tamper Resistance"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#DetectionRule
+###  https://w3id.org/nis2onto-ops#DetectionRule
 :DetectionRule rdf:type owl:Class ;
                rdfs:subClassOf :SecurityCatalogReference ;
                rdfs:comment "Rule used by a detection system to identify malicious or anomalous behavior."@en ;
                rdfs:label "Detection Rule"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Document
+###  https://w3id.org/nis2onto-ops#Document
 :Document rdf:type owl:Class ;
           rdfs:subClassOf nis2onto:NIS2GeneralOntologicalEntity ,
                           [ rdf:type owl:Restriction ;
@@ -1129,7 +1129,7 @@
           rdfs:label "Document"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#DocumentEvidenceRecord
+###  https://w3id.org/nis2onto-ops#DocumentEvidenceRecord
 :DocumentEvidenceRecord rdf:type owl:Class ;
                         owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                    [ rdf:type owl:Restriction ;
@@ -1144,7 +1144,7 @@
                         rdfs:label "Document Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#EventAnalysisAndClassification
+###  https://w3id.org/nis2onto-ops#EventAnalysisAndClassification
 :EventAnalysisAndClassification rdf:type owl:Class ;
                                 rdfs:subClassOf :ControlTheme ,
                                                 [ rdf:type owl:Restriction ;
@@ -1159,7 +1159,7 @@
                                 rdfs:label "Event Analysis and Classification"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#EventEvidenceRecord
+###  https://w3id.org/nis2onto-ops#EventEvidenceRecord
 :EventEvidenceRecord rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                 [ rdf:type owl:Restriction ;
@@ -1174,14 +1174,14 @@
                      rdfs:label "Event Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#EvidenceRecord
+###  https://w3id.org/nis2onto-ops#EvidenceRecord
 :EvidenceRecord rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty :producedBy ;
                                   owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:unionOf ( :SoftwareApplication
+                                                       owl:unionOf ( nis2onto:Assessment
+                                                                     :SoftwareApplication
                                                                      :SoftwareModule
-                                                                     nis2onto:Assessment
                                                                    )
                                                      ]
                                 ] ,
@@ -1197,28 +1197,28 @@
                 rdfs:label "Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#FileFormat
+###  https://w3id.org/nis2onto-ops#FileFormat
 :FileFormat rdf:type owl:Class ;
             rdfs:subClassOf nis2onto:NIS2GeneralOntologicalEntity ;
             rdfs:comment "Classification of file's type or encoding."@en ;
             rdfs:label "File Format"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#HashAlgorithm
+###  https://w3id.org/nis2onto-ops#HashAlgorithm
 :HashAlgorithm rdf:type owl:Class ;
                rdfs:subClassOf :HashComponent ;
                rdfs:comment "Cryptographic algorithm used to compute a hash digest."@en ;
                rdfs:label "Hash Algorithm"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#HashComponent
+###  https://w3id.org/nis2onto-ops#HashComponent
 :HashComponent rdf:type owl:Class ;
                rdfs:subClassOf nis2onto:NIS2GeneralOntologicalEntity ;
                rdfs:comment "Component involved in producing or representing a cryptographic hash."@en ;
                rdfs:label "Hash Component"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#HashDigest
+###  https://w3id.org/nis2onto-ops#HashDigest
 :HashDigest rdf:type owl:Class ;
             rdfs:subClassOf :HashComponent ,
                             [ rdf:type owl:Restriction ;
@@ -1233,21 +1233,21 @@
             rdfs:label "Hash Digest"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#IOCMatching
+###  https://w3id.org/nis2onto-ops#IOCMatching
 :IOCMatching rdf:type owl:Class ;
              rdfs:subClassOf :RuleBasedAssessment ;
              rdfs:comment "Rule-based assessment that matches observed data against known Indicators of Compromise."@en ;
              rdfs:label "IOC Matching"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ITAsset
+###  https://w3id.org/nis2onto-ops#ITAsset
 :ITAsset rdf:type owl:Class ;
          rdfs:subClassOf :Asset ;
          rdfs:comment "Information Technology asset such as a workstation, server, cloud instance, or software application."@en ;
          rdfs:label "IT Asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#IncidentDetectionAndMonitoring
+###  https://w3id.org/nis2onto-ops#IncidentDetectionAndMonitoring
 :IncidentDetectionAndMonitoring rdf:type owl:Class ;
                                 rdfs:subClassOf :ControlTheme ,
                                                 [ rdf:type owl:Restriction ;
@@ -1262,7 +1262,7 @@
                                 rdfs:label "Incident Detection and Monitoring"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#IncidentResponseProcedure
+###  https://w3id.org/nis2onto-ops#IncidentResponseProcedure
 :IncidentResponseProcedure rdf:type owl:Class ;
                            rdfs:subClassOf :ControlTheme ,
                                            [ rdf:type owl:Restriction ;
@@ -1277,28 +1277,28 @@
                            rdfs:label "Incidence Response Procedure"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#InjectionAttack
+###  https://w3id.org/nis2onto-ops#InjectionAttack
 :InjectionAttack rdf:type owl:Class ;
                  rdfs:subClassOf :AssetAttack ;
                  rdfs:comment "Attack that injects malicious, falsified, or unauthorized data into an asset or communication channel."@en ;
                  rdfs:label "Injection Attack"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#IntegrityVerification
+###  https://w3id.org/nis2onto-ops#IntegrityVerification
 :IntegrityVerification rdf:type owl:Class ;
                        rdfs:subClassOf nis2onto:Assessment ;
                        rdfs:comment "Assessment method that confirms data or a component has not been tampered with."@en ;
                        rdfs:label "Integrity Verification"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Ledger
+###  https://w3id.org/nis2onto-ops#Ledger
 :Ledger rdf:type owl:Class ;
         rdfs:subClassOf :SoftwareApplication ;
         rdfs:comment "Software application, such as a blockchain, that stores records for integrity and traceability."@en ;
         rdfs:label "Ledger"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#LedgerAttestedEvidenceRecord
+###  https://w3id.org/nis2onto-ops#LedgerAttestedEvidenceRecord
 :LedgerAttestedEvidenceRecord rdf:type owl:Class ;
                               owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                          [ rdf:type owl:Restriction ;
@@ -1325,22 +1325,22 @@
                               rdfs:label "Ledger-Attested Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#MISP
+###  https://w3id.org/nis2onto-ops#MISP
 :MISP rdf:type owl:Class ;
-      rdfs:subClassOf :CybersecuritySoftwareApplication ,
-                      nis2onto:CybersecurityTool ;
+      rdfs:subClassOf nis2onto:CybersecurityTool ,
+                      :CybersecuritySoftwareApplication ;
       rdfs:comment "MISP (Malware Information Sharing Platform or Threat Sharing) is an open-source Threat Intelligence Platform (TIP) to store, share, and analyze Indicators of Compromise (IoCs)."@en ;
       rdfs:label "MISP"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ManualAssessment
+###  https://w3id.org/nis2onto-ops#ManualAssessment
 :ManualAssessment rdf:type owl:Class ;
                   rdfs:subClassOf nis2onto:Assessment ;
                   rdfs:comment "Assessment method carried out through direct human analysis rather than automated tooling."@en ;
                   rdfs:label "Manual Assessment"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#MonitoringEvidenceRecord
+###  https://w3id.org/nis2onto-ops#MonitoringEvidenceRecord
 :MonitoringEvidenceRecord rdf:type owl:Class ;
                           owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                      [ rdf:type owl:Restriction ;
@@ -1359,28 +1359,28 @@
                           rdfs:label "Monitoring Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#MonitoringOutcome
+###  https://w3id.org/nis2onto-ops#MonitoringOutcome
 :MonitoringOutcome rdf:type owl:Class ;
                    rdfs:subClassOf :RiskRating ;
                    rdfs:comment "Result classification of a monitoring or detection check."@en ;
                    rdfs:label "Monitoring Outcome"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#NetworkAsset
+###  https://w3id.org/nis2onto-ops#NetworkAsset
 :NetworkAsset rdf:type owl:Class ;
               rdfs:subClassOf :ITAsset ;
               rdfs:comment "Network asset such as a router, firewall, switch, or communication channel."@en ;
               rdfs:label "Network Asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#OTAsset
+###  https://w3id.org/nis2onto-ops#OTAsset
 :OTAsset rdf:type owl:Class ;
          rdfs:subClassOf :Asset ;
          rdfs:comment "Operational Technology asset such as a sensor, embedded controller, or industrial system."@en ;
          rdfs:label "OT Asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#PlaybookExecutionEvidenceRecord
+###  https://w3id.org/nis2onto-ops#PlaybookExecutionEvidenceRecord
 :PlaybookExecutionEvidenceRecord rdf:type owl:Class ;
                                  owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                             [ rdf:type owl:Restriction ;
@@ -1399,14 +1399,14 @@
                                  rdfs:label "Playbook Execution Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#PolicyBasedScan
+###  https://w3id.org/nis2onto-ops#PolicyBasedScan
 :PolicyBasedScan rdf:type owl:Class ;
                  rdfs:subClassOf :RuleBasedAssessment ;
                  rdfs:comment "Rule-based assessment that checks compliance against a defined security policy."@en ;
                  rdfs:label "Policy-Based Scan"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#PostureScore
+###  https://w3id.org/nis2onto-ops#PostureScore
 :PostureScore rdf:type owl:Class ;
               rdfs:subClassOf :RiskRating ,
                               [ rdf:type owl:Restriction ;
@@ -1421,26 +1421,26 @@
               rdfs:label "Posture Score"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#PostureScoreEvidence
-:PostureScoreEvidence rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty :hasPostureScore ;
-                                                                   owl:someValuesFrom :PostureScore
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf :EvidenceRecord ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :supportsControlTheme ;
-                                        owl:hasValue :configuration_auditing
-                                      ] ;
-                      rdfs:comment "Evidence record documenting a posture score."@en ;
-                      rdfs:label "Posture Score Evidence"@en .
+###  https://w3id.org/nis2onto-ops#PostureScoreEvidenceRecord
+:PostureScoreEvidenceRecord rdf:type owl:Class ;
+                            owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasPostureScore ;
+                                                                         owl:someValuesFrom :PostureScore
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ] ;
+                            rdfs:subClassOf :EvidenceRecord ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :supportsControlTheme ;
+                                              owl:hasValue :configuration_auditing
+                                            ] ;
+                            rdfs:comment "Evidence record documenting a posture score."@en ;
+                            rdfs:label "Posture Score Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#RemediationScore
+###  https://w3id.org/nis2onto-ops#RemediationScore
 :RemediationScore rdf:type owl:Class ;
                   rdfs:subClassOf :RiskRating ,
                                   [ rdf:type owl:Restriction ;
@@ -1451,34 +1451,34 @@
                   rdfs:label "Remediation Score"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#RiskRating
+###  https://w3id.org/nis2onto-ops#RiskRating
 :RiskRating rdf:type owl:Class ;
             rdfs:subClassOf nis2onto:RiskAssessment ;
             rdfs:comment "Classification used to rate risk, such as severity, criticality, posture, or monitoring outcome."@en ;
             rdfs:label "Risk Rating"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#RuleBasedAssessment
+###  https://w3id.org/nis2onto-ops#RuleBasedAssessment
 :RuleBasedAssessment rdf:type owl:Class ;
                      rdfs:subClassOf nis2onto:Assessment ;
                      rdfs:comment "Assessment method that applies predefined rules, policies, or signatures to detect conditions."@en ;
                      rdfs:label "Rule-Based Assessment"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SUMOSimulator
+###  https://w3id.org/nis2onto-ops#SUMOSimulator
 :SUMOSimulator rdf:type owl:Class ;
                rdfs:subClassOf :CAVSimulator ;
                rdfs:comment "SUMO (Simulation of Urban MObility) traffic simulator."@en ;
                rdfs:label "SUMO Simulator"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SecurityCatalogReference
+###  https://w3id.org/nis2onto-ops#SecurityCatalogReference
 :SecurityCatalogReference rdf:type owl:Class ;
                           rdfs:comment "Reference to an entry in an external security catalog or knowledge base, such as CVE or CWE."@en ;
                           rdfs:label "Security Catalog Reference"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SecurityPostureAndControlEffectiveness
+###  https://w3id.org/nis2onto-ops#SecurityPostureAndControlEffectiveness
 :SecurityPostureAndControlEffectiveness rdf:type owl:Class ;
                                         rdfs:subClassOf :ControlTheme ,
                                                         [ rdf:type owl:Restriction ;
@@ -1493,57 +1493,57 @@
                                         rdfs:label "Security Posture and Control Effectiveness"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Severity
+###  https://w3id.org/nis2onto-ops#Severity
 :Severity rdf:type owl:Class ;
           rdfs:subClassOf :RiskRating ;
           rdfs:comment "Classification of how serious a vulnerability, weakness, or incident is."@en ;
           rdfs:label "Severity"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SignatureMatching
+###  https://w3id.org/nis2onto-ops#SignatureMatching
 :SignatureMatching rdf:type owl:Class ;
                    rdfs:subClassOf :RuleBasedAssessment ;
                    rdfs:comment "Rule-based assessment that matches observed data against known malicious signatures."@en ;
                    rdfs:label "Signature Matching"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Snyk
+###  https://w3id.org/nis2onto-ops#Snyk
 :Snyk rdf:type owl:Class ;
-      rdfs:subClassOf :CybersecuritySoftwareApplication ,
-                      nis2onto:CybersecurityTool ;
+      rdfs:subClassOf nis2onto:CybersecurityTool ,
+                      :CybersecuritySoftwareApplication ;
       rdfs:comment "Snyk is a software security platform that scans source code, open-source dependencies, containers, and infrastructure configurations to find and automatically fix security flaws."@en ;
       rdfs:label "Snyk"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SoftwareApplication
+###  https://w3id.org/nis2onto-ops#SoftwareApplication
 :SoftwareApplication rdf:type owl:Class ;
                      rdfs:subClassOf :SoftwareAsset ;
                      rdfs:comment "Software that is intended for end-user use."@en ;
                      rdfs:label "Software Application"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SoftwareAsset
+###  https://w3id.org/nis2onto-ops#SoftwareAsset
 :SoftwareAsset rdf:type owl:Class ;
                rdfs:subClassOf :ITAsset ;
                rdfs:comment "Software-related asset."@en ;
                rdfs:label "Software Asset"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SoftwareModule
+###  https://w3id.org/nis2onto-ops#SoftwareModule
 :SoftwareModule rdf:type owl:Class ;
                 rdfs:subClassOf :SoftwareAsset ;
                 rdfs:comment "Software unit responsible for a specific function."@en ;
                 rdfs:label "Software Module"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#StreamPatternMatching
+###  https://w3id.org/nis2onto-ops#StreamPatternMatching
 :StreamPatternMatching rdf:type owl:Class ;
                        rdfs:subClassOf :RuleBasedAssessment ;
                        rdfs:comment "Rule-based assessment that matches patterns within a continuous data stream."@en ;
                        rdfs:label "Stream Pattern Matching"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#SupplyChainSecurity
+###  https://w3id.org/nis2onto-ops#SupplyChainSecurity
 :SupplyChainSecurity rdf:type owl:Class ;
                      rdfs:subClassOf :ControlTheme ,
                                      [ rdf:type owl:Restriction ;
@@ -1558,15 +1558,15 @@
                      rdfs:label "Supply Chain Security"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Suricata
+###  https://w3id.org/nis2onto-ops#Suricata
 :Suricata rdf:type owl:Class ;
-          rdfs:subClassOf :CybersecuritySoftwareApplication ,
-                          nis2onto:CybersecurityTool ;
+          rdfs:subClassOf nis2onto:CybersecurityTool ,
+                          :CybersecuritySoftwareApplication ;
           rdfs:comment "Suricata is an open-source Network Intrusion Detection System (NIDS), Intrusion Prevention System (IPS), and Network Security Monitoring (NSM) engine that performs deep packet inspection and watches network traffic for malicious patterns, policy violations, and suspicious anomalies."@en ;
           rdfs:label "Suricata"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#VulnerabilityEvidenceRecord
+###  https://w3id.org/nis2onto-ops#VulnerabilityEvidenceRecord
 :VulnerabilityEvidenceRecord rdf:type owl:Class ;
                              owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                         [ rdf:type owl:Class ;
@@ -1592,7 +1592,7 @@
                              rdfs:label "Vulnerability Evidence Record"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#VulnerabilityHandlingAndDisclosure
+###  https://w3id.org/nis2onto-ops#VulnerabilityHandlingAndDisclosure
 :VulnerabilityHandlingAndDisclosure rdf:type owl:Class ;
                                     rdfs:subClassOf :ControlTheme ,
                                                     [ rdf:type owl:Restriction ;
@@ -1607,10 +1607,10 @@
                                     rdfs:label "Vulnerability Handling and Disclosure"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#Wazuh
+###  https://w3id.org/nis2onto-ops#Wazuh
 :Wazuh rdf:type owl:Class ;
-       rdfs:subClassOf :CybersecuritySoftwareApplication ,
-                       nis2onto:CybersecurityTool ;
+       rdfs:subClassOf nis2onto:CybersecurityTool ,
+                       :CybersecuritySoftwareApplication ;
        rdfs:comment "Wazuh is an open-source, enterprise-grade security monitoring platform that uses agents to collect, analyze, and correlate logs in real-time, offering file integrity monitoring, vulnerability detection, and incident response."@en ;
        rdfs:label "Wazuh"@en .
 
@@ -1619,7 +1619,7 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/nis2onto-ops#CROSSCORE
+###  https://w3id.org/nis2onto-ops#CROSSCORE
 :CROSSCORE rdf:type owl:NamedIndividual ,
                     :CybersecuritySoftwareModule ;
            :hasCriticality :n_a ;
@@ -1628,7 +1628,7 @@
            rdfs:label "CROSSCORE"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBERGOPLUS
+###  https://w3id.org/nis2onto-ops#CYBERGOPLUS
 :CYBERGOPLUS rdf:type owl:NamedIndividual ,
                       :CybersecuritySoftwareModule ;
              :hasComponent :CYBERGOPLUS-Snyk ;
@@ -1638,7 +1638,7 @@
              rdfs:label "CYBERGOPLUS"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBERGOPLUS-Snyk
+###  https://w3id.org/nis2onto-ops#CYBERGOPLUS-Snyk
 :CYBERGOPLUS-Snyk rdf:type owl:NamedIndividual ,
                            :Snyk ;
                   :hasCriticality :n_a ;
@@ -1647,7 +1647,7 @@
                   rdfs:label "CYBERGOPLUS Snyk"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBERRA
+###  https://w3id.org/nis2onto-ops#CYBERRA
 :CYBERRA rdf:type owl:NamedIndividual ,
                   :CybersecuritySoftwareModule ;
          :hasComponent :CYBERRA-MISP ;
@@ -1657,7 +1657,7 @@
          rdfs:label "CYBERRA"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBERRA-MISP
+###  https://w3id.org/nis2onto-ops#CYBERRA-MISP
 :CYBERRA-MISP rdf:type owl:NamedIndividual ,
                        :MISP ;
               :hasCriticality :n_a ;
@@ -1666,7 +1666,7 @@
               rdfs:label "CYBERRA MISP"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBERWISE
+###  https://w3id.org/nis2onto-ops#CYBERWISE
 :CYBERWISE rdf:type owl:NamedIndividual ,
                     :CybersecuritySoftwareModule ;
            :hasCriticality :n_a ;
@@ -1675,7 +1675,7 @@
            rdfs:label "CYBERWISE"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBRITE
+###  https://w3id.org/nis2onto-ops#CYBRITE
 :CYBRITE rdf:type owl:NamedIndividual ,
                   :CybersecuritySoftwareModule ;
          :hasComponent :CYBRITE-Suricata ,
@@ -1686,7 +1686,7 @@
          rdfs:label "CYBRITE"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBRITE-Suricata
+###  https://w3id.org/nis2onto-ops#CYBRITE-Suricata
 :CYBRITE-Suricata rdf:type owl:NamedIndividual ,
                            :Suricata ;
                   :hasCriticality :n_a ;
@@ -1695,7 +1695,7 @@
                   rdfs:label "CYBRITE Suricata"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYBRITE-Wazuh
+###  https://w3id.org/nis2onto-ops#CYBRITE-Wazuh
 :CYBRITE-Wazuh rdf:type owl:NamedIndividual ,
                         :Wazuh ;
                :hasCriticality :n_a ;
@@ -1704,7 +1704,7 @@
                rdfs:label "CYBRITE Wazuh"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#CYRESCUE
+###  https://w3id.org/nis2onto-ops#CYRESCUE
 :CYRESCUE rdf:type owl:NamedIndividual ,
                    :CybersecuritySoftwareModule ;
           :hasCriticality :n_a ;
@@ -1713,98 +1713,98 @@
           rdfs:label "CYRESCUE"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#adversarial_perturbation_detection
+###  https://w3id.org/nis2onto-ops#adversarial_perturbation_detection
 :adversarial_perturbation_detection rdf:type owl:NamedIndividual ,
                                              :AnomalyDetection ;
                                     rdfs:comment "Anomaly detection method that identifies adversarial perturbations crafted to fool a perception AI model."@en ;
                                     rdfs:label "Adversarial Perturbation Detection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ai_segmentation_check
+###  https://w3id.org/nis2onto-ops#ai_segmentation_check
 :ai_segmentation_check rdf:type owl:NamedIndividual ,
                                 :CAV2DSegmentationAIEvent ;
                        rdfs:comment "Event representing a check of the 2D image segmentation AI module's output."@en ;
                        rdfs:label "AI Segmentation Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ai_segmentation_degradation
+###  https://w3id.org/nis2onto-ops#ai_segmentation_degradation
 :ai_segmentation_degradation rdf:type owl:NamedIndividual ,
                                       :CAV2DSegmentationAIAttack ;
                              rdfs:comment "Attack that degrades the accuracy of the 2D image segmentation AI module."@en ;
                              rdfs:label "AI Segmentation Degradation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#anomaly
+###  https://w3id.org/nis2onto-ops#anomaly
 :anomaly rdf:type owl:NamedIndividual ,
                   :MonitoringOutcome ;
          rdfs:comment "Monitoring outcome indicating that an anomaly was detected."@en ;
          rdfs:label "Anomaly"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#anomaly_detector_detection
+###  https://w3id.org/nis2onto-ops#anomaly_detector_detection
 :anomaly_detector_detection rdf:type owl:NamedIndividual ,
                                      :AnomalyDetection ;
                             rdfs:comment "Generic anomaly-detection assessment method for identifying abnormal behavior."@en ;
                             rdfs:label "Anomaly Detector Detection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#api_key_validation
+###  https://w3id.org/nis2onto-ops#api_key_validation
 :api_key_validation rdf:type owl:NamedIndividual ,
                              :AuthenticationCheck ;
                     rdfs:comment "Authentication check that validates an API key presented by a client."@en ;
                     rdfs:label "API Key Validation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#asset_evidence_documentation
+###  https://w3id.org/nis2onto-ops#asset_evidence_documentation
 :asset_evidence_documentation rdf:type owl:NamedIndividual ,
                                        :AssetInventoryAndManagement ;
                               rdfs:comment "Linking evidence records to the assets they concern."@en ;
                               rdfs:label "Asset Evidence Documentation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#authentication_check
+###  https://w3id.org/nis2onto-ops#authentication_check
 :authentication_check rdf:type owl:NamedIndividual ,
                                :AuthenticationCheck ;
                       rdfs:comment "Generic authentication check verifying credentials presented by an entity."@en ;
                       rdfs:label "Authentication Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#behavioral_baseline_deviation
+###  https://w3id.org/nis2onto-ops#behavioral_baseline_deviation
 :behavioral_baseline_deviation rdf:type owl:NamedIndividual ,
                                         :AnomalyDetection ;
                                rdfs:comment "Anomaly detection method that flags deviation from an established behavioral baseline."@en ;
                                rdfs:label "Behavioral Baseline Deviation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#can_bus_anomaly_detection
+###  https://w3id.org/nis2onto-ops#can_bus_anomaly_detection
 :can_bus_anomaly_detection rdf:type owl:NamedIndividual ,
                                     :AnomalyDetection ;
                            rdfs:comment "Anomaly detection method that monitors CAN bus traffic for abnormal patterns."@en ;
                            rdfs:label "CAN Bus Anomaly Detection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#can_bus_rule_check
+###  https://w3id.org/nis2onto-ops#can_bus_rule_check
 :can_bus_rule_check rdf:type owl:NamedIndividual ,
                              :StreamPatternMatching ;
                     rdfs:comment "Stream pattern matching that checks CAN bus messages against predefined rules."@en ;
                     rdfs:label "CAN Bus Rule Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#certificate_validation
+###  https://w3id.org/nis2onto-ops#certificate_validation
 :certificate_validation rdf:type owl:NamedIndividual ,
                                  :AuthenticationCheck ;
                         rdfs:comment "Authentication check that validates a digital certificate."@en ;
                         rdfs:label "Certificate Validation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#compliant
+###  https://w3id.org/nis2onto-ops#compliant
 :compliant rdf:type owl:NamedIndividual ,
                     :ControlStatus ;
            rdfs:comment "Status indicating the scope is fully supported by sufficient, current evidence."@en ;
            rdfs:label "Compliant"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#component_authentication_and_authorisation
+###  https://w3id.org/nis2onto-ops#component_authentication_and_authorisation
 :component_authentication_and_authorisation rdf:type owl:NamedIndividual ,
                                                      :AuthenticationAndAccessControl ,
                                                      :CryptographicProtection ;
@@ -1812,7 +1812,7 @@
                                             rdfs:label "Component Authentication and Authorisation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#component_integrity_evaluation
+###  https://w3id.org/nis2onto-ops#component_integrity_evaluation
 :component_integrity_evaluation rdf:type owl:NamedIndividual ,
                                          :CryptographicProtection ,
                                          :EventAnalysisAndClassification ,
@@ -1821,77 +1821,77 @@
                                 rdfs:label "Component Integrity Evaluation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#configuration_auditing
+###  https://w3id.org/nis2onto-ops#configuration_auditing
 :configuration_auditing rdf:type owl:NamedIndividual ,
                                  :SecurityPostureAndControlEffectiveness ;
                         rdfs:comment "Evaluation of assets against established security baselines and best practices, e.g., Wazuh SCA scans."@en ;
                         rdfs:label "Configuration Auditing"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#container_policy_scan
+###  https://w3id.org/nis2onto-ops#container_policy_scan
 :container_policy_scan rdf:type owl:NamedIndividual ,
                                 :PolicyBasedScan ;
                        rdfs:comment "Policy-based scan that checks container images and configurations for policy compliance."@en ;
                        rdfs:label "Container Policy Scan"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#content_signature_match
+###  https://w3id.org/nis2onto-ops#content_signature_match
 :content_signature_match rdf:type owl:NamedIndividual ,
                                   :SignatureMatching ;
                          rdfs:comment "Signature matching that compares content against known malicious signatures."@en ;
                          rdfs:label "Content Signature Match"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#credential_login_check
+###  https://w3id.org/nis2onto-ops#credential_login_check
 :credential_login_check rdf:type owl:NamedIndividual ,
                                  :AuthenticationCheck ;
                         rdfs:comment "Authentication check that verifies login credentials such as username and password."@en ;
                         rdfs:label "Credential Login Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#critical_criticality
+###  https://w3id.org/nis2onto-ops#critical_criticality
 :critical_criticality rdf:type owl:NamedIndividual ,
                                :Criticality ;
                       rdfs:comment "Criticality level indicating the asset is essential and its failure would have severe impact."@en ;
                       rdfs:label "Critical"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#critical_severity
+###  https://w3id.org/nis2onto-ops#critical_severity
 :critical_severity rdf:type owl:NamedIndividual ,
                             :Severity ;
                    rdfs:comment "Severity level indicating the highest degree of seriousness, requiring immediate action."@en ;
                    rdfs:label "Critical"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#csv_format
+###  https://w3id.org/nis2onto-ops#csv_format
 :csv_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Comma-Separated Values format."@en ;
             rdfs:label "CSV"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#cti_enrichment
+###  https://w3id.org/nis2onto-ops#cti_enrichment
 :cti_enrichment rdf:type owl:NamedIndividual ,
                          :EventAnalysisAndClassification ;
                 rdfs:comment "Incident-context enrichment via external CTI (Cyber Threat Intelligence), e.g., MISP IoC (Indicator of Compromise)."@en ;
                 rdfs:label "CTI Enrichment"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#cve_cwe_disclosure
+###  https://w3id.org/nis2onto-ops#cve_cwe_disclosure
 :cve_cwe_disclosure rdf:type owl:NamedIndividual ,
                              :VulnerabilityHandlingAndDisclosure ;
                     rdfs:comment "Reporting and disclosure of identified CVEs and their underlying CWEs."@en ;
                     rdfs:label "CVE/CWE Disclosure"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#cvgl_delay_replay
+###  https://w3id.org/nis2onto-ops#cvgl_delay_replay
 :cvgl_delay_replay rdf:type owl:NamedIndividual ,
                             :CAVCVGLAttack ;
                    rdfs:comment "Attack that replays delayed CVGL data to mislead the localization result."@en ;
                    rdfs:label "CVGL Delay Replay"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#cvgl_delay_replay_injection
+###  https://w3id.org/nis2onto-ops#cvgl_delay_replay_injection
 :cvgl_delay_replay_injection rdf:type owl:NamedIndividual ,
                                       :CAVCVGLAttack ,
                                       :InjectionAttack ;
@@ -1899,7 +1899,7 @@
                              rdfs:label "CVGL Delay Replay Injection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#cvgl_integrity_check
+###  https://w3id.org/nis2onto-ops#cvgl_integrity_check
 :cvgl_integrity_check rdf:type owl:NamedIndividual ,
                                :AnomalyDetection ,
                                :IntegrityVerification ;
@@ -1907,35 +1907,35 @@
                       rdfs:label "CVGL Integrity Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#cvgl_localisation_check
+###  https://w3id.org/nis2onto-ops#cvgl_localisation_check
 :cvgl_localisation_check rdf:type owl:NamedIndividual ,
                                   :CAVCVGLEvent ;
                          rdfs:comment "Event representing a check of the CVGL localization result."@en ;
                          rdfs:label "CVGL Localisation Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#cvgl_manipulation
+###  https://w3id.org/nis2onto-ops#cvgl_manipulation
 :cvgl_manipulation rdf:type owl:NamedIndividual ,
                             :CAVCVGLAttack ;
                    rdfs:comment "Attack that manipulates CVGL inputs or outputs to produce an incorrect localization."@en ;
                    rdfs:label "CVGL Manipulation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#dco_playbook_incident_response
+###  https://w3id.org/nis2onto-ops#dco_playbook_incident_response
 :dco_playbook_incident_response rdf:type owl:NamedIndividual ,
                                          :IncidentResponseProcedure ;
                                 rdfs:comment "Incident response carried out through execution of a DCO playbook."@en ;
                                 rdfs:label "DCO Playbook Incident Response"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#dependency_policy_scan
+###  https://w3id.org/nis2onto-ops#dependency_policy_scan
 :dependency_policy_scan rdf:type owl:NamedIndividual ,
                                  :PolicyBasedScan ;
                         rdfs:comment "Policy-based scan that checks software dependencies for policy compliance."@en ;
                         rdfs:label "Dependency Policy Scan"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#digital_signature_verification
+###  https://w3id.org/nis2onto-ops#digital_signature_verification
 :digital_signature_verification rdf:type owl:NamedIndividual ,
                                          :AuthenticationCheck ,
                                          :IntegrityVerification ;
@@ -1943,49 +1943,49 @@
                                 rdfs:label "Digital Signature Verification"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#docx_format
+###  https://w3id.org/nis2onto-ops#docx_format
 :docx_format rdf:type owl:NamedIndividual ,
                       :FileFormat ;
              rdfs:comment "Microsoft Word document format."@en ;
              rdfs:label "DOCX"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#domain_ioc_match
+###  https://w3id.org/nis2onto-ops#domain_ioc_match
 :domain_ioc_match rdf:type owl:NamedIndividual ,
                            :IOCMatching ;
                   rdfs:comment "IOC matching that compares observed domain names against known indicators of compromise."@en ;
                   rdfs:label "Domain IOC Match"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#eml_format
+###  https://w3id.org/nis2onto-ops#eml_format
 :eml_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Exported email message format."@en ;
             rdfs:label "EML"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#fail
+###  https://w3id.org/nis2onto-ops#fail
 :fail rdf:type owl:NamedIndividual ,
                :MonitoringOutcome ;
       rdfs:comment "Monitoring outcome indicating that the check failed."@en ;
       rdfs:label "Fail"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#gnss_check
+###  https://w3id.org/nis2onto-ops#gnss_check
 :gnss_check rdf:type owl:NamedIndividual ,
                      :CAVGNSSEvent ;
             rdfs:comment "Event representing a check of the CAV's GNSS receiver."@en ;
             rdfs:label "GNSS Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#gnss_jamming
+###  https://w3id.org/nis2onto-ops#gnss_jamming
 :gnss_jamming rdf:type owl:NamedIndividual ,
                        :CAVGNSSAttack ;
               rdfs:comment "Attack that jams GNSS signals to disrupt the CAV's positioning."@en ;
               rdfs:label "GNSS Jamming"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#gnss_jamming_injection
+###  https://w3id.org/nis2onto-ops#gnss_jamming_injection
 :gnss_jamming_injection rdf:type owl:NamedIndividual ,
                                  :CAVGNSSAttack ,
                                  :InjectionAttack ;
@@ -1993,21 +1993,21 @@
                         rdfs:label "GNSS Jamming Injection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#gnss_manipulation
+###  https://w3id.org/nis2onto-ops#gnss_manipulation
 :gnss_manipulation rdf:type owl:NamedIndividual ,
                             :CAVGNSSAttack ;
                    rdfs:comment "Attack that manipulates GNSS data to alter the CAV's perceived position."@en ;
                    rdfs:label "GNSS Manipulation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#gnss_spoofing
+###  https://w3id.org/nis2onto-ops#gnss_spoofing
 :gnss_spoofing rdf:type owl:NamedIndividual ,
                         :CAVGNSSAttack ;
                rdfs:comment "Attack that spoofs GNSS signals to feed the CAV false positioning data."@en ;
                rdfs:label "GNSS Spoofing"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#gnss_spoofing_injection
+###  https://w3id.org/nis2onto-ops#gnss_spoofing_injection
 :gnss_spoofing_injection rdf:type owl:NamedIndividual ,
                                   :CAVGNSSAttack ,
                                   :InjectionAttack ;
@@ -2015,7 +2015,7 @@
                          rdfs:label "GNSS Spoofing Injection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#hash_verification
+###  https://w3id.org/nis2onto-ops#hash_verification
 :hash_verification rdf:type owl:NamedIndividual ,
                             :IOCMatching ,
                             :IntegrityVerification ;
@@ -2023,35 +2023,35 @@
                    rdfs:label "Hash Verification"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#high_criticality
+###  https://w3id.org/nis2onto-ops#high_criticality
 :high_criticality rdf:type owl:NamedIndividual ,
                            :Criticality ;
                   rdfs:comment "Criticality level indicating the asset is important and its failure would have significant impact."@en ;
                   rdfs:label "High"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#high_severity
+###  https://w3id.org/nis2onto-ops#high_severity
 :high_severity rdf:type owl:NamedIndividual ,
                         :Severity ;
                rdfs:comment "Severity level indicating a serious issue requiring prompt attention."@en ;
                rdfs:label "High"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#iac_policy_scan
+###  https://w3id.org/nis2onto-ops#iac_policy_scan
 :iac_policy_scan rdf:type owl:NamedIndividual ,
                           :PolicyBasedScan ;
                  rdfs:comment "Policy-based scan that checks Infrastructure-as-Code definitions for policy compliance."@en ;
                  rdfs:label "IaC Policy Scan"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#image_perturbation
+###  https://w3id.org/nis2onto-ops#image_perturbation
 :image_perturbation rdf:type owl:NamedIndividual ,
                              :CAVCameraAttack ;
                     rdfs:comment "Attack that perturbs camera images to deceive perception algorithms."@en ;
                     rdfs:label "Image Perturbation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#image_perturbation_injection
+###  https://w3id.org/nis2onto-ops#image_perturbation_injection
 :image_perturbation_injection rdf:type owl:NamedIndividual ,
                                        :CAV2DSegmentationAIAttack ,
                                        :CAVCameraAttack ,
@@ -2060,63 +2060,63 @@
                               rdfs:label "Image Perturbation Injection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#image_stream_integrity_check
+###  https://w3id.org/nis2onto-ops#image_stream_integrity_check
 :image_stream_integrity_check rdf:type owl:NamedIndividual ,
                                        :CAVCameraEvent ;
                               rdfs:comment "Event representing an integrity check of the camera's image stream."@en ;
                               rdfs:label "Image Stream Integrity Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#inconclusive
+###  https://w3id.org/nis2onto-ops#inconclusive
 :inconclusive rdf:type owl:NamedIndividual ,
                        :MonitoringOutcome ;
               rdfs:comment "Monitoring outcome indicating that the check could not determine a definitive result."@en ;
               rdfs:label "Inconclusive"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#info_severity
+###  https://w3id.org/nis2onto-ops#info_severity
 :info_severity rdf:type owl:NamedIndividual ,
                         :Severity ;
                rdfs:comment "Severity level indicating informational significance with no immediate risk."@en ;
                rdfs:label "Info"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ip_ioc_match
+###  https://w3id.org/nis2onto-ops#ip_ioc_match
 :ip_ioc_match rdf:type owl:NamedIndividual ,
                        :IOCMatching ;
               rdfs:comment "IOC matching that compares observed IP addresses against known indicators of compromise."@en ;
               rdfs:label "IP IOC Match"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#jpeg_format
+###  https://w3id.org/nis2onto-ops#jpeg_format
 :jpeg_format rdf:type owl:NamedIndividual ,
                       :FileFormat ;
              rdfs:comment "JPEG image format."@en ;
              rdfs:label "JPEG"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#json_format
+###  https://w3id.org/nis2onto-ops#json_format
 :json_format rdf:type owl:NamedIndividual ,
                       :FileFormat ;
              rdfs:comment "JavaScript Object Notation format."@en ;
              rdfs:label "JSON"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ledger_attestation
+###  https://w3id.org/nis2onto-ops#ledger_attestation
 :ledger_attestation rdf:type owl:NamedIndividual ,
                              :IntegrityVerification ;
                     rdfs:comment "Assessment method that verifies integrity by checking a record's attestation on a ledger."@en ;
                     rdfs:label "Ledger Attestation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ledger_evidence_recording
+###  https://w3id.org/nis2onto-ops#ledger_evidence_recording
 :ledger_evidence_recording rdf:type owl:NamedIndividual ,
                                     :DataIntegrityAndTamperResistance ;
                            rdfs:comment "Data integrity maintained by recording evidence on a ledger."@en ;
                            rdfs:label "Ledger Evidence Recording"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#lidar_camera_cross_check
+###  https://w3id.org/nis2onto-ops#lidar_camera_cross_check
 :lidar_camera_cross_check rdf:type owl:NamedIndividual ,
                                    :AnomalyDetection ,
                                    :IntegrityVerification ;
@@ -2124,175 +2124,175 @@
                           rdfs:label "LiDAR-Camera Cross Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#log_correlation_rule
+###  https://w3id.org/nis2onto-ops#log_correlation_rule
 :log_correlation_rule rdf:type owl:NamedIndividual ,
                                :StreamPatternMatching ;
                       rdfs:comment "Stream pattern matching that correlates log entries against predefined rules."@en ;
                       rdfs:label "Log Correlation Rule"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#low_criticality
+###  https://w3id.org/nis2onto-ops#low_criticality
 :low_criticality rdf:type owl:NamedIndividual ,
                           :Criticality ;
                  rdfs:comment "Criticality level indicating the asset has limited impact if it fails."@en ;
                  rdfs:label "Low"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#low_severity
+###  https://w3id.org/nis2onto-ops#low_severity
 :low_severity rdf:type owl:NamedIndividual ,
                        :Severity ;
               rdfs:comment "Severity level indicating minor significance with limited impact."@en ;
               rdfs:label "Low"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_analyst_review
+###  https://w3id.org/nis2onto-ops#manual_analyst_review
 :manual_analyst_review rdf:type owl:NamedIndividual ,
                                 :ManualAssessment ;
                        rdfs:comment "Manual assessment performed by a human analyst reviewing evidence."@en ;
                        rdfs:label "Manual Analyst Review"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_assessment
+###  https://w3id.org/nis2onto-ops#manual_assessment
 :manual_assessment rdf:type owl:NamedIndividual ,
                             :ManualAssessment ;
                    rdfs:comment "Generic manual assessment performed by a human."@en ;
                    rdfs:label "Manual Assessment"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_code_review
+###  https://w3id.org/nis2onto-ops#manual_code_review
 :manual_code_review rdf:type owl:NamedIndividual ,
                              :ManualAssessment ;
                     rdfs:comment "Manual assessment involving human review of source code."@en ;
                     rdfs:label "Manual Code Review"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_document_review
+###  https://w3id.org/nis2onto-ops#manual_document_review
 :manual_document_review rdf:type owl:NamedIndividual ,
                                  :ManualAssessment ;
                         rdfs:comment "Manual assessment involving review of an uploaded document."@en ;
                         rdfs:label "Manual Document Review"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_forensic_investigation
+###  https://w3id.org/nis2onto-ops#manual_forensic_investigation
 :manual_forensic_investigation rdf:type owl:NamedIndividual ,
                                         :ManualAssessment ;
                                rdfs:comment "Manual assessment involving forensic investigation of an incident."@en ;
                                rdfs:label "Manual Forensic Investigation"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_penetration_test
+###  https://w3id.org/nis2onto-ops#manual_penetration_test
 :manual_penetration_test rdf:type owl:NamedIndividual ,
                                   :ManualAssessment ;
                          rdfs:comment "Manual assessment involving simulated attacks to identify exploitable weaknesses."@en ;
                          rdfs:label "Manual Penetration Test"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_physical_inspection
+###  https://w3id.org/nis2onto-ops#manual_physical_inspection
 :manual_physical_inspection rdf:type owl:NamedIndividual ,
                                      :ManualAssessment ;
                             rdfs:comment "Manual assessment involving physical inspection of an asset."@en ;
                             rdfs:label "Manual Physical Inspection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#manual_red_team_exercise
+###  https://w3id.org/nis2onto-ops#manual_red_team_exercise
 :manual_red_team_exercise rdf:type owl:NamedIndividual ,
                                    :ManualAssessment ;
                           rdfs:comment "Manual assessment involving an adversarial red team exercise."@en ;
                           rdfs:label "Manual Red Team Exercise"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#medium_criticality
+###  https://w3id.org/nis2onto-ops#medium_criticality
 :medium_criticality rdf:type owl:NamedIndividual ,
                              :Criticality ;
                     rdfs:comment "Criticality level indicating moderate impact if the asset fails."@en ;
                     rdfs:label "Medium"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#medium_severity
+###  https://w3id.org/nis2onto-ops#medium_severity
 :medium_severity rdf:type owl:NamedIndividual ,
                           :Severity ;
                  rdfs:comment "Severity level indicating moderate significance requiring attention."@en ;
                  rdfs:label "Medium"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#ml_perception_anomaly_detection
+###  https://w3id.org/nis2onto-ops#ml_perception_anomaly_detection
 :ml_perception_anomaly_detection rdf:type owl:NamedIndividual ,
                                           :AnomalyDetection ;
                                  rdfs:comment "Anomaly detection method using machine learning to detect abnormal perception outputs."@en ;
                                  rdfs:label "ML Perception Anomaly Detection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#n_a
+###  https://w3id.org/nis2onto-ops#n_a
 :n_a rdf:type owl:NamedIndividual ,
               :Criticality ;
      rdfs:comment "Criticality level indicating that a criticality classification does not apply."@en ;
      rdfs:label "N/A"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#needs_review
+###  https://w3id.org/nis2onto-ops#needs_review
 :needs_review rdf:type owl:NamedIndividual ,
                        :ControlStatus ;
               rdfs:comment "Status indicating evidence is present but ambiguous, stale, or borderline, and requires human review before a final status is assigned."@en ;
               rdfs:label "Needs Review"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#network_signature_match
+###  https://w3id.org/nis2onto-ops#network_signature_match
 :network_signature_match rdf:type owl:NamedIndividual ,
                                   :SignatureMatching ;
                          rdfs:comment "Signature matching that compares network traffic against known malicious signatures."@en ;
                          rdfs:label "Network Signature Match"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#not_assessed
+###  https://w3id.org/nis2onto-ops#not_assessed
 :not_assessed rdf:type owl:NamedIndividual ,
                        :ControlStatus ;
               rdfs:comment "Status indicating no evaluation has yet been performed and assessment is pending."@en ;
               rdfs:label "Not Assessed"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#not_compliant
+###  https://w3id.org/nis2onto-ops#not_compliant
 :not_compliant rdf:type owl:NamedIndividual ,
                         :ControlStatus ;
                rdfs:comment "Status indicating evidence or lack of evidence contradicts compliance."@en ;
                rdfs:label "Not Compliant"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#partially_compliant
+###  https://w3id.org/nis2onto-ops#partially_compliant
 :partially_compliant rdf:type owl:NamedIndividual ,
                               :ControlStatus ;
                      rdfs:comment "Status indicating evidence is present but is insufficient for full compliance."@en ;
                      rdfs:label "Partially Compliant"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#pass
+###  https://w3id.org/nis2onto-ops#pass
 :pass rdf:type owl:NamedIndividual ,
                :MonitoringOutcome ;
       rdfs:comment "Monitoring outcome indicating that the check passed successfully."@en ;
       rdfs:label "Pass"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#pdf_format
+###  https://w3id.org/nis2onto-ops#pdf_format
 :pdf_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Portable Document Format."@en ;
             rdfs:label "PDF"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#png_format
+###  https://w3id.org/nis2onto-ops#png_format
 :png_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Portable Network Graphics image format."@en ;
             rdfs:label "PNG"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#pptx_format
+###  https://w3id.org/nis2onto-ops#pptx_format
 :pptx_format rdf:type owl:NamedIndividual ,
                       :FileFormat ;
              rdfs:comment "Microsoft PowerPoint format."@en ;
              rdfs:label "PPTX"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#raim
+###  https://w3id.org/nis2onto-ops#raim
 :raim rdf:type owl:NamedIndividual ,
                :AnomalyDetection ,
                :IntegrityVerification ;
@@ -2300,7 +2300,7 @@
       rdfs:label "RAIM"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#risk_based_testing
+###  https://w3id.org/nis2onto-ops#risk_based_testing
 :risk_based_testing rdf:type owl:NamedIndividual ,
                              :ComplianceMonitoring ,
                              :VulnerabilityHandlingAndDisclosure ;
@@ -2308,77 +2308,77 @@
                     rdfs:label "Risk-Based Testing"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sast_policy_scan
+###  https://w3id.org/nis2onto-ops#sast_policy_scan
 :sast_policy_scan rdf:type owl:NamedIndividual ,
                            :PolicyBasedScan ;
                   rdfs:comment "Policy-based scan using Static Application Security Testing to check code for policy compliance."@en ;
                   rdfs:label "SAST Policy Scan"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#severity_classification
+###  https://w3id.org/nis2onto-ops#severity_classification
 :severity_classification rdf:type owl:NamedIndividual ,
                                   :EventAnalysisAndClassification ;
                          rdfs:comment "Analysis and classification carried out by scoring the severity of an identified incident, vulnerability, or weakness."@en ;
                          rdfs:label "Severity Classification"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha2_224
+###  https://w3id.org/nis2onto-ops#sha2_224
 :sha2_224 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-2 family hash algorithm that produces a 224-bit digest."@en ;
           rdfs:label "SHA2-224"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha2_256
+###  https://w3id.org/nis2onto-ops#sha2_256
 :sha2_256 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-2 family hash algorithm that produces a 256-bit digest."@en ;
           rdfs:label "SHA2-256"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha2_384
+###  https://w3id.org/nis2onto-ops#sha2_384
 :sha2_384 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-2 family hash algorithm that produces a 384-bit digest."@en ;
           rdfs:label "SHA2-384"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha2_512
+###  https://w3id.org/nis2onto-ops#sha2_512
 :sha2_512 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-2 family hash algorithm that produces a 512-bit digest."@en ;
           rdfs:label "SHA2-512"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha3_224
+###  https://w3id.org/nis2onto-ops#sha3_224
 :sha3_224 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-3 family hash algorithm that produces a 224-bit digest."@en ;
           rdfs:label "SHA3-224"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha3_256
+###  https://w3id.org/nis2onto-ops#sha3_256
 :sha3_256 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-3 family hash algorithm that produces a 256-bit digest."@en ;
           rdfs:label "SHA3-256"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha3_384
+###  https://w3id.org/nis2onto-ops#sha3_384
 :sha3_384 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-3 family hash algorithm that produces a 384-bit digest."@en ;
           rdfs:label "SHA3-384"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#sha3_512
+###  https://w3id.org/nis2onto-ops#sha3_512
 :sha3_512 rdf:type owl:NamedIndividual ,
                    :HashAlgorithm ;
           rdfs:comment "SHA-3 family hash algorithm that produces a 512-bit digest."@en ;
           rdfs:label "SHA3-512"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#software_dependency_risk_reporting
+###  https://w3id.org/nis2onto-ops#software_dependency_risk_reporting
 :software_dependency_risk_reporting rdf:type owl:NamedIndividual ,
                                              :SupplyChainSecurity ,
                                              :VulnerabilityHandlingAndDisclosure ;
@@ -2386,28 +2386,28 @@
                                     rdfs:label "Software Dependency Risk Reporting"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#statistical_outlier_detection
+###  https://w3id.org/nis2onto-ops#statistical_outlier_detection
 :statistical_outlier_detection rdf:type owl:NamedIndividual ,
                                         :AnomalyDetection ;
                                rdfs:comment "Anomaly detection method that flags statistical outliers in observed data."@en ;
                                rdfs:label "Statistical Outlier Detection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#teleop_api_call
+###  https://w3id.org/nis2onto-ops#teleop_api_call
 :teleop_api_call rdf:type owl:NamedIndividual ,
                           :CAVTeleoperationServiceEvent ;
                  rdfs:comment "Event representing a call to the teleoperation service API."@en ;
                  rdfs:label "Teleoperation API Call"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#teleop_api_unauth
+###  https://w3id.org/nis2onto-ops#teleop_api_unauth
 :teleop_api_unauth rdf:type owl:NamedIndividual ,
                             :CAVTeleoperationServiceAttack ;
                    rdfs:comment "Attack involving unauthorized access to the teleoperation service API."@en ;
                    rdfs:label "Teleoperation API Unauthorized Access"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#teleop_api_unauth_injection
+###  https://w3id.org/nis2onto-ops#teleop_api_unauth_injection
 :teleop_api_unauth_injection rdf:type owl:NamedIndividual ,
                                       :CAVTeleoperationServiceAttack ,
                                       :InjectionAttack ;
@@ -2415,49 +2415,49 @@
                              rdfs:label "Teleoperation API Unauthorized Injection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#teleop_auth_attempt
+###  https://w3id.org/nis2onto-ops#teleop_auth_attempt
 :teleop_auth_attempt rdf:type owl:NamedIndividual ,
                               :CAVTeleoperationServiceEvent ;
                      rdfs:comment "Event representing an authentication attempt against the teleoperation service."@en ;
                      rdfs:label "Teleoperation Authentication Attempt"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#teleoperation_latency_anomaly_detection
+###  https://w3id.org/nis2onto-ops#teleoperation_latency_anomaly_detection
 :teleoperation_latency_anomaly_detection rdf:type owl:NamedIndividual ,
                                                   :AnomalyDetection ;
                                          rdfs:comment "Anomaly detection method that flags abnormal latency in the teleoperation service."@en ;
                                          rdfs:label "Teleoperation Latency Anomaly Detection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#txt_format
+###  https://w3id.org/nis2onto-ops#txt_format
 :txt_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Plain text format."@en ;
             rdfs:label "TXT"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#v2x_message_check
+###  https://w3id.org/nis2onto-ops#v2x_message_check
 :v2x_message_check rdf:type owl:NamedIndividual ,
                             :CAVV2XCommunicationModuleEvent ;
                    rdfs:comment "Event representing a check of a received V2X message's validity."@en ;
                    rdfs:label "V2X Message Check"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#v2x_message_policy_rule
+###  https://w3id.org/nis2onto-ops#v2x_message_policy_rule
 :v2x_message_policy_rule rdf:type owl:NamedIndividual ,
                                   :StreamPatternMatching ;
                          rdfs:comment "Stream pattern matching that checks V2X messages against a predefined policy rule."@en ;
                          rdfs:label "V2X Message Policy Rule"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#v2x_message_spoofing
+###  https://w3id.org/nis2onto-ops#v2x_message_spoofing
 :v2x_message_spoofing rdf:type owl:NamedIndividual ,
                                :CAVV2XCommunicationModuleAttack ;
                       rdfs:comment "Attack that spoofs V2X messages to feed the CAV false information from other vehicles or infrastructure."@en ;
                       rdfs:label "V2X Message Spoofing"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#v2x_message_spoofing_injection
+###  https://w3id.org/nis2onto-ops#v2x_message_spoofing_injection
 :v2x_message_spoofing_injection rdf:type owl:NamedIndividual ,
                                          :CAVV2XCommunicationModuleAttack ,
                                          :InjectionAttack ;
@@ -2465,21 +2465,21 @@
                                 rdfs:label "V2X Message Spoofing Injection"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#xml_format
+###  https://w3id.org/nis2onto-ops#xml_format
 :xml_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Extensible Markup Language format."@en ;
             rdfs:label "XML"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#xslx_format
+###  https://w3id.org/nis2onto-ops#xslx_format
 :xslx_format rdf:type owl:NamedIndividual ,
                       :FileFormat ;
              rdfs:comment "Microsoft Excel spreadsheet format."@en ;
              rdfs:label "XLSX"@en .
 
 
-###  http://www.semanticweb.org/nis2onto-ops#zip_format
+###  https://w3id.org/nis2onto-ops#zip_format
 :zip_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Compressed archive format."@en ;
