@@ -457,6 +457,7 @@
 
 ###  https://w3id.org/nis2onto-ops#hasFileName
 :hasFileName rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
              rdfs:comment "File name string."@en ;
              rdfs:label "has file name"@en .
 
