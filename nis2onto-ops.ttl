@@ -326,6 +326,22 @@
                   rdfs:label "recorded on ledger"@en .
 
 
+###  https://w3id.org/nis2onto-ops#recordsAttackTactic
+:recordsAttackTactic rdf:type owl:ObjectProperty ;
+                     rdfs:domain :EvidenceRecord ;
+                     rdfs:range :AttackTactic ;
+                     rdfs:comment "Evidence record documents an attack tactic from MITRE ATT&CK knowledge base."@en ;
+                     rdfs:label "records attack tactic"@en .
+
+
+###  https://w3id.org/nis2onto-ops#recordsAttackTechnique
+:recordsAttackTechnique rdf:type owl:ObjectProperty ;
+                        rdfs:domain :EvidenceRecord ;
+                        rdfs:range :AttackTechnique ;
+                        rdfs:comment "Evidence record documents an attack technique from MITRE ATT&CK knowledge base."@en ;
+                        rdfs:label "records attack technique"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#recordsDocument
 :recordsDocument rdf:type owl:ObjectProperty ;
                  rdfs:domain :EvidenceRecord ;
@@ -653,7 +669,7 @@
 
 ###  https://w3id.org/nis2onto-ops#AttackEvidenceRecord
 :AttackEvidenceRecord rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( :EventEvidenceRecord
+                      owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :recordsEvent ;
                                                                    owl:someValuesFrom :Attack
@@ -832,6 +848,13 @@
                  rdfs:label "CAV GNSS Receiver"@en .
 
 
+###  https://w3id.org/nis2onto-ops#CAVIMU
+:CAVIMU rdf:type owl:Class ;
+        rdfs:subClassOf :CAVSensor ;
+        rdfs:comment "Connected & Autonomous Vehicle Inertial Measurement Unit."@en ;
+        rdfs:label "CAV IMU"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#CAVLiDAR
 :CAVLiDAR rdf:type owl:Class ;
           rdfs:subClassOf :CAVSensor ;
@@ -839,11 +862,54 @@
           rdfs:label "CAV LiDAR"@en .
 
 
+###  https://w3id.org/nis2onto-ops#CAVLiDARAttack
+:CAVLiDARAttack rdf:type owl:Class ;
+                rdfs:subClassOf :CAVAttack ;
+                rdfs:comment "Attack targeting a CAV LiDAR sensor."@en ;
+                rdfs:label "CAV LiDAR Attack"@en .
+
+
+###  https://w3id.org/nis2onto-ops#CAVLiDAREvent
+:CAVLiDAREvent rdf:type owl:Class ;
+               rdfs:subClassOf :CAVEvent ;
+               rdfs:comment "Event related to a CAV LiDAR sensor."@en ;
+               rdfs:label "CAV LiDAR Event"@en .
+
+
+###  https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIAttack
+:CAVLiDARSegmentationAIAttack rdf:type owl:Class ;
+                              rdfs:subClassOf :CAVAttack ;
+                              rdfs:comment "Attack that targets or degrades the CAV's LiDAR segmentation AI module."@en ;
+                              rdfs:label "CAV LiDAR Segmentation AI Attack"@en .
+
+
+###  https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIEvent
+:CAVLiDARSegmentationAIEvent rdf:type owl:Class ;
+                             rdfs:subClassOf :CAVEvent ;
+                             rdfs:comment "Event related to the operation or output of the CAV's LiDAR segmentation AI module."@en ;
+                             rdfs:label "CAV LiDAR Segmentation AI Event"@en .
+
+
+###  https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIModule
+:CAVLiDARSegmentationAIModule rdf:type owl:Class ;
+                              rdfs:subClassOf :CAVSoftwareModule ;
+                              rdfs:comment "Connected & Autonomous Vehicle LiDAR segmentation AI module."@en ;
+                              rdfs:label "CAV LiDAR Segmentation AI Module"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#CAVOBU
 :CAVOBU rdf:type owl:Class ;
         rdfs:subClassOf :CAVAsset ;
         rdfs:comment "Connected & Autonomous Vehicle On-Board Unit for toll payments, traffic updates, and connections to other cars or smart roads (V2X)."@en ;
         rdfs:label "CAV OBU"@en .
+
+
+###  https://w3id.org/nis2onto-ops#CAVOnboardComputer
+:CAVOnboardComputer rdf:type owl:Class ;
+                    rdfs:subClassOf :CAVAsset ,
+                                    :ComputeHost ;
+                    rdfs:comment "Connected & Autonomous Vehicle onboard compute host."@en ;
+                    rdfs:label "CAV Onboard Computer"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#CAVRSU
@@ -944,6 +1010,27 @@
                                 rdfs:label "CAV V2X Communication Module Event"@en .
 
 
+###  https://w3id.org/nis2onto-ops#CTIEnrichedEvidenceRecord
+:CTIEnrichedEvidenceRecord rdf:type owl:Class ;
+                           rdfs:subClassOf :EvidenceRecord ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :producedBy ;
+                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( :MISP
+                                                                                :Snyk
+                                                                                :Suricata
+                                                                                :Wazuh
+                                                                              )
+                                                                ]
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :supportsControlTheme ;
+                                             owl:hasValue :cti_enrichment
+                                           ] ;
+                           rdfs:comment "Evidence record enriched by external CTI (Cyber Threat Intelligence)."@en ;
+                           rdfs:label "CTI-Enriched Evidence Record"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#CVE
 :CVE rdf:type owl:Class ;
      rdfs:subClassOf :SecurityCatalogReference ;
@@ -978,6 +1065,13 @@
                 rdfs:subClassOf :SecurityCatalogReference ;
                 rdfs:comment "Rule used to derive a control compliance ruling."@en ;
                 rdfs:label "Compliance Rule"@en .
+
+
+###  https://w3id.org/nis2onto-ops#ComputeHost
+:ComputeHost rdf:type owl:Class ;
+             rdfs:subClassOf :ITAsset ;
+             rdfs:comment "A physical or virtual machine that hosts software assets."@en ;
+             rdfs:label "Compute Host"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#ControlGovernance
@@ -1087,6 +1181,13 @@
              rdfs:subClassOf :SecurityCatalogReference ;
              rdfs:comment "Defensive Cyber Operations playbook describing a predefined incident-response procedure."@en ;
              rdfs:label "DCO Playbook"@en .
+
+
+###  https://w3id.org/nis2onto-ops#DataAsset
+:DataAsset rdf:type owl:Class ;
+           rdfs:subClassOf :ITAsset ;
+           rdfs:label "Data Asset"@en ,
+                      "Stored data asset."@en .
 
 
 ###  https://w3id.org/nis2onto-ops#DataIntegrityAndTamperResistance
@@ -1567,6 +1668,28 @@
           rdfs:label "Suricata"@en .
 
 
+###  https://w3id.org/nis2onto-ops#ThreatEvidenceRecord
+:ThreatEvidenceRecord rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
+                                                                 [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :recordsAttackTactic ;
+                                                                                   owl:someValuesFrom :AttackTactic
+                                                                                 ]
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :recordsAttackTechnique ;
+                                                                                   owl:someValuesFrom :AttackTechnique
+                                                                                 ]
+                                                                               )
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf :CTIEnrichedEvidenceRecord ;
+                      rdfs:comment "Evidence record documenting an attack tactic or technique from the MITRE ATT&CK knowledge base."@en ;
+                      rdfs:label "Threat Evidence Record"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#VulnerabilityEvidenceRecord
 :VulnerabilityEvidenceRecord rdf:type owl:Class ;
                              owl:equivalentClass [ owl:intersectionOf ( :EvidenceRecord
@@ -1584,12 +1707,12 @@
                                                                       ) ;
                                                    rdf:type owl:Class
                                                  ] ;
-                             rdfs:subClassOf :EvidenceRecord ,
+                             rdfs:subClassOf :CTIEnrichedEvidenceRecord ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty :supportsControlTheme ;
                                                owl:hasValue :cve_cwe_disclosure
                                              ] ;
-                             rdfs:comment "Evidence record documenting a vulnerability from a CVE."@en ;
+                             rdfs:comment "Evidence record documenting a vulnerability/weakness from a CVE/CWE."@en ;
                              rdfs:label "Vulnerability Evidence Record"@en .
 
 
@@ -1885,6 +2008,55 @@
                     rdfs:label "CVE/CWE Disclosure"@en .
 
 
+###  https://w3id.org/nis2onto-ops#cvgl_auth_attempt
+:cvgl_auth_attempt rdf:type owl:NamedIndividual ,
+                            :CAVCVGLEvent ;
+                   rdfs:comment "Event representing an authentication or access attempt against the CVGL correction service."@en ;
+                   rdfs:label "CVGL Authentication Attempt"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_availability_check
+:cvgl_availability_check rdf:type owl:NamedIndividual ,
+                                  :CAVCVGLEvent ;
+                         rdfs:comment "Event representing a check of whether the CVGL correction service is answering, and of its request rate, response latency, error rate and resource use."@en ;
+                         rdfs:label "CVGL Availability Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_availability_monitoring
+:cvgl_availability_monitoring rdf:type owl:NamedIndividual ,
+                                       :AnomalyDetection ;
+                              rdfs:comment "Monitors the CVGL correction service's request rate, response latency, error rate and resource use against its normal operating envelope, including whether it answered at all."@en ;
+                              rdfs:label "CVGL Availability Monitoring"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_config_data_poisoning
+:cvgl_config_data_poisoning rdf:type owl:NamedIndividual ,
+                                     :CAVCVGLAttack ;
+                            rdfs:comment "Attack that poisons the cached satellite reference tiles the CVGL service matches ground imagery against."@en ;
+                            rdfs:label "CVGL Config Data Poisoning"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_config_integrity_check
+:cvgl_config_integrity_check rdf:type owl:NamedIndividual ,
+                                      :CAVCVGLEvent ;
+                             rdfs:comment "Event representing a fingerprint recheck of the CVGL service's configuration files and stored reference data."@en ;
+                             rdfs:label "CVGL Configuration Integrity Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_config_tampering
+:cvgl_config_tampering rdf:type owl:NamedIndividual ,
+                                :CAVCVGLAttack ;
+                       rdfs:comment "Attack that modifies the CVGL service's configuration so that corrections are computed differently."@en ;
+                       rdfs:label "CVGL Configuration Tampering"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_correction_envelope_check
+:cvgl_correction_envelope_check rdf:type owl:NamedIndividual ,
+                                         :CAVCVGLEvent ;
+                                rdfs:comment "Event representing a check of whether a CVGL correction falls inside the residual envelope the service was validated for."@en ;
+                                rdfs:label "CVGL Correction Envelope Check"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#cvgl_delay_replay
 :cvgl_delay_replay rdf:type owl:NamedIndividual ,
                             :CAVCVGLAttack ;
@@ -1898,6 +2070,13 @@
                                       :InjectionAttack ;
                              rdfs:comment "Injection attack that feeds delayed, replayed data into the CVGL service."@en ;
                              rdfs:label "CVGL Delay Replay Injection"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_dos
+:cvgl_dos rdf:type owl:NamedIndividual ,
+                   :CAVCVGLAttack ;
+          rdfs:comment "Attack that floods the CVGL correction service or the path to it so that corrections time out for the vehicles relying on it."@en ;
+          rdfs:label "CVGL Denial of Service"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#cvgl_integrity_check
@@ -1922,11 +2101,34 @@
                    rdfs:label "CVGL Manipulation"@en .
 
 
+###  https://w3id.org/nis2onto-ops#cvgl_unauth
+:cvgl_unauth rdf:type owl:NamedIndividual ,
+                      :CAVCVGLAttack ;
+             rdfs:comment "Attack involving unauthorized access to the CVGL correction service or its host."@en ;
+             rdfs:label "CVGL Unauthorized Access"@en .
+
+
+###  https://w3id.org/nis2onto-ops#cvgl_unauth_injection
+:cvgl_unauth_injection rdf:type owl:NamedIndividual ,
+                                :CAVCVGLAttack ,
+                                :InjectionAttack ;
+                       rdfs:comment "Injection attack that performs unauthorized access against the CVGL correction service as part of a scripted penetration test."@en ;
+                       rdfs:label "CVGL Unauthorized Injection"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#dco_playbook_incident_response
 :dco_playbook_incident_response rdf:type owl:NamedIndividual ,
                                          :IncidentResponseProcedure ;
                                 rdfs:comment "Incident response carried out through execution of a DCO playbook."@en ;
                                 rdfs:label "DCO Playbook Incident Response"@en .
+
+
+###  https://w3id.org/nis2onto-ops#dead_reckoning_cross_validation
+:dead_reckoning_cross_validation rdf:type owl:NamedIndividual ,
+                                          :AnomalyDetection ,
+                                          :IntegrityVerification ;
+                                 rdfs:comment "Cross-validates a raw GNSS fix, a motion-propagated dead-reckoning estimate and a returned CVGL correction, to determine whether the corrected position can be trusted."@en ;
+                                 rdfs:label "Dead Reckoning Cross Validation"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#dependency_policy_scan
@@ -1970,6 +2172,13 @@
                :MonitoringOutcome ;
       rdfs:comment "Monitoring outcome indicating that the check failed."@en ;
       rdfs:label "Fail"@en .
+
+
+###  https://w3id.org/nis2onto-ops#file_integrity_monitoring
+:file_integrity_monitoring rdf:type owl:NamedIndividual ,
+                                    :IntegrityVerification ;
+                           rdfs:comment "Rechecks a file, configuration or stored dataset against a previously recorded baseline fingerprint."@en ;
+                           rdfs:label "File Integrity Monitoring"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#gnss_check
@@ -2022,6 +2231,14 @@
                             :IntegrityVerification ;
                    rdfs:comment "Assessment method that verifies data integrity by comparing hash digests."@en ;
                    rdfs:label "Hash Verification"@en .
+
+
+###  https://w3id.org/nis2onto-ops#hd_map_consistency_verification
+:hd_map_consistency_verification rdf:type owl:NamedIndividual ,
+                                          :AnomalyDetection ,
+                                          :IntegrityVerification ;
+                                 rdfs:comment "Compares segmented structural classes against the HD map, to separate a manipulated perception result from a genuine change in the environment."@en ;
+                                 rdfs:label "HD Map Consistency Verification"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#high_criticality
@@ -2125,6 +2342,34 @@
                           rdfs:label "LiDAR-Camera Cross Check"@en .
 
 
+###  https://w3id.org/nis2onto-ops#lidar_model_integrity_check
+:lidar_model_integrity_check rdf:type owl:NamedIndividual ,
+                                      :CAVLiDARSegmentationAIEvent ;
+                             rdfs:comment "Event representing a fingerprint recheck of a LiDAR segmentation model's weights and configuration."@en ;
+                             rdfs:label "LiDAR Model Integrity Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#lidar_segmentation_check
+:lidar_segmentation_check rdf:type owl:NamedIndividual ,
+                                   :CAVLiDARSegmentationAIEvent ;
+                          rdfs:comment "Event representing a check of the LiDAR segmentation model's output, against an independently trained reference model or against the HD map."@en ;
+                          rdfs:label "LiDAR Segmentation Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#lidar_segmentation_degradation
+:lidar_segmentation_degradation rdf:type owl:NamedIndividual ,
+                                         :CAVLiDARSegmentationAIAttack ;
+                                rdfs:comment "Attack that degrades the accuracy of the LiDAR segmentation module."@en ;
+                                rdfs:label "LiDAR Segmentation Degradation"@en .
+
+
+###  https://w3id.org/nis2onto-ops#lidar_segmentation_model_tampering
+:lidar_segmentation_model_tampering rdf:type owl:NamedIndividual ,
+                                             :CAVLiDARSegmentationAIAttack ;
+                                    rdfs:comment "Attack that alters a LiDAR segmentation model's weights or configuration."@en ;
+                                    rdfs:label "LiDAR Segmentation Model Tampering"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#log_correlation_rule
 :log_correlation_rule rdf:type owl:NamedIndividual ,
                                :StreamPatternMatching ;
@@ -2144,6 +2389,13 @@
                        :Severity ;
               rdfs:comment "Severity level indicating minor significance with limited impact."@en ;
               rdfs:label "Low"@en .
+
+
+###  https://w3id.org/nis2onto-ops#maintenance_window_policy_scan
+:maintenance_window_policy_scan rdf:type owl:NamedIndividual ,
+                                         :PolicyBasedScan ;
+                                rdfs:comment "Checks whether an access to a service occurred inside a declared maintenance window."@en ;
+                                rdfs:label "Maintenance Window Policy Scan"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#manual_analyst_review
@@ -2279,11 +2531,41 @@
             rdfs:label "PDF"@en .
 
 
+###  https://w3id.org/nis2onto-ops#perception_model_cross_validation
+:perception_model_cross_validation rdf:type owl:NamedIndividual ,
+                                            :AnomalyDetection ,
+                                            :IntegrityVerification ;
+                                   rdfs:comment "Compares a primary perception model's output against that of an independently trained reference model run on the same input."@en ;
+                                   rdfs:label "Perception Model Cross Validation"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#png_format
 :png_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Portable Network Graphics image format."@en ;
             rdfs:label "PNG"@en .
+
+
+###  https://w3id.org/nis2onto-ops#point_cloud_integrity_check
+:point_cloud_integrity_check rdf:type owl:NamedIndividual ,
+                                      :CAVLiDAREvent ;
+                             rdfs:comment "Event representing an integrity check of the LiDAR point cloud stream."@en ;
+                             rdfs:label "Point Cloud Integrity Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#point_cloud_perturbation
+:point_cloud_perturbation rdf:type owl:NamedIndividual ,
+                                   :CAVLiDARAttack ;
+                          rdfs:comment "Attack that perturbs LiDAR points to deceive segmentation."@en ;
+                          rdfs:label "Point Cloud Perturbation"@en .
+
+
+###  https://w3id.org/nis2onto-ops#point_cloud_perturbation_injection
+:point_cloud_perturbation_injection rdf:type owl:NamedIndividual ,
+                                             :CAVLiDARAttack ,
+                                             :InjectionAttack ;
+                                    rdfs:comment "Injection attack that introduces adversarially perturbed point-cloud data to mislead the LiDAR segmentation module."@en ;
+                                    rdfs:label "Point Cloud Perturbation Injection"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#pptx_format
@@ -2401,6 +2683,13 @@
                  rdfs:label "Teleoperation API Call"@en .
 
 
+###  https://w3id.org/nis2onto-ops#teleop_api_dos
+:teleop_api_dos rdf:type owl:NamedIndividual ,
+                         :CAVTeleoperationServiceAttack ;
+                rdfs:comment "Attack that floods the teleoperation API until it stops answering or becomes too slow to be usable."@en ;
+                rdfs:label "Teleoperation API Denial of Service"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#teleop_api_unauth
 :teleop_api_unauth rdf:type owl:NamedIndividual ,
                             :CAVTeleoperationServiceAttack ;
@@ -2423,11 +2712,32 @@
                      rdfs:label "Teleoperation Authentication Attempt"@en .
 
 
-###  https://w3id.org/nis2onto-ops#teleoperation_latency_anomaly_detection
-:teleoperation_latency_anomaly_detection rdf:type owl:NamedIndividual ,
-                                                  :AnomalyDetection ;
-                                         rdfs:comment "Anomaly detection method that flags abnormal latency in the teleoperation service."@en ;
-                                         rdfs:label "Teleoperation Latency Anomaly Detection"@en .
+###  https://w3id.org/nis2onto-ops#teleop_availability_check
+:teleop_availability_check rdf:type owl:NamedIndividual ,
+                                    :CAVTeleoperationServiceEvent ;
+                           rdfs:comment "Event representing a check of the teleoperation service's request volume, response time, error rate and resource use."@en ;
+                           rdfs:label "Teleoperation Availability Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#teleop_config_integrity_check
+:teleop_config_integrity_check rdf:type owl:NamedIndividual ,
+                                        :CAVTeleoperationServiceEvent ;
+                               rdfs:comment "Event representing a fingerprint recheck of the teleoperation API's settings and session configuration."@en ;
+                               rdfs:label "Teleoperation Configuration Integrity Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#teleop_config_tampering
+:teleop_config_tampering rdf:type owl:NamedIndividual ,
+                                  :CAVTeleoperationServiceAttack ;
+                         rdfs:comment "Attack that modifies the teleoperation API's settings or session configuration."@en ;
+                         rdfs:label "Teleoperation Configuration Tampering"@en .
+
+
+###  https://w3id.org/nis2onto-ops#teleop_latency_anomaly_detection
+:teleop_latency_anomaly_detection rdf:type owl:NamedIndividual ,
+                                           :AnomalyDetection ;
+                                  rdfs:comment "Anomaly detection method that flags abnormal latency in the teleoperation service."@en ;
+                                  rdfs:label "Teleoperation Latency Anomaly Detection"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#txt_format
@@ -2466,18 +2776,25 @@
                                 rdfs:label "V2X Message Spoofing Injection"@en .
 
 
+###  https://w3id.org/nis2onto-ops#vehicle_positioning_check
+:vehicle_positioning_check rdf:type owl:NamedIndividual ,
+                                    :CAVEvent ;
+                           rdfs:comment "Event representing a check of whether the vehicle still holds a trusted positioning reference from any of its sources."@en ;
+                           rdfs:label "Vehicle Positioning Check"@en .
+
+
+###  https://w3id.org/nis2onto-ops#xlsx_format
+:xlsx_format rdf:type owl:NamedIndividual ,
+                      :FileFormat ;
+             rdfs:comment "Microsoft Excel spreadsheet format."@en ;
+             rdfs:label "XLSX"@en .
+
+
 ###  https://w3id.org/nis2onto-ops#xml_format
 :xml_format rdf:type owl:NamedIndividual ,
                      :FileFormat ;
             rdfs:comment "Extensible Markup Language format."@en ;
             rdfs:label "XML"@en .
-
-
-###  https://w3id.org/nis2onto-ops#xslx_format
-:xslx_format rdf:type owl:NamedIndividual ,
-                      :FileFormat ;
-             rdfs:comment "Microsoft Excel spreadsheet format."@en ;
-             rdfs:label "XLSX"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#zip_format

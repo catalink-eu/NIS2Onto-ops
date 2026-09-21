@@ -120,10 +120,31 @@
         <Class IRI="#CAVGNSSReceiver"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CAVIMU"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CAVLiDAR"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CAVLiDARAttack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CAVLiDAREvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CAVLiDARSegmentationAIAttack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CAVLiDARSegmentationAIEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CAVLiDARSegmentationAIModule"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CAVOBU"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CAVOnboardComputer"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CAVRSU"/>
@@ -168,6 +189,9 @@
         <Class IRI="#CAVV2XCommunicationModuleEvent"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CTIEnrichedEvidenceRecord"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CVE"/>
     </Declaration>
     <Declaration>
@@ -178,6 +202,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#ComplianceRule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComputeHost"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ControlGovernance"/>
@@ -208,6 +235,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DCOPlaybook"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataAsset"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DataIntegrityAndTamperResistance"/>
@@ -342,6 +372,9 @@
         <Class IRI="#Suricata"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ThreatEvidenceRecord"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#VulnerabilityEvidenceRecord"/>
     </Declaration>
     <Declaration>
@@ -460,6 +493,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#recordedOnLedger"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recordsAttackTactic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recordsAttackTechnique"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#recordsDocument"/>
@@ -642,10 +681,34 @@
         <NamedIndividual IRI="#cve_cwe_disclosure"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#cvgl_auth_attempt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_availability_check"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_availability_monitoring"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_config_data_poisoning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_config_integrity_check"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_config_tampering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_correction_envelope_check"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#cvgl_delay_replay"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#cvgl_delay_replay_injection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_dos"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#cvgl_integrity_check"/>
@@ -657,7 +720,16 @@
         <NamedIndividual IRI="#cvgl_manipulation"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#cvgl_unauth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_unauth_injection"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#dco_playbook_incident_response"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dead_reckoning_cross_validation"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#dependency_policy_scan"/>
@@ -676,6 +748,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#fail"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#file_integrity_monitoring"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#gnss_check"/>
@@ -697,6 +772,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#hash_verification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hd_map_consistency_verification"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#high_criticality"/>
@@ -741,6 +819,18 @@
         <NamedIndividual IRI="#lidar_camera_cross_check"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#lidar_model_integrity_check"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lidar_segmentation_check"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lidar_segmentation_degradation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lidar_segmentation_model_tampering"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#log_correlation_rule"/>
     </Declaration>
     <Declaration>
@@ -748,6 +838,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#low_severity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maintenance_window_policy_scan"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#manual_analyst_review"/>
@@ -807,7 +900,19 @@
         <NamedIndividual IRI="#pdf_format"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#perception_model_cross_validation"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#png_format"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#point_cloud_integrity_check"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#point_cloud_perturbation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#point_cloud_perturbation_injection"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#pptx_format"/>
@@ -858,6 +963,9 @@
         <NamedIndividual IRI="#teleop_api_call"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#teleop_api_dos"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#teleop_api_unauth"/>
     </Declaration>
     <Declaration>
@@ -867,7 +975,16 @@
         <NamedIndividual IRI="#teleop_auth_attempt"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#teleoperation_latency_anomaly_detection"/>
+        <NamedIndividual IRI="#teleop_availability_check"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teleop_config_integrity_check"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teleop_config_tampering"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#teleop_latency_anomaly_detection"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#txt_format"/>
@@ -885,10 +1002,13 @@
         <NamedIndividual IRI="#v2x_message_spoofing_injection"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#xml_format"/>
+        <NamedIndividual IRI="#vehicle_positioning_check"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#xslx_format"/>
+        <NamedIndividual IRI="#xlsx_format"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xml_format"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#zip_format"/>
@@ -920,7 +1040,7 @@
     <EquivalentClasses>
         <Class IRI="#AttackEvidenceRecord"/>
         <ObjectIntersectionOf>
-            <Class IRI="#EventEvidenceRecord"/>
+            <Class IRI="#EvidenceRecord"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#recordsEvent"/>
                 <Class IRI="#Attack"/>
@@ -993,6 +1113,22 @@
                 <ObjectProperty IRI="#hasPostureScore"/>
                 <Class IRI="#PostureScore"/>
             </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ThreatEvidenceRecord"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#EvidenceRecord"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#recordsAttackTactic"/>
+                    <Class IRI="#AttackTactic"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#recordsAttackTechnique"/>
+                    <Class IRI="#AttackTechnique"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -1199,12 +1335,44 @@
         <Class IRI="#CAVSensor"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CAVIMU"/>
+        <Class IRI="#CAVSensor"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CAVLiDAR"/>
         <Class IRI="#CAVSensor"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CAVLiDARAttack"/>
+        <Class IRI="#CAVAttack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CAVLiDAREvent"/>
+        <Class IRI="#CAVEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CAVLiDARSegmentationAIAttack"/>
+        <Class IRI="#CAVAttack"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CAVLiDARSegmentationAIEvent"/>
+        <Class IRI="#CAVEvent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CAVLiDARSegmentationAIModule"/>
+        <Class IRI="#CAVSoftwareModule"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CAVOBU"/>
         <Class IRI="#CAVAsset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CAVOnboardComputer"/>
+        <Class IRI="#CAVAsset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CAVOnboardComputer"/>
+        <Class IRI="#ComputeHost"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CAVRSU"/>
@@ -1263,6 +1431,29 @@
         <Class IRI="#CAVEvent"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CTIEnrichedEvidenceRecord"/>
+        <Class IRI="#EvidenceRecord"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CTIEnrichedEvidenceRecord"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#producedBy"/>
+            <ObjectUnionOf>
+                <Class IRI="#MISP"/>
+                <Class IRI="#Snyk"/>
+                <Class IRI="#Suricata"/>
+                <Class IRI="#Wazuh"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CTIEnrichedEvidenceRecord"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#supportsControlTheme"/>
+            <NamedIndividual IRI="#cti_enrichment"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CVE"/>
         <Class IRI="#SecurityCatalogReference"/>
     </SubClassOf>
@@ -1291,6 +1482,10 @@
     <SubClassOf>
         <Class IRI="#ComplianceRule"/>
         <Class IRI="#SecurityCatalogReference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComputeHost"/>
+        <Class IRI="#ITAsset"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ControlRuling"/>
@@ -1397,6 +1592,10 @@
     <SubClassOf>
         <Class IRI="#DCOPlaybook"/>
         <Class IRI="#SecurityCatalogReference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataAsset"/>
+        <Class IRI="#ITAsset"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DataIntegrityAndTamperResistance"/>
@@ -1772,8 +1971,12 @@
         <Class IRI="#CybersecuritySoftwareApplication"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ThreatEvidenceRecord"/>
+        <Class IRI="#CTIEnrichedEvidenceRecord"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#VulnerabilityEvidenceRecord"/>
-        <Class IRI="#EvidenceRecord"/>
+        <Class IRI="#CTIEnrichedEvidenceRecord"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#VulnerabilityEvidenceRecord"/>
@@ -1957,6 +2160,34 @@
         <NamedIndividual IRI="#cve_cwe_disclosure"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CAVCVGLEvent"/>
+        <NamedIndividual IRI="#cvgl_auth_attempt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLEvent"/>
+        <NamedIndividual IRI="#cvgl_availability_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AnomalyDetection"/>
+        <NamedIndividual IRI="#cvgl_availability_monitoring"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLAttack"/>
+        <NamedIndividual IRI="#cvgl_config_data_poisoning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLEvent"/>
+        <NamedIndividual IRI="#cvgl_config_integrity_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLAttack"/>
+        <NamedIndividual IRI="#cvgl_config_tampering"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLEvent"/>
+        <NamedIndividual IRI="#cvgl_correction_envelope_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#CAVCVGLAttack"/>
         <NamedIndividual IRI="#cvgl_delay_replay"/>
     </ClassAssertion>
@@ -1967,6 +2198,10 @@
     <ClassAssertion>
         <Class IRI="#InjectionAttack"/>
         <NamedIndividual IRI="#cvgl_delay_replay_injection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLAttack"/>
+        <NamedIndividual IRI="#cvgl_dos"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#AnomalyDetection"/>
@@ -1985,8 +2220,28 @@
         <NamedIndividual IRI="#cvgl_manipulation"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CAVCVGLAttack"/>
+        <NamedIndividual IRI="#cvgl_unauth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLAttack"/>
+        <NamedIndividual IRI="#cvgl_unauth_injection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InjectionAttack"/>
+        <NamedIndividual IRI="#cvgl_unauth_injection"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#IncidentResponseProcedure"/>
         <NamedIndividual IRI="#dco_playbook_incident_response"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AnomalyDetection"/>
+        <NamedIndividual IRI="#dead_reckoning_cross_validation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegrityVerification"/>
+        <NamedIndividual IRI="#dead_reckoning_cross_validation"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PolicyBasedScan"/>
@@ -2015,6 +2270,10 @@
     <ClassAssertion>
         <Class IRI="#MonitoringOutcome"/>
         <NamedIndividual IRI="#fail"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegrityVerification"/>
+        <NamedIndividual IRI="#file_integrity_monitoring"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVGNSSEvent"/>
@@ -2055,6 +2314,14 @@
     <ClassAssertion>
         <Class IRI="#IntegrityVerification"/>
         <NamedIndividual IRI="#hash_verification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AnomalyDetection"/>
+        <NamedIndividual IRI="#hd_map_consistency_verification"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegrityVerification"/>
+        <NamedIndividual IRI="#hd_map_consistency_verification"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Criticality"/>
@@ -2125,6 +2392,22 @@
         <NamedIndividual IRI="#lidar_camera_cross_check"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CAVLiDARSegmentationAIEvent"/>
+        <NamedIndividual IRI="#lidar_model_integrity_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVLiDARSegmentationAIEvent"/>
+        <NamedIndividual IRI="#lidar_segmentation_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVLiDARSegmentationAIAttack"/>
+        <NamedIndividual IRI="#lidar_segmentation_degradation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVLiDARSegmentationAIAttack"/>
+        <NamedIndividual IRI="#lidar_segmentation_model_tampering"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#StreamPatternMatching"/>
         <NamedIndividual IRI="#log_correlation_rule"/>
     </ClassAssertion>
@@ -2135,6 +2418,10 @@
     <ClassAssertion>
         <Class IRI="#Severity"/>
         <NamedIndividual IRI="#low_severity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PolicyBasedScan"/>
+        <NamedIndividual IRI="#maintenance_window_policy_scan"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#ManualAssessment"/>
@@ -2213,8 +2500,32 @@
         <NamedIndividual IRI="#pdf_format"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#AnomalyDetection"/>
+        <NamedIndividual IRI="#perception_model_cross_validation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegrityVerification"/>
+        <NamedIndividual IRI="#perception_model_cross_validation"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#FileFormat"/>
         <NamedIndividual IRI="#png_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVLiDAREvent"/>
+        <NamedIndividual IRI="#point_cloud_integrity_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVLiDARAttack"/>
+        <NamedIndividual IRI="#point_cloud_perturbation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVLiDARAttack"/>
+        <NamedIndividual IRI="#point_cloud_perturbation_injection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InjectionAttack"/>
+        <NamedIndividual IRI="#point_cloud_perturbation_injection"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
@@ -2294,6 +2605,10 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVTeleoperationServiceAttack"/>
+        <NamedIndividual IRI="#teleop_api_dos"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVTeleoperationServiceAttack"/>
         <NamedIndividual IRI="#teleop_api_unauth"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2309,8 +2624,20 @@
         <NamedIndividual IRI="#teleop_auth_attempt"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#CAVTeleoperationServiceEvent"/>
+        <NamedIndividual IRI="#teleop_availability_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVTeleoperationServiceEvent"/>
+        <NamedIndividual IRI="#teleop_config_integrity_check"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVTeleoperationServiceAttack"/>
+        <NamedIndividual IRI="#teleop_config_tampering"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#AnomalyDetection"/>
-        <NamedIndividual IRI="#teleoperation_latency_anomaly_detection"/>
+        <NamedIndividual IRI="#teleop_latency_anomaly_detection"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
@@ -2337,12 +2664,16 @@
         <NamedIndividual IRI="#v2x_message_spoofing_injection"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FileFormat"/>
-        <NamedIndividual IRI="#xml_format"/>
+        <Class IRI="#CAVEvent"/>
+        <NamedIndividual IRI="#vehicle_positioning_check"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
-        <NamedIndividual IRI="#xslx_format"/>
+        <NamedIndividual IRI="#xlsx_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FileFormat"/>
+        <NamedIndividual IRI="#xml_format"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
@@ -2661,6 +2992,14 @@
         </ObjectUnionOf>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recordsAttackTactic"/>
+        <Class IRI="#EvidenceRecord"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recordsAttackTechnique"/>
+        <Class IRI="#EvidenceRecord"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#recordsDocument"/>
         <Class IRI="#EvidenceRecord"/>
     </ObjectPropertyDomain>
@@ -2851,6 +3190,14 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#recordedOnLedger"/>
         <Class IRI="#Ledger"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recordsAttackTactic"/>
+        <Class IRI="#AttackTactic"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recordsAttackTechnique"/>
+        <Class IRI="#AttackTechnique"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#recordsDocument"/>
@@ -3314,6 +3661,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAVIMU</IRI>
+        <Literal xml:lang="en">Connected &amp; Autonomous Vehicle Inertial Measurement Unit.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CAVIMU</IRI>
+        <Literal xml:lang="en">CAV IMU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CAVLiDAR</IRI>
         <Literal xml:lang="en">Connected &amp; Autonomous Vehicle LiDAR (Light Detection And Ranging) sensor.</Literal>
     </AnnotationAssertion>
@@ -3324,6 +3681,56 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAVLiDARAttack</IRI>
+        <Literal xml:lang="en">Attack targeting a CAV LiDAR sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CAVLiDARAttack</IRI>
+        <Literal xml:lang="en">CAV LiDAR Attack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAVLiDAREvent</IRI>
+        <Literal xml:lang="en">Event related to a CAV LiDAR sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CAVLiDAREvent</IRI>
+        <Literal xml:lang="en">CAV LiDAR Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAVLiDARSegmentationAIAttack</IRI>
+        <Literal xml:lang="en">Attack that targets or degrades the CAV&apos;s LiDAR segmentation AI module.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CAVLiDARSegmentationAIAttack</IRI>
+        <Literal xml:lang="en">CAV LiDAR Segmentation AI Attack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAVLiDARSegmentationAIEvent</IRI>
+        <Literal xml:lang="en">Event related to the operation or output of the CAV&apos;s LiDAR segmentation AI module.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CAVLiDARSegmentationAIEvent</IRI>
+        <Literal xml:lang="en">CAV LiDAR Segmentation AI Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAVLiDARSegmentationAIModule</IRI>
+        <Literal xml:lang="en">Connected &amp; Autonomous Vehicle LiDAR segmentation AI module.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CAVLiDARSegmentationAIModule</IRI>
+        <Literal xml:lang="en">CAV LiDAR Segmentation AI Module</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CAVOBU</IRI>
         <Literal xml:lang="en">Connected &amp; Autonomous Vehicle On-Board Unit for toll payments, traffic updates, and connections to other cars or smart roads (V2X).</Literal>
     </AnnotationAssertion>
@@ -3331,6 +3738,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CAVOBU</IRI>
         <Literal xml:lang="en">CAV OBU</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CAVOnboardComputer</IRI>
+        <Literal xml:lang="en">Connected &amp; Autonomous Vehicle onboard compute host.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CAVOnboardComputer</IRI>
+        <Literal xml:lang="en">CAV Onboard Computer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3484,6 +3901,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CTIEnrichedEvidenceRecord</IRI>
+        <Literal xml:lang="en">Evidence record enriched by external CTI (Cyber Threat Intelligence).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CTIEnrichedEvidenceRecord</IRI>
+        <Literal xml:lang="en">CTI-Enriched Evidence Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#CVE</IRI>
         <Literal xml:lang="en">Common Vulnerabilities and Exposures (CVE) are publicly disclosed and uniquely identified cybersecurity vulnerabilities affecting software, hardware, or firmware systems.</Literal>
     </AnnotationAssertion>
@@ -3614,6 +4041,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ComputeHost</IRI>
+        <Literal xml:lang="en">A physical or virtual machine that hosts software assets.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ComputeHost</IRI>
+        <Literal xml:lang="en">Compute Host</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ControlGovernance</IRI>
         <Literal xml:lang="en">Organizational grouping for the concepts used to define, scope, and evaluate compliance controls.</Literal>
     </AnnotationAssertion>
@@ -3711,6 +4148,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DCOPlaybook</IRI>
         <Literal xml:lang="en">DCO Playbook</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataAsset</IRI>
+        <Literal xml:lang="en">Data Asset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DataAsset</IRI>
+        <Literal xml:lang="en">Stored data asset.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4154,8 +4601,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ThreatEvidenceRecord</IRI>
+        <Literal xml:lang="en">Evidence record documenting an attack tactic or technique from the MITRE ATT&amp;CK knowledge base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ThreatEvidenceRecord</IRI>
+        <Literal xml:lang="en">Threat Evidence Record</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#VulnerabilityEvidenceRecord</IRI>
-        <Literal xml:lang="en">Evidence record documenting a vulnerability from a CVE.</Literal>
+        <Literal xml:lang="en">Evidence record documenting a vulnerability/weakness from a CVE/CWE.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4474,6 +4931,76 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_auth_attempt</IRI>
+        <Literal xml:lang="en">Event representing an authentication or access attempt against the CVGL correction service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_auth_attempt</IRI>
+        <Literal xml:lang="en">CVGL Authentication Attempt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_availability_check</IRI>
+        <Literal xml:lang="en">Event representing a check of whether the CVGL correction service is answering, and of its request rate, response latency, error rate and resource use.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_availability_check</IRI>
+        <Literal xml:lang="en">CVGL Availability Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_availability_monitoring</IRI>
+        <Literal xml:lang="en">Monitors the CVGL correction service&apos;s request rate, response latency, error rate and resource use against its normal operating envelope, including whether it answered at all.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_availability_monitoring</IRI>
+        <Literal xml:lang="en">CVGL Availability Monitoring</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_config_data_poisoning</IRI>
+        <Literal xml:lang="en">Attack that poisons the cached satellite reference tiles the CVGL service matches ground imagery against.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_config_data_poisoning</IRI>
+        <Literal xml:lang="en">CVGL Config Data Poisoning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_config_integrity_check</IRI>
+        <Literal xml:lang="en">Event representing a fingerprint recheck of the CVGL service&apos;s configuration files and stored reference data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_config_integrity_check</IRI>
+        <Literal xml:lang="en">CVGL Configuration Integrity Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_config_tampering</IRI>
+        <Literal xml:lang="en">Attack that modifies the CVGL service&apos;s configuration so that corrections are computed differently.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_config_tampering</IRI>
+        <Literal xml:lang="en">CVGL Configuration Tampering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_correction_envelope_check</IRI>
+        <Literal xml:lang="en">Event representing a check of whether a CVGL correction falls inside the residual envelope the service was validated for.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_correction_envelope_check</IRI>
+        <Literal xml:lang="en">CVGL Correction Envelope Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#cvgl_delay_replay</IRI>
         <Literal xml:lang="en">Attack that replays delayed CVGL data to mislead the localization result.</Literal>
     </AnnotationAssertion>
@@ -4491,6 +5018,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#cvgl_delay_replay_injection</IRI>
         <Literal xml:lang="en">CVGL Delay Replay Injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_dos</IRI>
+        <Literal xml:lang="en">Attack that floods the CVGL correction service or the path to it so that corrections time out for the vehicles relying on it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_dos</IRI>
+        <Literal xml:lang="en">CVGL Denial of Service</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4524,6 +5061,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_unauth</IRI>
+        <Literal xml:lang="en">Attack involving unauthorized access to the CVGL correction service or its host.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_unauth</IRI>
+        <Literal xml:lang="en">CVGL Unauthorized Access</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_unauth_injection</IRI>
+        <Literal xml:lang="en">Injection attack that performs unauthorized access against the CVGL correction service as part of a scripted penetration test.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_unauth_injection</IRI>
+        <Literal xml:lang="en">CVGL Unauthorized Injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#dco_playbook_incident_response</IRI>
         <Literal xml:lang="en">Incident response carried out through execution of a DCO playbook.</Literal>
     </AnnotationAssertion>
@@ -4531,6 +5088,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#dco_playbook_incident_response</IRI>
         <Literal xml:lang="en">DCO Playbook Incident Response</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dead_reckoning_cross_validation</IRI>
+        <Literal xml:lang="en">Cross-validates a raw GNSS fix, a motion-propagated dead-reckoning estimate and a returned CVGL correction, to determine whether the corrected position can be trusted.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#dead_reckoning_cross_validation</IRI>
+        <Literal xml:lang="en">Dead Reckoning Cross Validation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4611,6 +5178,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#fail</IRI>
         <Literal xml:lang="en">Fail</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#file_integrity_monitoring</IRI>
+        <Literal xml:lang="en">Rechecks a file, configuration or stored dataset against a previously recorded baseline fingerprint.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#file_integrity_monitoring</IRI>
+        <Literal xml:lang="en">File Integrity Monitoring</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4984,6 +5561,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hd_map_consistency_verification</IRI>
+        <Literal xml:lang="en">Compares segmented structural classes against the HD map, to separate a manipulated perception result from a genuine change in the environment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hd_map_consistency_verification</IRI>
+        <Literal xml:lang="en">HD Map Consistency Verification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#high_criticality</IRI>
         <Literal xml:lang="en">Criticality level indicating the asset is important and its failure would have significant impact.</Literal>
     </AnnotationAssertion>
@@ -5194,6 +5781,46 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#lidar_model_integrity_check</IRI>
+        <Literal xml:lang="en">Event representing a fingerprint recheck of a LiDAR segmentation model&apos;s weights and configuration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lidar_model_integrity_check</IRI>
+        <Literal xml:lang="en">LiDAR Model Integrity Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#lidar_segmentation_check</IRI>
+        <Literal xml:lang="en">Event representing a check of the LiDAR segmentation model&apos;s output, against an independently trained reference model or against the HD map.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lidar_segmentation_check</IRI>
+        <Literal xml:lang="en">LiDAR Segmentation Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#lidar_segmentation_degradation</IRI>
+        <Literal xml:lang="en">Attack that degrades the accuracy of the LiDAR segmentation module.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lidar_segmentation_degradation</IRI>
+        <Literal xml:lang="en">LiDAR Segmentation Degradation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#lidar_segmentation_model_tampering</IRI>
+        <Literal xml:lang="en">Attack that alters a LiDAR segmentation model&apos;s weights or configuration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lidar_segmentation_model_tampering</IRI>
+        <Literal xml:lang="en">LiDAR Segmentation Model Tampering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#log_correlation_rule</IRI>
         <Literal xml:lang="en">Stream pattern matching that correlates log entries against predefined rules.</Literal>
     </AnnotationAssertion>
@@ -5221,6 +5848,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#low_severity</IRI>
         <Literal xml:lang="en">Low</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#maintenance_window_policy_scan</IRI>
+        <Literal xml:lang="en">Checks whether an access to a service occurred inside a declared maintenance window.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#maintenance_window_policy_scan</IRI>
+        <Literal xml:lang="en">Maintenance Window Policy Scan</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5434,6 +6071,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#perception_model_cross_validation</IRI>
+        <Literal xml:lang="en">Compares a primary perception model&apos;s output against that of an independently trained reference model run on the same input.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#perception_model_cross_validation</IRI>
+        <Literal xml:lang="en">Perception Model Cross Validation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#png_format</IRI>
         <Literal xml:lang="en">Portable Network Graphics image format.</Literal>
     </AnnotationAssertion>
@@ -5441,6 +6088,36 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#png_format</IRI>
         <Literal xml:lang="en">PNG</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#point_cloud_integrity_check</IRI>
+        <Literal xml:lang="en">Event representing an integrity check of the LiDAR point cloud stream.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#point_cloud_integrity_check</IRI>
+        <Literal xml:lang="en">Point Cloud Integrity Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#point_cloud_perturbation</IRI>
+        <Literal xml:lang="en">Attack that perturbs LiDAR points to deceive segmentation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#point_cloud_perturbation</IRI>
+        <Literal xml:lang="en">Point Cloud Perturbation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#point_cloud_perturbation_injection</IRI>
+        <Literal xml:lang="en">Injection attack that introduces adversarially perturbed point-cloud data to mislead the LiDAR segmentation module.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#point_cloud_perturbation_injection</IRI>
+        <Literal xml:lang="en">Point Cloud Perturbation Injection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5491,6 +6168,26 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#recordedOnLedger</IRI>
         <Literal xml:lang="en">recorded on ledger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recordsAttackTactic</IRI>
+        <Literal xml:lang="en">Evidence record documents an attack tactic from MITRE ATT&amp;CK knowledge base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#recordsAttackTactic</IRI>
+        <Literal xml:lang="en">records attack tactic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recordsAttackTechnique</IRI>
+        <Literal xml:lang="en">Evidence record documents an attack technique from MITRE ATT&amp;CK knowledge base.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#recordsAttackTechnique</IRI>
+        <Literal xml:lang="en">records attack technique</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5764,6 +6461,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#teleop_api_dos</IRI>
+        <Literal xml:lang="en">Attack that floods the teleoperation API until it stops answering or becomes too slow to be usable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#teleop_api_dos</IRI>
+        <Literal xml:lang="en">Teleoperation API Denial of Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#teleop_api_unauth</IRI>
         <Literal xml:lang="en">Attack involving unauthorized access to the teleoperation service API.</Literal>
     </AnnotationAssertion>
@@ -5794,12 +6501,42 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#teleoperation_latency_anomaly_detection</IRI>
+        <IRI>#teleop_availability_check</IRI>
+        <Literal xml:lang="en">Event representing a check of the teleoperation service&apos;s request volume, response time, error rate and resource use.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#teleop_availability_check</IRI>
+        <Literal xml:lang="en">Teleoperation Availability Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#teleop_config_integrity_check</IRI>
+        <Literal xml:lang="en">Event representing a fingerprint recheck of the teleoperation API&apos;s settings and session configuration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#teleop_config_integrity_check</IRI>
+        <Literal xml:lang="en">Teleoperation Configuration Integrity Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#teleop_config_tampering</IRI>
+        <Literal xml:lang="en">Attack that modifies the teleoperation API&apos;s settings or session configuration.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#teleop_config_tampering</IRI>
+        <Literal xml:lang="en">Teleoperation Configuration Tampering</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#teleop_latency_anomaly_detection</IRI>
         <Literal xml:lang="en">Anomaly detection method that flags abnormal latency in the teleoperation service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#teleoperation_latency_anomaly_detection</IRI>
+        <IRI>#teleop_latency_anomaly_detection</IRI>
         <Literal xml:lang="en">Teleoperation Latency Anomaly Detection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -5864,6 +6601,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#vehicle_positioning_check</IRI>
+        <Literal xml:lang="en">Event representing a check of whether the vehicle still holds a trusted positioning reference from any of its sources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#vehicle_positioning_check</IRI>
+        <Literal xml:lang="en">Vehicle Positioning Check</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#xlsx_format</IRI>
+        <Literal xml:lang="en">Microsoft Excel spreadsheet format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#xlsx_format</IRI>
+        <Literal xml:lang="en">XLSX</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#xml_format</IRI>
         <Literal xml:lang="en">Extensible Markup Language format.</Literal>
     </AnnotationAssertion>
@@ -5871,16 +6628,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#xml_format</IRI>
         <Literal xml:lang="en">XML</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#xslx_format</IRI>
-        <Literal xml:lang="en">Microsoft Excel spreadsheet format.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#xslx_format</IRI>
-        <Literal xml:lang="en">XLSX</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
