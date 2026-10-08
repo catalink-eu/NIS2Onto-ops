@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://w3id.org/nis2onto-ops">
-    <Prefix name="" IRI="https://w3id.org/nis2onto-ops#"/>
+    <Prefix name="" IRI="https://w3id.org/nis2onto-ops"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -14,6 +14,7 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"/>
     <Prefix name="nis2onto" IRI="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#"/>
+    <Prefix name="nis2onto-ops" IRI="https://w3id.org/nis2onto-ops#"/>
     <Import>http://www.unict.it/nas-inf/nis2onto/nis2onto.owl</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -46,6 +47,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#AssetInventoryAndManagement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AssetOwner"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Attack"/>
@@ -540,7 +544,13 @@
         <ObjectProperty IRI="#usesRule"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasAlertTimestamp"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasBlockchainTxID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCVSSScore"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasEndpoint"/>
@@ -1216,6 +1226,10 @@
             <DataProperty IRI="#relatedToENISATechnicalGuideSection"/>
             <Literal>12.4</Literal>
         </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AssetOwner"/>
+        <Class abbreviatedIRI="nis2onto:Actor"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Attack"/>
@@ -3288,8 +3302,16 @@
         <Class IRI="#Asset"/>
     </DataPropertyDomain>
     <DataPropertyRange>
+        <DataProperty IRI="#hasAlertTimestamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasBlockchainTxID"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCVSSScore"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasEndpoint"/>
@@ -3418,6 +3440,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#AssetInventoryAndManagement</IRI>
         <Literal xml:lang="en">Asset Inventory and Management</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AssetOwner</IRI>
+        <Literal xml:lang="en">Entity that holds legal, operational, or financial rights to an asset.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AssetOwner</IRI>
+        <Literal xml:lang="en">Asset Owner</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5301,6 +5333,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasAlertTimestamp</IRI>
+        <Literal xml:lang="en">Datetime timestamp record for a triggered alert (e.g. a Wazuh rule trigger).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasAlertTimestamp</IRI>
+        <Literal xml:lang="en">has alert timestamp</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasBlockchainTxID</IRI>
         <Literal xml:lang="en">Blockchain transcaction id string.</Literal>
     </AnnotationAssertion>
@@ -5308,6 +5350,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasBlockchainTxID</IRI>
         <Literal xml:lang="en">has blockchain transaction ID</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasCVSSScore</IRI>
+        <Literal xml:lang="en">Float Common Vulnerability Scoring System (CVSS) score.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasCVSSScore</IRI>
+        <Literal xml:lang="en">has CVSS score</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

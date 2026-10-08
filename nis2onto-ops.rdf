@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/nis2onto-ops#"
+<rdf:RDF xmlns="https://w3id.org/nis2onto-ops"
      xml:base="https://w3id.org/nis2onto-ops"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -7,7 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
-     xmlns:nis2onto="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#">
+     xmlns:nis2onto="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#"
+     xmlns:nis2onto-ops="https://w3id.org/nis2onto-ops#">
     <owl:Ontology rdf:about="https://w3id.org/nis2onto-ops">
         <owl:imports rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl"/>
         <rdfs:comment xml:lang="en">NIS2Onto-ops is an operational ontology that extends NIS2Onto with the concepts needed to monitor assets, track security events, and record cybersecurity evidence in the context of NIS2 Article 21 risk-management obligations. It adds a compliance-governance layer that ties control judgements back to specific regulatory requirements, enabling automated, evidence-based classification of compliance status over time. Developed as part of the NIS2Graph project.</rdfs:comment>
@@ -637,6 +638,16 @@
     
 
 
+    <!-- https://w3id.org/nis2onto-ops#hasAlertTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/nis2onto-ops#hasAlertTimestamp">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Datetime timestamp record for a triggered alert (e.g. a Wazuh rule trigger).</rdfs:comment>
+        <rdfs:label xml:lang="en">has alert timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/nis2onto-ops#hasBlockchainTxID -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/nis2onto-ops#hasBlockchainTxID">
@@ -644,6 +655,16 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Blockchain transcaction id string.</rdfs:comment>
         <rdfs:label xml:lang="en">has blockchain transaction ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#hasCVSSScore -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/nis2onto-ops#hasCVSSScore">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment xml:lang="en">Float Common Vulnerability Scoring System (CVSS) score.</rdfs:comment>
+        <rdfs:label xml:lang="en">has CVSS score</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -926,11 +947,21 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12.4</owl:hasValue>
+                <owl:hasValue>12.4</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the identification, inventory, and lifecycle tracking of assets relevant to the security of network and information systems.</rdfs:comment>
         <rdfs:label xml:lang="en">Asset Inventory and Management</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#AssetOwner -->
+
+    <owl:Class rdf:about="https://w3id.org/nis2onto-ops#AssetOwner">
+        <rdfs:subClassOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Actor"/>
+        <rdfs:comment xml:lang="en">Entity that holds legal, operational, or financial rights to an asset.</rdfs:comment>
+        <rdfs:label xml:lang="en">Asset Owner</rdfs:label>
     </owl:Class>
     
 
@@ -1005,7 +1036,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</owl:hasValue>
+                <owl:hasValue>11</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the policies and mechanisms that govern authentication and access to network and information systems.</rdfs:comment>
@@ -1499,7 +1530,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.2</owl:hasValue>
+                <owl:hasValue>2.2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the regular review of compliance with security policies, rules, and standards, and the reporting of compliance status to management bodies.</rdfs:comment>
@@ -1648,7 +1679,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9.1</owl:hasValue>
+                <owl:hasValue>9.1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the policy and use of cryptographic mechanisms to protect the confidentiality, integrity, and authenticity of data.</rdfs:comment>
@@ -1710,7 +1741,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2.5</owl:hasValue>
+                <owl:hasValue>3.2.5</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the protection of logs and recorded data from unauthorised access or modification.</rdfs:comment>
@@ -1791,7 +1822,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.4</owl:hasValue>
+                <owl:hasValue>3.4</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the assessment of suspicious events to determine whether they constitute incidents and the classification of their nature and severity.</rdfs:comment>
@@ -1941,7 +1972,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2</owl:hasValue>
+                <owl:hasValue>3.2</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the monitoring and logging of network and information systems to detect events that could constitute incidents.</rdfs:comment>
@@ -1963,7 +1994,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5</owl:hasValue>
+                <owl:hasValue>3.5</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the containment, eradication, and recovery procedures used to respond to incidents.</rdfs:comment>
@@ -2269,7 +2300,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</owl:hasValue>
+                <owl:hasValue>7</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the policies and procedures used to assess the effectiveness of implemented cybersecurity risk-management measures.</rdfs:comment>
@@ -2362,7 +2393,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.1</owl:hasValue>
+                <owl:hasValue>5.1</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the identification and management of risks arising from suppliers, service providers, and third-party software components in the network and information systems supply chain.</rdfs:comment>
@@ -2459,7 +2490,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"/>
-                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.10</owl:hasValue>
+                <owl:hasValue>6.10</owl:hasValue>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the identification, handling, and coordinated disclosure of vulnerabilities affecting network and information systems.</rdfs:comment>
@@ -2494,8 +2525,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CROSSCORE">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CybersecuritySoftwareModule"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CROSSCORE</hasID>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CROSSCORE</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">CYberSynchrony module that facilitates secure, cross-border cooperation during cyber incidents. Blockchain technology ensures data integrity, enabling reliable information sharing among MS.</rdfs:comment>
         <rdfs:label xml:lang="en">CROSSCORE</rdfs:label>
     </owl:NamedIndividual>
@@ -2506,9 +2537,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBERGOPLUS">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CybersecuritySoftwareModule"/>
-        <hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBERGOPLUS-Snyk"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBERGOPLUS</hasID>
+        <nis2onto-ops:hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBERGOPLUS-Snyk"/>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBERGOPLUS</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">CYberSynchrony module that supports the implementation of robust cybersecurity policies and standards, ensuring consistent practices and regulatory compliance across sectors.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBERGOPLUS</rdfs:label>
     </owl:NamedIndividual>
@@ -2519,8 +2550,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBERGOPLUS-Snyk">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#Snyk"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBERGOPLUS-Snyk</hasID>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBERGOPLUS-Snyk</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">Snyk instance deployed as a component of the CYBERGOPLUS cybersecurity module.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBERGOPLUS Snyk</rdfs:label>
     </owl:NamedIndividual>
@@ -2531,9 +2562,9 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBERRA">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CybersecuritySoftwareModule"/>
-        <hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBERRA-MISP"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBERRA</hasID>
+        <nis2onto-ops:hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBERRA-MISP"/>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBERRA</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">CYberSynchrony module that focuses on real-time threat intelligence and tailored risk analysis for member states, ensuring reliable assessments through secure forensic methods.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBERRA</rdfs:label>
     </owl:NamedIndividual>
@@ -2544,8 +2575,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBERRA-MISP">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#MISP"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBERRA-MISP</hasID>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBERRA-MISP</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">MISP instance deployed as a component of the CYBERRA cybersecurity module.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBERRA MISP</rdfs:label>
     </owl:NamedIndividual>
@@ -2556,8 +2587,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBERWISE">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CybersecuritySoftwareModule"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBERWISE</hasID>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBERWISE</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">CYberSynchrony module that promotes cybersecurity awareness through engaging, educational tools, fostering a culture of cybersecurity across society.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBERWISE</rdfs:label>
     </owl:NamedIndividual>
@@ -2568,10 +2599,10 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBRITE">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CybersecuritySoftwareModule"/>
-        <hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBRITE-Suricata"/>
-        <hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBRITE-Wazuh"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBRITE</hasID>
+        <nis2onto-ops:hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBRITE-Suricata"/>
+        <nis2onto-ops:hasComponent rdf:resource="https://w3id.org/nis2onto-ops#CYBRITE-Wazuh"/>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBRITE</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">CYberSynchrony module that provides continuous monitoring to detect threats early. Advanced analytics support proactive risk management, minimizing incident impact.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBRITE</rdfs:label>
     </owl:NamedIndividual>
@@ -2582,8 +2613,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBRITE-Suricata">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#Suricata"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBRITE-Suricata</hasID>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBRITE-Suricata</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">Suricata instance deployed as a component of the CYBRITE cybersecurity module.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBRITE Suricata</rdfs:label>
     </owl:NamedIndividual>
@@ -2594,8 +2625,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYBRITE-Wazuh">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#Wazuh"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYBRITE-Wazuh</hasID>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYBRITE-Wazuh</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">Wazuh instance deployed as a component of the CYBRITE cybersecurity module.</rdfs:comment>
         <rdfs:label xml:lang="en">CYBRITE Wazuh</rdfs:label>
     </owl:NamedIndividual>
@@ -2606,8 +2637,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#CYRESCUE">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CybersecuritySoftwareModule"/>
-        <hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
-        <hasID>CYRESCUE</hasID>
+        <nis2onto-ops:hasCriticality rdf:resource="https://w3id.org/nis2onto-ops#n_a"/>
+        <nis2onto-ops:hasID>CYRESCUE</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">CYberSynchrony module that enhances resilience by identifying vulnerabilities in critical systems and streamlining incident response. Automated tools and secure digital vaults protect systems and data, enabling rapid response to threats.</rdfs:comment>
         <rdfs:label xml:lang="en">CYRESCUE</rdfs:label>
     </owl:NamedIndividual>
