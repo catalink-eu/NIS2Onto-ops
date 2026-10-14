@@ -45,7 +45,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/nis2onto-ops#assessedByEvidenceRecord">
         <rdfs:domain rdf:resource="https://w3id.org/nis2onto-ops#Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/nis2onto-ops#EvidenceRecord"/>
-        <rdfs:comment xml:lang="en">Asset is assed by an evidence record.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Asset is assessed by an evidence record.</rdfs:comment>
         <rdfs:label xml:lang="en">assessed by evidence record</rdfs:label>
     </owl:ObjectProperty>
     
@@ -56,7 +56,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/nis2onto-ops#assessesAsset">
         <rdfs:domain rdf:resource="https://w3id.org/nis2onto-ops#EvidenceRecord"/>
         <rdfs:range rdf:resource="https://w3id.org/nis2onto-ops#Asset"/>
-        <rdfs:comment xml:lang="en">Evidence record asseses an asset.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Evidence record assesses an asset.</rdfs:comment>
         <rdfs:label xml:lang="en">assesses asset</rdfs:label>
     </owl:ObjectProperty>
     
@@ -357,7 +357,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/nis2onto-ops#Asset"/>
         <rdfs:range rdf:resource="https://w3id.org/nis2onto-ops#ControlScope"/>
         <rdfs:comment xml:lang="en">Asset is an in-scope asset of a control scope.</rdfs:comment>
-        <rdfs:label xml:lang="en">has asset in scope</rdfs:label>
+        <rdfs:label xml:lang="en">is asset in scope</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -379,7 +379,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/nis2onto-ops#ControlTheme"/>
         <rdfs:range rdf:resource="https://w3id.org/nis2onto-ops#ControlScope"/>
         <rdfs:comment xml:lang="en">Control theme is an in-scope control theme of a control scope.</rdfs:comment>
-        <rdfs:label xml:lang="en">has control theme in scope</rdfs:label>
+        <rdfs:label xml:lang="en">is control theme in scope</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -438,7 +438,7 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://w3id.org/nis2onto-ops#EvidenceRecord"/>
-        <rdfs:label xml:lang="en">Source that produces an evidence record.</rdfs:label>
+        <rdfs:comment xml:lang="en">Source that produces an evidence record.</rdfs:comment>
         <rdfs:label xml:lang="en">produces</rdfs:label>
     </owl:ObjectProperty>
     
@@ -581,7 +581,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/nis2onto-ops#simulates">
         <rdfs:domain rdf:resource="https://w3id.org/nis2onto-ops#SoftwareApplication"/>
         <rdfs:range rdf:resource="https://w3id.org/nis2onto-ops#Asset"/>
-        <rdfs:comment xml:lang="en">Software applicates can simulate an asset.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Software application can simulate an asset.</rdfs:comment>
         <rdfs:label xml:lang="en">simulates</rdfs:label>
     </owl:ObjectProperty>
     
@@ -653,7 +653,7 @@
     <owl:DatatypeProperty rdf:about="https://w3id.org/nis2onto-ops#hasBlockchainTxID">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Blockchain transcaction id string.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Blockchain transaction id string.</rdfs:comment>
         <rdfs:label xml:lang="en">has blockchain transaction ID</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -813,25 +813,30 @@
 
     <owl:Class rdf:about="https://w3id.org/nis2onto-ops#AlertEvidenceRecord">
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#hasSeverity"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/nis2onto-ops#Severity"/>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/nis2onto-ops#EvidenceRecord"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#hasSeverity"/>
+                        <owl:someValuesFrom>
                             <owl:Class>
-                                <owl:complementOf>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://w3id.org/nis2onto-ops#Severity"/>
                                     <owl:Class>
-                                        <owl:oneOf rdf:parseType="Collection">
-                                            <rdf:Description rdf:about="https://w3id.org/nis2onto-ops#info_severity"/>
-                                        </owl:oneOf>
+                                        <owl:complementOf>
+                                            <owl:Class>
+                                                <owl:oneOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="https://w3id.org/nis2onto-ops#info_severity"/>
+                                                </owl:oneOf>
+                                            </owl:Class>
+                                        </owl:complementOf>
                                     </owl:Class>
-                                </owl:complementOf>
+                                </owl:intersectionOf>
                             </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/nis2onto-ops#EvidenceRecord"/>
         <rdfs:subClassOf>
@@ -1451,7 +1456,7 @@
     <owl:Class rdf:about="https://w3id.org/nis2onto-ops#CAVV2XCommunicationModuleAttack">
         <rdfs:subClassOf rdf:resource="https://w3id.org/nis2onto-ops#CAVAttack"/>
         <rdfs:comment xml:lang="en">Attack targeting the CAV&apos;s V2X communication module.</rdfs:comment>
-        <rdfs:label xml:lang="en">V2X Communication Module Attack</rdfs:label>
+        <rdfs:label xml:lang="en">CAV V2X Communication Module Attack</rdfs:label>
     </owl:Class>
     
 
@@ -1722,8 +1727,8 @@
 
     <owl:Class rdf:about="https://w3id.org/nis2onto-ops#DataAsset">
         <rdfs:subClassOf rdf:resource="https://w3id.org/nis2onto-ops#ITAsset"/>
+        <rdfs:comment xml:lang="en">Stored data asset.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Asset</rdfs:label>
-        <rdfs:label xml:lang="en">Stored data asset.</rdfs:label>
     </owl:Class>
     
 
@@ -1998,7 +2003,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Control theme covering the containment, eradication, and recovery procedures used to respond to incidents.</rdfs:comment>
-        <rdfs:label xml:lang="en">Incidence Response Procedure</rdfs:label>
+        <rdfs:label xml:lang="en">Incident Response Procedure</rdfs:label>
     </owl:Class>
     
 
@@ -2649,18 +2654,8 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#adversarial_perturbation_detection">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
-        <rdfs:comment xml:lang="en">Anomaly detection method that identifies adversarial perturbations crafted to fool a perception AI model.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies adversarial perturbations crafted to fool a perception AI model.</rdfs:comment>
         <rdfs:label xml:lang="en">Adversarial Perturbation Detection</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/nis2onto-ops#ai_segmentation_check -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#ai_segmentation_check">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAV2DSegmentationAIEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of the 2D image segmentation AI module&apos;s output.</rdfs:comment>
-        <rdfs:label xml:lang="en">AI Segmentation Check</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2671,6 +2666,16 @@
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAV2DSegmentationAIAttack"/>
         <rdfs:comment xml:lang="en">Attack that degrades the accuracy of the 2D image segmentation AI module.</rdfs:comment>
         <rdfs:label xml:lang="en">AI Segmentation Degradation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#ai_segmentation_divergent -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#ai_segmentation_divergent">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAV2DSegmentationAIEvent"/>
+        <rdfs:comment xml:lang="en">Event in which the 2D image segmentation output disagrees beyond tolerance with an independently trained reference model or with the HD map.</rdfs:comment>
+        <rdfs:label xml:lang="en">AI Segmentation Divergent</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2699,7 +2704,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#api_key_validation">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AuthenticationCheck"/>
-        <rdfs:comment xml:lang="en">Authentication check that validates an API key presented by a client.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Validates an API key presented by a client.</rdfs:comment>
         <rdfs:label xml:lang="en">API Key Validation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2729,7 +2734,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#behavioral_baseline_deviation">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
-        <rdfs:comment xml:lang="en">Anomaly detection method that flags deviation from an established behavioral baseline.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Flags deviation from an established behavioral baseline.</rdfs:comment>
         <rdfs:label xml:lang="en">Behavioral Baseline Deviation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2739,7 +2744,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#can_bus_anomaly_detection">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
-        <rdfs:comment xml:lang="en">Anomaly detection method that monitors CAN bus traffic for abnormal patterns.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Monitors CAN bus traffic for abnormal patterns.</rdfs:comment>
         <rdfs:label xml:lang="en">CAN Bus Anomaly Detection</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2749,7 +2754,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#can_bus_rule_check">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#StreamPatternMatching"/>
-        <rdfs:comment xml:lang="en">Stream pattern matching that checks CAN bus messages against predefined rules.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Checks CAN bus messages against predefined rules.</rdfs:comment>
         <rdfs:label xml:lang="en">CAN Bus Rule Check</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2759,7 +2764,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#certificate_validation">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AuthenticationCheck"/>
-        <rdfs:comment xml:lang="en">Authentication check that validates a digital certificate.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Validates a digital certificate.</rdfs:comment>
         <rdfs:label xml:lang="en">Certificate Validation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2812,7 +2817,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#container_policy_scan">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#PolicyBasedScan"/>
-        <rdfs:comment xml:lang="en">Policy-based scan that checks container images and configurations for policy compliance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Checks container images and configurations for policy compliance.</rdfs:comment>
         <rdfs:label xml:lang="en">Container Policy Scan</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2822,7 +2827,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#content_signature_match">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#SignatureMatching"/>
-        <rdfs:comment xml:lang="en">Signature matching that compares content against known malicious signatures.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Compares content against known malicious signatures.</rdfs:comment>
         <rdfs:label xml:lang="en">Content Signature Match</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2832,7 +2837,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#credential_login_check">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AuthenticationCheck"/>
-        <rdfs:comment xml:lang="en">Authentication check that verifies login credentials such as username and password.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Verifies login credentials such as username and password.</rdfs:comment>
         <rdfs:label xml:lang="en">Credential Login Check</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2898,20 +2903,11 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#cvgl_availability_check -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_availability_check">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of whether the CVGL correction service is answering, and of its request rate, response latency, error rate and resource use.</rdfs:comment>
-        <rdfs:label xml:lang="en">CVGL Availability Check</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/nis2onto-ops#cvgl_availability_monitoring -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_availability_monitoring">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
         <rdfs:comment xml:lang="en">Monitors the CVGL correction service&apos;s request rate, response latency, error rate and resource use against its normal operating envelope, including whether it answered at all.</rdfs:comment>
         <rdfs:label xml:lang="en">CVGL Availability Monitoring</rdfs:label>
     </owl:NamedIndividual>
@@ -2923,17 +2919,17 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_config_data_poisoning">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLAttack"/>
         <rdfs:comment xml:lang="en">Attack that poisons the cached satellite reference tiles the CVGL service matches ground imagery against.</rdfs:comment>
-        <rdfs:label xml:lang="en">CVGL Config Data Poisoning</rdfs:label>
+        <rdfs:label xml:lang="en">CVGL Configuration Data Poisoning</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#cvgl_config_integrity_check -->
+    <!-- https://w3id.org/nis2onto-ops#cvgl_config_mismatch -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_config_integrity_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_config_mismatch">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a fingerprint recheck of the CVGL service&apos;s configuration files and stored reference data.</rdfs:comment>
-        <rdfs:label xml:lang="en">CVGL Configuration Integrity Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which the CVGL service&apos;s configuration files or stored satellite reference tiles no longer match their recorded baseline fingerprint.</rdfs:comment>
+        <rdfs:label xml:lang="en">CVGL Configuration Mismatch</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2948,12 +2944,22 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#cvgl_correction_envelope_check -->
+    <!-- https://w3id.org/nis2onto-ops#cvgl_correction_out_of_envelope -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_correction_envelope_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_correction_out_of_envelope">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of whether a CVGL correction falls inside the residual envelope the service was validated for.</rdfs:comment>
-        <rdfs:label xml:lang="en">CVGL Correction Envelope Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which a returned CVGL correction falls outside the residual envelope the service was validated for, relative to the raw GNSS fix and the dead-reckoning estimate.</rdfs:comment>
+        <rdfs:label xml:lang="en">CVGL Correction Out of Envelope</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#cvgl_correction_stale -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_correction_stale">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLEvent"/>
+        <rdfs:comment xml:lang="en">Event in which a CVGL correction carries an outdated timestamp, a repeated sequence number or a reused nonce, so it does not describe the vehicle&apos;s current position.</rdfs:comment>
+        <rdfs:label xml:lang="en">CVGL Correction Stale</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2994,18 +3000,8 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_integrity_check">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
-        <rdfs:comment xml:lang="en">Assessment method that verifies the integrity of CVGL localization data.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Verifies the integrity of CVGL localization data.</rdfs:comment>
         <rdfs:label xml:lang="en">CVGL Integrity Check</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://w3id.org/nis2onto-ops#cvgl_localisation_check -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_localisation_check">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of the CVGL localization result.</rdfs:comment>
-        <rdfs:label xml:lang="en">CVGL Localisation Check</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3035,8 +3031,18 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_unauth_injection">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLAttack"/>
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#InjectionAttack"/>
-        <rdfs:comment xml:lang="en">Injection attack that performs unauthorized access against the CVGL correction service as part of a scripted penetration test.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Injection attack that performs unauthorized access against the CVGL correction service.</rdfs:comment>
         <rdfs:label xml:lang="en">CVGL Unauthorized Injection</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#cvgl_unavailable -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#cvgl_unavailable">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCVGLEvent"/>
+        <rdfs:comment xml:lang="en">Event in which the CVGL correction service does not answer, or answers too slowly or with too many errors for its corrections to be usable by the vehicles relying on it.</rdfs:comment>
+        <rdfs:label xml:lang="en">CVGL Unavailable</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3066,7 +3072,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#dependency_policy_scan">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#PolicyBasedScan"/>
-        <rdfs:comment xml:lang="en">Policy-based scan that checks software dependencies for policy compliance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Checks software dependencies for policy compliance.</rdfs:comment>
         <rdfs:label xml:lang="en">Dependency Policy Scan</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3077,7 +3083,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#digital_signature_verification">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AuthenticationCheck"/>
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
-        <rdfs:comment xml:lang="en">Assessment method that verifies a digital signature to confirm authenticity and integrity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Verifies a digital signature to confirm authenticity and integrity.</rdfs:comment>
         <rdfs:label xml:lang="en">Digital Signature Verification</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3097,7 +3103,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#domain_ioc_match">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IOCMatching"/>
-        <rdfs:comment xml:lang="en">IOC matching that compares observed domain names against known indicators of compromise.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Compares observed domain names against known indicators of compromise.</rdfs:comment>
         <rdfs:label xml:lang="en">Domain IOC Match</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3133,12 +3139,12 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#gnss_check -->
+    <!-- https://w3id.org/nis2onto-ops#gnss_inconsistent -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#gnss_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#gnss_inconsistent">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVGNSSEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of the CAV&apos;s GNSS receiver.</rdfs:comment>
-        <rdfs:label xml:lang="en">GNSS Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which the GNSS receiver&apos;s position fix is inconsistent across satellites, or disagrees with independent motion estimates beyond tolerance.</rdfs:comment>
+        <rdfs:label xml:lang="en">GNSS Inconsistent</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3200,7 +3206,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#hash_verification">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IOCMatching"/>
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
-        <rdfs:comment xml:lang="en">Assessment method that verifies data integrity by comparing hash digests.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Verifies data integrity by comparing hash digests.</rdfs:comment>
         <rdfs:label xml:lang="en">Hash Verification</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3241,7 +3247,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#iac_policy_scan">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#PolicyBasedScan"/>
-        <rdfs:comment xml:lang="en">Policy-based scan that checks Infrastructure-as-Code definitions for policy compliance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Checks Infrastructure-as-Code definitions for policy compliance.</rdfs:comment>
         <rdfs:label xml:lang="en">IaC Policy Scan</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3269,12 +3275,12 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#image_stream_integrity_check -->
+    <!-- https://w3id.org/nis2onto-ops#image_stream_inconsistent -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#image_stream_integrity_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#image_stream_inconsistent">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVCameraEvent"/>
-        <rdfs:comment xml:lang="en">Event representing an integrity check of the camera&apos;s image stream.</rdfs:comment>
-        <rdfs:label xml:lang="en">Image Stream Integrity Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which camera frames show content or statistics inconsistent with co-located sensors or with expected scene properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Image Stream Inconsistent</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3303,7 +3309,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#ip_ioc_match">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IOCMatching"/>
-        <rdfs:comment xml:lang="en">IOC matching that compares observed IP addresses against known indicators of compromise.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Compares observed IP addresses against known indicators of compromise.</rdfs:comment>
         <rdfs:label xml:lang="en">IP IOC Match</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3329,11 +3335,21 @@
     
 
 
+    <!-- https://w3id.org/nis2onto-ops#jsonl_format -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#jsonl_format">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#FileFormat"/>
+        <rdfs:comment xml:lang="en">JSON Lines format.</rdfs:comment>
+        <rdfs:label xml:lang="en">JSONL</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/nis2onto-ops#ledger_attestation -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#ledger_attestation">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
-        <rdfs:comment xml:lang="en">Assessment method that verifies integrity by checking a record&apos;s attestation on a ledger.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Verifies integrity by checking a record&apos;s attestation on a ledger.</rdfs:comment>
         <rdfs:label xml:lang="en">Ledger Attestation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3354,28 +3370,28 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#lidar_camera_cross_check">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
-        <rdfs:comment xml:lang="en">Assessment method that cross-checks LiDAR and camera data for consistency.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Cross-checks LiDAR and camera data for consistency.</rdfs:comment>
         <rdfs:label xml:lang="en">LiDAR-Camera Cross Check</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#lidar_model_integrity_check -->
+    <!-- https://w3id.org/nis2onto-ops#lidar_model_mismatch -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#lidar_model_integrity_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#lidar_model_mismatch">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a fingerprint recheck of a LiDAR segmentation model&apos;s weights and configuration.</rdfs:comment>
-        <rdfs:label xml:lang="en">LiDAR Model Integrity Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which a LiDAR segmentation model&apos;s weights or configuration no longer match their recorded baseline fingerprint.</rdfs:comment>
+        <rdfs:label xml:lang="en">LiDAR Model Mismatch</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#lidar_segmentation_check -->
+    <!-- https://w3id.org/nis2onto-ops#lidar_model_tampering -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#lidar_segmentation_check">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of the LiDAR segmentation model&apos;s output, against an independently trained reference model or against the HD map.</rdfs:comment>
-        <rdfs:label xml:lang="en">LiDAR Segmentation Check</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#lidar_model_tampering">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIAttack"/>
+        <rdfs:comment xml:lang="en">Attack that alters a LiDAR segmentation model&apos;s weights or configuration.</rdfs:comment>
+        <rdfs:label xml:lang="en">LiDAR Model Tampering</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3390,12 +3406,12 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#lidar_segmentation_model_tampering -->
+    <!-- https://w3id.org/nis2onto-ops#lidar_segmentation_divergent -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#lidar_segmentation_model_tampering">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIAttack"/>
-        <rdfs:comment xml:lang="en">Attack that alters a LiDAR segmentation model&apos;s weights or configuration.</rdfs:comment>
-        <rdfs:label xml:lang="en">LiDAR Segmentation Model Tampering</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#lidar_segmentation_divergent">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVLiDARSegmentationAIEvent"/>
+        <rdfs:comment xml:lang="en">Event in which the LiDAR segmentation output disagrees beyond tolerance with an independently trained reference model or with the HD map.</rdfs:comment>
+        <rdfs:label xml:lang="en">LiDAR Segmentation Divergent</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3404,7 +3420,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#log_correlation_rule">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#StreamPatternMatching"/>
-        <rdfs:comment xml:lang="en">Stream pattern matching that correlates log entries against predefined rules.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Correlates log entries against predefined rules.</rdfs:comment>
         <rdfs:label xml:lang="en">Log Correlation Rule</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3544,7 +3560,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#ml_perception_anomaly_detection">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
-        <rdfs:comment xml:lang="en">Anomaly detection method using machine learning to detect abnormal perception outputs.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Uses machine learning to detect abnormal perception outputs.</rdfs:comment>
         <rdfs:label xml:lang="en">ML Perception Anomaly Detection</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3574,7 +3590,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#network_signature_match">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#SignatureMatching"/>
-        <rdfs:comment xml:lang="en">Signature matching that compares network traffic against known malicious signatures.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Compares network traffic against known malicious signatures.</rdfs:comment>
         <rdfs:label xml:lang="en">Network Signature Match</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3651,12 +3667,12 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#point_cloud_integrity_check -->
+    <!-- https://w3id.org/nis2onto-ops#point_cloud_inconsistent -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#point_cloud_integrity_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#point_cloud_inconsistent">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVLiDAREvent"/>
-        <rdfs:comment xml:lang="en">Event representing an integrity check of the LiDAR point cloud stream.</rdfs:comment>
-        <rdfs:label xml:lang="en">Point Cloud Integrity Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which the LiDAR point cloud contains points inconsistent with co-located sensors or with the expected geometry of the scene.</rdfs:comment>
+        <rdfs:label xml:lang="en">Point Cloud Inconsistent</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3697,7 +3713,7 @@
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#raim">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
-        <rdfs:comment xml:lang="en">Receiver Autonomous Integrity Monitoring: a method for detecting faults in GNSS positioning data.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Receiver Autonomous Integrity Monitoring: detects faults in GNSS positioning data.</rdfs:comment>
         <rdfs:label xml:lang="en">RAIM</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3718,7 +3734,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#sast_policy_scan">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#PolicyBasedScan"/>
-        <rdfs:comment xml:lang="en">Policy-based scan using Static Application Security Testing to check code for policy compliance.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Uses Static Application Security Testing to check code for policy compliance.</rdfs:comment>
         <rdfs:label xml:lang="en">SAST Policy Scan</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3829,7 +3845,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#statistical_outlier_detection">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
-        <rdfs:comment xml:lang="en">Anomaly detection method that flags statistical outliers in observed data.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Flags statistical outliers in observed data.</rdfs:comment>
         <rdfs:label xml:lang="en">Statistical Outlier Detection</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3886,22 +3902,23 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#teleop_availability_check -->
+    <!-- https://w3id.org/nis2onto-ops#teleop_availability_monitoring -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#teleop_availability_check">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVTeleoperationServiceEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of the teleoperation service&apos;s request volume, response time, error rate and resource use.</rdfs:comment>
-        <rdfs:label xml:lang="en">Teleoperation Availability Check</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#teleop_availability_monitoring">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#IntegrityVerification"/>
+        <rdfs:comment xml:lang="en">Monitors the teleoperation service&apos;s request volume, response time, error rate and resource use against its normal operating envelope, including whether it answered at all.</rdfs:comment>
+        <rdfs:label xml:lang="en">Teleoperation Availability Monitoring</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#teleop_config_integrity_check -->
+    <!-- https://w3id.org/nis2onto-ops#teleop_config_mismatch -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#teleop_config_integrity_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#teleop_config_mismatch">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVTeleoperationServiceEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a fingerprint recheck of the teleoperation API&apos;s settings and session configuration.</rdfs:comment>
-        <rdfs:label xml:lang="en">Teleoperation Configuration Integrity Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which the teleoperation API&apos;s settings or session configuration no longer match their recorded baseline fingerprint.</rdfs:comment>
+        <rdfs:label xml:lang="en">Teleoperation Configuration Mismatch</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3916,12 +3933,12 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#teleop_latency_anomaly_detection -->
+    <!-- https://w3id.org/nis2onto-ops#teleop_unavailable -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#teleop_latency_anomaly_detection">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#AnomalyDetection"/>
-        <rdfs:comment xml:lang="en">Anomaly detection method that flags abnormal latency in the teleoperation service.</rdfs:comment>
-        <rdfs:label xml:lang="en">Teleoperation Latency Anomaly Detection</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#teleop_unavailable">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVTeleoperationServiceEvent"/>
+        <rdfs:comment xml:lang="en">Event in which the teleoperation service does not answer, or its response time or error rate makes remote operation of the vehicle unusable.</rdfs:comment>
+        <rdfs:label xml:lang="en">Teleoperation Unavailable</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3936,12 +3953,12 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#v2x_message_check -->
+    <!-- https://w3id.org/nis2onto-ops#v2x_message_implausible -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#v2x_message_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#v2x_message_implausible">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVV2XCommunicationModuleEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of a received V2X message&apos;s validity.</rdfs:comment>
-        <rdfs:label xml:lang="en">V2X Message Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which a received V2X message fails authenticity or plausibility constraints, such as an invalid signature, or position, speed or timing values inconsistent with the sender&apos;s history or physical limits.</rdfs:comment>
+        <rdfs:label xml:lang="en">V2X Message Implausible</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3950,7 +3967,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#v2x_message_policy_rule">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#StreamPatternMatching"/>
-        <rdfs:comment xml:lang="en">Stream pattern matching that checks V2X messages against a predefined policy rule.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Checks V2X messages against a predefined policy rule.</rdfs:comment>
         <rdfs:label xml:lang="en">V2X Message Policy Rule</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3977,12 +3994,12 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#vehicle_positioning_check -->
+    <!-- https://w3id.org/nis2onto-ops#vehicle_positioning_lost -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#vehicle_positioning_check">
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#vehicle_positioning_lost">
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#CAVEvent"/>
-        <rdfs:comment xml:lang="en">Event representing a check of whether the vehicle still holds a trusted positioning reference from any of its sources.</rdfs:comment>
-        <rdfs:label xml:lang="en">Vehicle Positioning Check</rdfs:label>
+        <rdfs:comment xml:lang="en">Event in which the vehicle no longer holds a trusted position reference from any of its sources.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle Positioning Lost</rdfs:label>
     </owl:NamedIndividual>
     
 

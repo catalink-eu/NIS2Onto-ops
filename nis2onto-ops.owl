@@ -622,10 +622,10 @@
         <NamedIndividual IRI="#adversarial_perturbation_detection"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ai_segmentation_check"/>
+        <NamedIndividual IRI="#ai_segmentation_degradation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#ai_segmentation_degradation"/>
+        <NamedIndividual IRI="#ai_segmentation_divergent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#anomaly"/>
@@ -694,22 +694,22 @@
         <NamedIndividual IRI="#cvgl_auth_attempt"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#cvgl_availability_check"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#cvgl_availability_monitoring"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#cvgl_config_data_poisoning"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#cvgl_config_integrity_check"/>
+        <NamedIndividual IRI="#cvgl_config_mismatch"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#cvgl_config_tampering"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#cvgl_correction_envelope_check"/>
+        <NamedIndividual IRI="#cvgl_correction_out_of_envelope"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_correction_stale"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#cvgl_delay_replay"/>
@@ -724,9 +724,6 @@
         <NamedIndividual IRI="#cvgl_integrity_check"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#cvgl_localisation_check"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#cvgl_manipulation"/>
     </Declaration>
     <Declaration>
@@ -734,6 +731,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#cvgl_unauth_injection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cvgl_unavailable"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#dco_playbook_incident_response"/>
@@ -763,7 +763,7 @@
         <NamedIndividual IRI="#file_integrity_monitoring"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#gnss_check"/>
+        <NamedIndividual IRI="#gnss_inconsistent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#gnss_jamming"/>
@@ -802,7 +802,7 @@
         <NamedIndividual IRI="#image_perturbation_injection"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#image_stream_integrity_check"/>
+        <NamedIndividual IRI="#image_stream_inconsistent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#inconclusive"/>
@@ -820,6 +820,9 @@
         <NamedIndividual IRI="#json_format"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#jsonl_format"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#ledger_attestation"/>
     </Declaration>
     <Declaration>
@@ -829,16 +832,16 @@
         <NamedIndividual IRI="#lidar_camera_cross_check"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#lidar_model_integrity_check"/>
+        <NamedIndividual IRI="#lidar_model_mismatch"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#lidar_segmentation_check"/>
+        <NamedIndividual IRI="#lidar_model_tampering"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#lidar_segmentation_degradation"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#lidar_segmentation_model_tampering"/>
+        <NamedIndividual IRI="#lidar_segmentation_divergent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#log_correlation_rule"/>
@@ -916,7 +919,7 @@
         <NamedIndividual IRI="#png_format"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#point_cloud_integrity_check"/>
+        <NamedIndividual IRI="#point_cloud_inconsistent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#point_cloud_perturbation"/>
@@ -985,22 +988,22 @@
         <NamedIndividual IRI="#teleop_auth_attempt"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#teleop_availability_check"/>
+        <NamedIndividual IRI="#teleop_availability_monitoring"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#teleop_config_integrity_check"/>
+        <NamedIndividual IRI="#teleop_config_mismatch"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#teleop_config_tampering"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#teleop_latency_anomaly_detection"/>
+        <NamedIndividual IRI="#teleop_unavailable"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#txt_format"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#v2x_message_check"/>
+        <NamedIndividual IRI="#v2x_message_implausible"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#v2x_message_policy_rule"/>
@@ -1012,7 +1015,7 @@
         <NamedIndividual IRI="#v2x_message_spoofing_injection"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#vehicle_positioning_check"/>
+        <NamedIndividual IRI="#vehicle_positioning_lost"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#xlsx_format"/>
@@ -1025,17 +1028,20 @@
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#AlertEvidenceRecord"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSeverity"/>
-            <ObjectIntersectionOf>
-                <Class IRI="#Severity"/>
-                <ObjectComplementOf>
-                    <ObjectOneOf>
-                        <NamedIndividual IRI="#info_severity"/>
-                    </ObjectOneOf>
-                </ObjectComplementOf>
-            </ObjectIntersectionOf>
-        </ObjectSomeValuesFrom>
+        <ObjectIntersectionOf>
+            <Class IRI="#EvidenceRecord"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasSeverity"/>
+                <ObjectIntersectionOf>
+                    <Class IRI="#Severity"/>
+                    <ObjectComplementOf>
+                        <ObjectOneOf>
+                            <NamedIndividual IRI="#info_severity"/>
+                        </ObjectOneOf>
+                    </ObjectComplementOf>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#AssetEvidenceRecord"/>
@@ -2070,12 +2076,12 @@
         <NamedIndividual IRI="#adversarial_perturbation_detection"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CAV2DSegmentationAIEvent"/>
-        <NamedIndividual IRI="#ai_segmentation_check"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#CAV2DSegmentationAIAttack"/>
         <NamedIndividual IRI="#ai_segmentation_degradation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAV2DSegmentationAIEvent"/>
+        <NamedIndividual IRI="#ai_segmentation_divergent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#MonitoringOutcome"/>
@@ -2178,11 +2184,11 @@
         <NamedIndividual IRI="#cvgl_auth_attempt"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CAVCVGLEvent"/>
-        <NamedIndividual IRI="#cvgl_availability_check"/>
+        <Class IRI="#AnomalyDetection"/>
+        <NamedIndividual IRI="#cvgl_availability_monitoring"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#AnomalyDetection"/>
+        <Class IRI="#IntegrityVerification"/>
         <NamedIndividual IRI="#cvgl_availability_monitoring"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -2191,7 +2197,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVCVGLEvent"/>
-        <NamedIndividual IRI="#cvgl_config_integrity_check"/>
+        <NamedIndividual IRI="#cvgl_config_mismatch"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVCVGLAttack"/>
@@ -2199,7 +2205,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVCVGLEvent"/>
-        <NamedIndividual IRI="#cvgl_correction_envelope_check"/>
+        <NamedIndividual IRI="#cvgl_correction_out_of_envelope"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLEvent"/>
+        <NamedIndividual IRI="#cvgl_correction_stale"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVCVGLAttack"/>
@@ -2226,10 +2236,6 @@
         <NamedIndividual IRI="#cvgl_integrity_check"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CAVCVGLEvent"/>
-        <NamedIndividual IRI="#cvgl_localisation_check"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#CAVCVGLAttack"/>
         <NamedIndividual IRI="#cvgl_manipulation"/>
     </ClassAssertion>
@@ -2244,6 +2250,10 @@
     <ClassAssertion>
         <Class IRI="#InjectionAttack"/>
         <NamedIndividual IRI="#cvgl_unauth_injection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CAVCVGLEvent"/>
+        <NamedIndividual IRI="#cvgl_unavailable"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#IncidentResponseProcedure"/>
@@ -2291,7 +2301,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVGNSSEvent"/>
-        <NamedIndividual IRI="#gnss_check"/>
+        <NamedIndividual IRI="#gnss_inconsistent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVGNSSAttack"/>
@@ -2367,7 +2377,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVCameraEvent"/>
-        <NamedIndividual IRI="#image_stream_integrity_check"/>
+        <NamedIndividual IRI="#image_stream_inconsistent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#MonitoringOutcome"/>
@@ -2390,6 +2400,10 @@
         <NamedIndividual IRI="#json_format"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#FileFormat"/>
+        <NamedIndividual IRI="#jsonl_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#IntegrityVerification"/>
         <NamedIndividual IRI="#ledger_attestation"/>
     </ClassAssertion>
@@ -2407,19 +2421,19 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVLiDARSegmentationAIEvent"/>
-        <NamedIndividual IRI="#lidar_model_integrity_check"/>
+        <NamedIndividual IRI="#lidar_model_mismatch"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CAVLiDARSegmentationAIEvent"/>
-        <NamedIndividual IRI="#lidar_segmentation_check"/>
+        <Class IRI="#CAVLiDARSegmentationAIAttack"/>
+        <NamedIndividual IRI="#lidar_model_tampering"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVLiDARSegmentationAIAttack"/>
         <NamedIndividual IRI="#lidar_segmentation_degradation"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CAVLiDARSegmentationAIAttack"/>
-        <NamedIndividual IRI="#lidar_segmentation_model_tampering"/>
+        <Class IRI="#CAVLiDARSegmentationAIEvent"/>
+        <NamedIndividual IRI="#lidar_segmentation_divergent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#StreamPatternMatching"/>
@@ -2527,7 +2541,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVLiDAREvent"/>
-        <NamedIndividual IRI="#point_cloud_integrity_check"/>
+        <NamedIndividual IRI="#point_cloud_inconsistent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVLiDARAttack"/>
@@ -2638,20 +2652,24 @@
         <NamedIndividual IRI="#teleop_auth_attempt"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CAVTeleoperationServiceEvent"/>
-        <NamedIndividual IRI="#teleop_availability_check"/>
+        <Class IRI="#AnomalyDetection"/>
+        <NamedIndividual IRI="#teleop_availability_monitoring"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IntegrityVerification"/>
+        <NamedIndividual IRI="#teleop_availability_monitoring"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVTeleoperationServiceEvent"/>
-        <NamedIndividual IRI="#teleop_config_integrity_check"/>
+        <NamedIndividual IRI="#teleop_config_mismatch"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVTeleoperationServiceAttack"/>
         <NamedIndividual IRI="#teleop_config_tampering"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#AnomalyDetection"/>
-        <NamedIndividual IRI="#teleop_latency_anomaly_detection"/>
+        <Class IRI="#CAVTeleoperationServiceEvent"/>
+        <NamedIndividual IRI="#teleop_unavailable"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
@@ -2659,7 +2677,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVV2XCommunicationModuleEvent"/>
-        <NamedIndividual IRI="#v2x_message_check"/>
+        <NamedIndividual IRI="#v2x_message_implausible"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#StreamPatternMatching"/>
@@ -2679,7 +2697,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CAVEvent"/>
-        <NamedIndividual IRI="#vehicle_positioning_check"/>
+        <NamedIndividual IRI="#vehicle_positioning_lost"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
@@ -3909,7 +3927,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#CAVV2XCommunicationModuleAttack</IRI>
-        <Literal xml:lang="en">V2X Communication Module Attack</Literal>
+        <Literal xml:lang="en">CAV V2X Communication Module Attack</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4182,14 +4200,14 @@
         <Literal xml:lang="en">DCO Playbook</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#DataAsset</IRI>
-        <Literal xml:lang="en">Data Asset</Literal>
+        <Literal xml:lang="en">Stored data asset.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DataAsset</IRI>
-        <Literal xml:lang="en">Stored data asset.</Literal>
+        <Literal xml:lang="en">Data Asset</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4339,7 +4357,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#IncidentResponseProcedure</IRI>
-        <Literal xml:lang="en">Incidence Response Procedure</Literal>
+        <Literal xml:lang="en">Incident Response Procedure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4684,22 +4702,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#adversarial_perturbation_detection</IRI>
-        <Literal xml:lang="en">Anomaly detection method that identifies adversarial perturbations crafted to fool a perception AI model.</Literal>
+        <Literal xml:lang="en">Identifies adversarial perturbations crafted to fool a perception AI model.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#adversarial_perturbation_detection</IRI>
         <Literal xml:lang="en">Adversarial Perturbation Detection</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#ai_segmentation_check</IRI>
-        <Literal xml:lang="en">Event representing a check of the 2D image segmentation AI module&apos;s output.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ai_segmentation_check</IRI>
-        <Literal xml:lang="en">AI Segmentation Check</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4710,6 +4718,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#ai_segmentation_degradation</IRI>
         <Literal xml:lang="en">AI Segmentation Degradation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ai_segmentation_divergent</IRI>
+        <Literal xml:lang="en">Event in which the 2D image segmentation output disagrees beyond tolerance with an independently trained reference model or with the HD map.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ai_segmentation_divergent</IRI>
+        <Literal xml:lang="en">AI Segmentation Divergent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4734,7 +4752,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#api_key_validation</IRI>
-        <Literal xml:lang="en">Authentication check that validates an API key presented by a client.</Literal>
+        <Literal xml:lang="en">Validates an API key presented by a client.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4744,7 +4762,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#assessedByEvidenceRecord</IRI>
-        <Literal xml:lang="en">Asset is assed by an evidence record.</Literal>
+        <Literal xml:lang="en">Asset is assessed by an evidence record.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4754,7 +4772,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#assessesAsset</IRI>
-        <Literal xml:lang="en">Evidence record asseses an asset.</Literal>
+        <Literal xml:lang="en">Evidence record assesses an asset.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4784,7 +4802,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#behavioral_baseline_deviation</IRI>
-        <Literal xml:lang="en">Anomaly detection method that flags deviation from an established behavioral baseline.</Literal>
+        <Literal xml:lang="en">Flags deviation from an established behavioral baseline.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4794,7 +4812,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#can_bus_anomaly_detection</IRI>
-        <Literal xml:lang="en">Anomaly detection method that monitors CAN bus traffic for abnormal patterns.</Literal>
+        <Literal xml:lang="en">Monitors CAN bus traffic for abnormal patterns.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4804,7 +4822,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#can_bus_rule_check</IRI>
-        <Literal xml:lang="en">Stream pattern matching that checks CAN bus messages against predefined rules.</Literal>
+        <Literal xml:lang="en">Checks CAN bus messages against predefined rules.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4824,7 +4842,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#certificate_validation</IRI>
-        <Literal xml:lang="en">Authentication check that validates a digital certificate.</Literal>
+        <Literal xml:lang="en">Validates a digital certificate.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4884,7 +4902,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#container_policy_scan</IRI>
-        <Literal xml:lang="en">Policy-based scan that checks container images and configurations for policy compliance.</Literal>
+        <Literal xml:lang="en">Checks container images and configurations for policy compliance.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4894,7 +4912,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#content_signature_match</IRI>
-        <Literal xml:lang="en">Signature matching that compares content against known malicious signatures.</Literal>
+        <Literal xml:lang="en">Compares content against known malicious signatures.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4904,7 +4922,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#credential_login_check</IRI>
-        <Literal xml:lang="en">Authentication check that verifies login credentials such as username and password.</Literal>
+        <Literal xml:lang="en">Verifies login credentials such as username and password.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4973,16 +4991,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cvgl_availability_check</IRI>
-        <Literal xml:lang="en">Event representing a check of whether the CVGL correction service is answering, and of its request rate, response latency, error rate and resource use.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#cvgl_availability_check</IRI>
-        <Literal xml:lang="en">CVGL Availability Check</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#cvgl_availability_monitoring</IRI>
         <Literal xml:lang="en">Monitors the CVGL correction service&apos;s request rate, response latency, error rate and resource use against its normal operating envelope, including whether it answered at all.</Literal>
     </AnnotationAssertion>
@@ -4999,17 +5007,17 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#cvgl_config_data_poisoning</IRI>
-        <Literal xml:lang="en">CVGL Config Data Poisoning</Literal>
+        <Literal xml:lang="en">CVGL Configuration Data Poisoning</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cvgl_config_integrity_check</IRI>
-        <Literal xml:lang="en">Event representing a fingerprint recheck of the CVGL service&apos;s configuration files and stored reference data.</Literal>
+        <IRI>#cvgl_config_mismatch</IRI>
+        <Literal xml:lang="en">Event in which the CVGL service&apos;s configuration files or stored satellite reference tiles no longer match their recorded baseline fingerprint.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#cvgl_config_integrity_check</IRI>
-        <Literal xml:lang="en">CVGL Configuration Integrity Check</Literal>
+        <IRI>#cvgl_config_mismatch</IRI>
+        <Literal xml:lang="en">CVGL Configuration Mismatch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5023,13 +5031,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cvgl_correction_envelope_check</IRI>
-        <Literal xml:lang="en">Event representing a check of whether a CVGL correction falls inside the residual envelope the service was validated for.</Literal>
+        <IRI>#cvgl_correction_out_of_envelope</IRI>
+        <Literal xml:lang="en">Event in which a returned CVGL correction falls outside the residual envelope the service was validated for, relative to the raw GNSS fix and the dead-reckoning estimate.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#cvgl_correction_envelope_check</IRI>
-        <Literal xml:lang="en">CVGL Correction Envelope Check</Literal>
+        <IRI>#cvgl_correction_out_of_envelope</IRI>
+        <Literal xml:lang="en">CVGL Correction Out of Envelope</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_correction_stale</IRI>
+        <Literal xml:lang="en">Event in which a CVGL correction carries an outdated timestamp, a repeated sequence number or a reused nonce, so it does not describe the vehicle&apos;s current position.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_correction_stale</IRI>
+        <Literal xml:lang="en">CVGL Correction Stale</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5064,22 +5082,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#cvgl_integrity_check</IRI>
-        <Literal xml:lang="en">Assessment method that verifies the integrity of CVGL localization data.</Literal>
+        <Literal xml:lang="en">Verifies the integrity of CVGL localization data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#cvgl_integrity_check</IRI>
         <Literal xml:lang="en">CVGL Integrity Check</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#cvgl_localisation_check</IRI>
-        <Literal xml:lang="en">Event representing a check of the CVGL localization result.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#cvgl_localisation_check</IRI>
-        <Literal xml:lang="en">CVGL Localisation Check</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5104,12 +5112,22 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#cvgl_unauth_injection</IRI>
-        <Literal xml:lang="en">Injection attack that performs unauthorized access against the CVGL correction service as part of a scripted penetration test.</Literal>
+        <Literal xml:lang="en">Injection attack that performs unauthorized access against the CVGL correction service.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#cvgl_unauth_injection</IRI>
         <Literal xml:lang="en">CVGL Unauthorized Injection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#cvgl_unavailable</IRI>
+        <Literal xml:lang="en">Event in which the CVGL correction service does not answer, or answers too slowly or with too many errors for its corrections to be usable by the vehicles relying on it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#cvgl_unavailable</IRI>
+        <Literal xml:lang="en">CVGL Unavailable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5134,7 +5152,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#dependency_policy_scan</IRI>
-        <Literal xml:lang="en">Policy-based scan that checks software dependencies for policy compliance.</Literal>
+        <Literal xml:lang="en">Checks software dependencies for policy compliance.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5144,7 +5162,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#digital_signature_verification</IRI>
-        <Literal xml:lang="en">Assessment method that verifies a digital signature to confirm authenticity and integrity.</Literal>
+        <Literal xml:lang="en">Verifies a digital signature to confirm authenticity and integrity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5164,7 +5182,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#domain_ioc_match</IRI>
-        <Literal xml:lang="en">IOC matching that compares observed domain names against known indicators of compromise.</Literal>
+        <Literal xml:lang="en">Compares observed domain names against known indicators of compromise.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5263,13 +5281,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#gnss_check</IRI>
-        <Literal xml:lang="en">Event representing a check of the CAV&apos;s GNSS receiver.</Literal>
+        <IRI>#gnss_inconsistent</IRI>
+        <Literal xml:lang="en">Event in which the GNSS receiver&apos;s position fix is inconsistent across satellites, or disagrees with independent motion estimates beyond tolerance.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#gnss_check</IRI>
-        <Literal xml:lang="en">GNSS Check</Literal>
+        <IRI>#gnss_inconsistent</IRI>
+        <Literal xml:lang="en">GNSS Inconsistent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5344,7 +5362,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hasBlockchainTxID</IRI>
-        <Literal xml:lang="en">Blockchain transcaction id string.</Literal>
+        <Literal xml:lang="en">Blockchain transaction id string.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5594,7 +5612,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#hash_verification</IRI>
-        <Literal xml:lang="en">Assessment method that verifies data integrity by comparing hash digests.</Literal>
+        <Literal xml:lang="en">Verifies data integrity by comparing hash digests.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5644,7 +5662,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#iac_policy_scan</IRI>
-        <Literal xml:lang="en">Policy-based scan that checks Infrastructure-as-Code definitions for policy compliance.</Literal>
+        <Literal xml:lang="en">Checks Infrastructure-as-Code definitions for policy compliance.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5673,13 +5691,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#image_stream_integrity_check</IRI>
-        <Literal xml:lang="en">Event representing an integrity check of the camera&apos;s image stream.</Literal>
+        <IRI>#image_stream_inconsistent</IRI>
+        <Literal xml:lang="en">Event in which camera frames show content or statistics inconsistent with co-located sensors or with expected scene properties.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#image_stream_integrity_check</IRI>
-        <Literal xml:lang="en">Image Stream Integrity Check</Literal>
+        <IRI>#image_stream_inconsistent</IRI>
+        <Literal xml:lang="en">Image Stream Inconsistent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5704,7 +5722,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ip_ioc_match</IRI>
-        <Literal xml:lang="en">IOC matching that compares observed IP addresses against known indicators of compromise.</Literal>
+        <Literal xml:lang="en">Compares observed IP addresses against known indicators of compromise.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5729,7 +5747,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isAssetInScope</IRI>
-        <Literal xml:lang="en">has asset in scope</Literal>
+        <Literal xml:lang="en">is asset in scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5749,7 +5767,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isControlThemeInScope</IRI>
-        <Literal xml:lang="en">has control theme in scope</Literal>
+        <Literal xml:lang="en">is control theme in scope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5803,8 +5821,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#jsonl_format</IRI>
+        <Literal xml:lang="en">JSON Lines format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#jsonl_format</IRI>
+        <Literal xml:lang="en">JSONL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ledger_attestation</IRI>
-        <Literal xml:lang="en">Assessment method that verifies integrity by checking a record&apos;s attestation on a ledger.</Literal>
+        <Literal xml:lang="en">Verifies integrity by checking a record&apos;s attestation on a ledger.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5824,7 +5852,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#lidar_camera_cross_check</IRI>
-        <Literal xml:lang="en">Assessment method that cross-checks LiDAR and camera data for consistency.</Literal>
+        <Literal xml:lang="en">Cross-checks LiDAR and camera data for consistency.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -5833,23 +5861,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#lidar_model_integrity_check</IRI>
-        <Literal xml:lang="en">Event representing a fingerprint recheck of a LiDAR segmentation model&apos;s weights and configuration.</Literal>
+        <IRI>#lidar_model_mismatch</IRI>
+        <Literal xml:lang="en">Event in which a LiDAR segmentation model&apos;s weights or configuration no longer match their recorded baseline fingerprint.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#lidar_model_integrity_check</IRI>
-        <Literal xml:lang="en">LiDAR Model Integrity Check</Literal>
+        <IRI>#lidar_model_mismatch</IRI>
+        <Literal xml:lang="en">LiDAR Model Mismatch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#lidar_segmentation_check</IRI>
-        <Literal xml:lang="en">Event representing a check of the LiDAR segmentation model&apos;s output, against an independently trained reference model or against the HD map.</Literal>
+        <IRI>#lidar_model_tampering</IRI>
+        <Literal xml:lang="en">Attack that alters a LiDAR segmentation model&apos;s weights or configuration.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#lidar_segmentation_check</IRI>
-        <Literal xml:lang="en">LiDAR Segmentation Check</Literal>
+        <IRI>#lidar_model_tampering</IRI>
+        <Literal xml:lang="en">LiDAR Model Tampering</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5863,18 +5891,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#lidar_segmentation_model_tampering</IRI>
-        <Literal xml:lang="en">Attack that alters a LiDAR segmentation model&apos;s weights or configuration.</Literal>
+        <IRI>#lidar_segmentation_divergent</IRI>
+        <Literal xml:lang="en">Event in which the LiDAR segmentation output disagrees beyond tolerance with an independently trained reference model or with the HD map.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#lidar_segmentation_model_tampering</IRI>
-        <Literal xml:lang="en">LiDAR Segmentation Model Tampering</Literal>
+        <IRI>#lidar_segmentation_divergent</IRI>
+        <Literal xml:lang="en">LiDAR Segmentation Divergent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#log_correlation_rule</IRI>
-        <Literal xml:lang="en">Stream pattern matching that correlates log entries against predefined rules.</Literal>
+        <Literal xml:lang="en">Correlates log entries against predefined rules.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6014,7 +6042,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#ml_perception_anomaly_detection</IRI>
-        <Literal xml:lang="en">Anomaly detection method using machine learning to detect abnormal perception outputs.</Literal>
+        <Literal xml:lang="en">Uses machine learning to detect abnormal perception outputs.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6044,7 +6072,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#network_signature_match</IRI>
-        <Literal xml:lang="en">Signature matching that compares network traffic against known malicious signatures.</Literal>
+        <Literal xml:lang="en">Compares network traffic against known malicious signatures.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6143,13 +6171,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#point_cloud_integrity_check</IRI>
-        <Literal xml:lang="en">Event representing an integrity check of the LiDAR point cloud stream.</Literal>
+        <IRI>#point_cloud_inconsistent</IRI>
+        <Literal xml:lang="en">Event in which the LiDAR point cloud contains points inconsistent with co-located sensors or with the expected geometry of the scene.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#point_cloud_integrity_check</IRI>
-        <Literal xml:lang="en">Point Cloud Integrity Check</Literal>
+        <IRI>#point_cloud_inconsistent</IRI>
+        <Literal xml:lang="en">Point Cloud Inconsistent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6192,7 +6220,7 @@
         <Literal xml:lang="en">produced by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#produces</IRI>
         <Literal xml:lang="en">Source that produces an evidence record.</Literal>
     </AnnotationAssertion>
@@ -6204,7 +6232,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#raim</IRI>
-        <Literal xml:lang="en">Receiver Autonomous Integrity Monitoring: a method for detecting faults in GNSS positioning data.</Literal>
+        <Literal xml:lang="en">Receiver Autonomous Integrity Monitoring: detects faults in GNSS positioning data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6344,7 +6372,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#sast_policy_scan</IRI>
-        <Literal xml:lang="en">Policy-based scan using Static Application Security Testing to check code for policy compliance.</Literal>
+        <Literal xml:lang="en">Uses Static Application Security Testing to check code for policy compliance.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6454,7 +6482,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#simulates</IRI>
-        <Literal xml:lang="en">Software applicates can simulate an asset.</Literal>
+        <Literal xml:lang="en">Software application can simulate an asset.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6474,7 +6502,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#statistical_outlier_detection</IRI>
-        <Literal xml:lang="en">Anomaly detection method that flags statistical outliers in observed data.</Literal>
+        <Literal xml:lang="en">Flags statistical outliers in observed data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6553,23 +6581,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#teleop_availability_check</IRI>
-        <Literal xml:lang="en">Event representing a check of the teleoperation service&apos;s request volume, response time, error rate and resource use.</Literal>
+        <IRI>#teleop_availability_monitoring</IRI>
+        <Literal xml:lang="en">Monitors the teleoperation service&apos;s request volume, response time, error rate and resource use against its normal operating envelope, including whether it answered at all.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#teleop_availability_check</IRI>
-        <Literal xml:lang="en">Teleoperation Availability Check</Literal>
+        <IRI>#teleop_availability_monitoring</IRI>
+        <Literal xml:lang="en">Teleoperation Availability Monitoring</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#teleop_config_integrity_check</IRI>
-        <Literal xml:lang="en">Event representing a fingerprint recheck of the teleoperation API&apos;s settings and session configuration.</Literal>
+        <IRI>#teleop_config_mismatch</IRI>
+        <Literal xml:lang="en">Event in which the teleoperation API&apos;s settings or session configuration no longer match their recorded baseline fingerprint.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#teleop_config_integrity_check</IRI>
-        <Literal xml:lang="en">Teleoperation Configuration Integrity Check</Literal>
+        <IRI>#teleop_config_mismatch</IRI>
+        <Literal xml:lang="en">Teleoperation Configuration Mismatch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6583,13 +6611,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#teleop_latency_anomaly_detection</IRI>
-        <Literal xml:lang="en">Anomaly detection method that flags abnormal latency in the teleoperation service.</Literal>
+        <IRI>#teleop_unavailable</IRI>
+        <Literal xml:lang="en">Event in which the teleoperation service does not answer, or its response time or error rate makes remote operation of the vehicle unusable.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#teleop_latency_anomaly_detection</IRI>
-        <Literal xml:lang="en">Teleoperation Latency Anomaly Detection</Literal>
+        <IRI>#teleop_unavailable</IRI>
+        <Literal xml:lang="en">Teleoperation Unavailable</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6613,18 +6641,18 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#v2x_message_check</IRI>
-        <Literal xml:lang="en">Event representing a check of a received V2X message&apos;s validity.</Literal>
+        <IRI>#v2x_message_implausible</IRI>
+        <Literal xml:lang="en">Event in which a received V2X message fails authenticity or plausibility constraints, such as an invalid signature, or position, speed or timing values inconsistent with the sender&apos;s history or physical limits.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#v2x_message_check</IRI>
-        <Literal xml:lang="en">V2X Message Check</Literal>
+        <IRI>#v2x_message_implausible</IRI>
+        <Literal xml:lang="en">V2X Message Implausible</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#v2x_message_policy_rule</IRI>
-        <Literal xml:lang="en">Stream pattern matching that checks V2X messages against a predefined policy rule.</Literal>
+        <Literal xml:lang="en">Checks V2X messages against a predefined policy rule.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -6653,13 +6681,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#vehicle_positioning_check</IRI>
-        <Literal xml:lang="en">Event representing a check of whether the vehicle still holds a trusted positioning reference from any of its sources.</Literal>
+        <IRI>#vehicle_positioning_lost</IRI>
+        <Literal xml:lang="en">Event in which the vehicle no longer holds a trusted position reference from any of its sources.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#vehicle_positioning_check</IRI>
-        <Literal xml:lang="en">Vehicle Positioning Check</Literal>
+        <IRI>#vehicle_positioning_lost</IRI>
+        <Literal xml:lang="en">Vehicle Positioning Lost</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
