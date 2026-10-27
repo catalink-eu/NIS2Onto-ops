@@ -62,14 +62,14 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#causedByVulnerability -->
+    <!-- https://w3id.org/nis2onto-ops#causesVulnerability -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/nis2onto-ops#causedByVulnerability">
+    <owl:ObjectProperty rdf:about="https://w3id.org/nis2onto-ops#causesVulnerability">
         <owl:inverseOf rdf:resource="https://w3id.org/nis2onto-ops#hasCausalWeakness"/>
         <rdfs:domain rdf:resource="https://w3id.org/nis2onto-ops#CWE"/>
         <rdfs:range rdf:resource="https://w3id.org/nis2onto-ops#CVE"/>
         <rdfs:comment xml:lang="en">Underlying weakness causes a vulnerability.</rdfs:comment>
-        <rdfs:label xml:lang="en">caused by vulnerability</rdfs:label>
+        <rdfs:label xml:lang="en">causes vulnerability</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -676,16 +676,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Software endpoint string.</rdfs:comment>
         <rdfs:label xml:lang="en">has endpoint</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/nis2onto-ops#hasFileName -->
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/nis2onto-ops#hasFileName">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">File name string.</rdfs:comment>
-        <rdfs:label xml:lang="en">has file name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1769,24 +1759,6 @@
 
     <owl:Class rdf:about="https://w3id.org/nis2onto-ops#Document">
         <rdfs:subClassOf rdf:resource="http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#NIS2GeneralOntologicalEntity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#hasFileFormat"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/nis2onto-ops#FileFormat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#hasFileName"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/nis2onto-ops#hasURL"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A documentary artifact, e.g. a policy, procedure, certificate, or report.</rdfs:comment>
         <rdfs:label xml:lang="en">Document</rdfs:label>
     </owl:Class>
@@ -2646,6 +2618,16 @@
         <nis2onto-ops:hasID>CYRESCUE</nis2onto-ops:hasID>
         <rdfs:comment xml:lang="en">CYberSynchrony module that enhances resilience by identifying vulnerabilities in critical systems and streamlining incident response. Automated tools and secure digital vaults protect systems and data, enabling rapid response to threats.</rdfs:comment>
         <rdfs:label xml:lang="en">CYRESCUE</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#YAML -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#YAML">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#FileFormat"/>
+        <rdfs:comment xml:lang="en">YAML Ain&apos;t Markup Language format.</rdfs:comment>
+        <rdfs:label xml:lang="en">YAML</rdfs:label>
     </owl:NamedIndividual>
     
 

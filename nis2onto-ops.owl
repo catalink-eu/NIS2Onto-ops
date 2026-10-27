@@ -397,7 +397,7 @@
         <ObjectProperty IRI="#assessesAsset"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#causedByVulnerability"/>
+        <ObjectProperty IRI="#causesVulnerability"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#communicatesWith"/>
@@ -556,9 +556,6 @@
         <DataProperty IRI="#hasEndpoint"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasFileName"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasHashValue"/>
     </Declaration>
     <Declaration>
@@ -617,6 +614,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CYRESCUE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#YAML"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#adversarial_perturbation_detection"/>
@@ -1644,27 +1644,6 @@
         <Class abbreviatedIRI="nis2onto:NIS2GeneralOntologicalEntity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Document"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasFileFormat"/>
-            <Class IRI="#FileFormat"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Document"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasFileName"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Document"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#hasURL"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#DocumentEvidenceRecord"/>
         <Class IRI="#EvidenceRecord"/>
     </SubClassOf>
@@ -2070,6 +2049,10 @@
     <ClassAssertion>
         <Class IRI="#CybersecuritySoftwareModule"/>
         <NamedIndividual IRI="#CYRESCUE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FileFormat"/>
+        <NamedIndividual IRI="#YAML"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#AnomalyDetection"/>
@@ -2849,7 +2832,7 @@
         <ObjectProperty IRI="#isAchievedByAttackTechnique"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#causedByVulnerability"/>
+        <ObjectProperty IRI="#causesVulnerability"/>
         <ObjectProperty IRI="#hasCausalWeakness"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
@@ -2908,7 +2891,7 @@
         <Class IRI="#EvidenceRecord"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#causedByVulnerability"/>
+        <ObjectProperty IRI="#causesVulnerability"/>
         <Class IRI="#CWE"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -3092,7 +3075,7 @@
         <Class IRI="#Asset"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#causedByVulnerability"/>
+        <ObjectProperty IRI="#causesVulnerability"/>
         <Class IRI="#CVE"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -3333,10 +3316,6 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasEndpoint"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasFileName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -4691,6 +4670,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#YAML</IRI>
+        <Literal xml:lang="en">YAML Ain&apos;t Markup Language format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#YAML</IRI>
+        <Literal xml:lang="en">YAML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#achievesAttackTactic</IRI>
         <Literal xml:lang="en">Technique that serves a MITRE ATT&amp;CK tactic.</Literal>
     </AnnotationAssertion>
@@ -4831,13 +4820,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#causedByVulnerability</IRI>
+        <IRI>#causesVulnerability</IRI>
         <Literal xml:lang="en">Underlying weakness causes a vulnerability.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#causedByVulnerability</IRI>
-        <Literal xml:lang="en">caused by vulnerability</Literal>
+        <IRI>#causesVulnerability</IRI>
+        <Literal xml:lang="en">causes vulnerability</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -5448,16 +5437,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasFileFormat</IRI>
         <Literal xml:lang="en">has file format</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#hasFileName</IRI>
-        <Literal xml:lang="en">File name string.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasFileName</IRI>
-        <Literal xml:lang="en">has file name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

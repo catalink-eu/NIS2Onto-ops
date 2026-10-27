@@ -11,26 +11,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid100",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
-    }, {
-      "@id" : "_:genid102"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid102",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#recordsExecutionOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#DCOPlaybook"
-  } ]
-}, {
-  "@id" : "_:genid104",
+  "@id" : "_:genid101",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#dco_playbook_incident_response"
@@ -39,7 +20,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#supportsControlTheme"
   } ]
 }, {
-  "@id" : "_:genid105",
+  "@id" : "_:genid102",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasScoreGrade"
@@ -48,7 +29,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid106",
+  "@id" : "_:genid103",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasScoreValue"
@@ -57,17 +38,17 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid107",
+  "@id" : "_:genid104",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
     }, {
-      "@id" : "_:genid109"
+      "@id" : "_:genid106"
     } ]
   } ]
 }, {
-  "@id" : "_:genid109",
+  "@id" : "_:genid106",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasPostureScore"
@@ -76,7 +57,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#PostureScore"
   } ]
 }, {
-  "@id" : "_:genid111",
+  "@id" : "_:genid108",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#configuration_auditing"
@@ -85,7 +66,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#supportsControlTheme"
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid109",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasScoreValue"
@@ -94,7 +75,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid113",
+  "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#governedBy"
@@ -103,7 +84,7 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Art21Par2-f-Entity"
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid111",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "7"
@@ -112,7 +93,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"
   } ]
 }, {
-  "@id" : "_:genid115",
+  "@id" : "_:genid112",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#governedBy"
@@ -121,7 +102,7 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Art21Par2-d-Entity"
   } ]
 }, {
-  "@id" : "_:genid116",
+  "@id" : "_:genid113",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "5.1"
@@ -130,24 +111,33 @@
     "@id" : "https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"
   } ]
 }, {
-  "@id" : "_:genid117",
+  "@id" : "_:genid114",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
     }, {
-      "@id" : "_:genid119"
+      "@id" : "_:genid116"
     } ]
   } ]
 }, {
-  "@id" : "_:genid119",
+  "@id" : "_:genid116",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid123"
+      "@id" : "_:genid120"
     }, {
-      "@id" : "_:genid121"
+      "@id" : "_:genid118"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid118",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#recordsAttackTechnique"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#AttackTechnique"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -160,16 +150,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid121",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#recordsAttackTechnique"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#AttackTechnique"
-  } ]
-}, {
-  "@id" : "_:genid123",
+  "@id" : "_:genid120",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#recordsAttackTactic"
@@ -178,27 +159,27 @@
     "@id" : "https://w3id.org/nis2onto-ops#AttackTactic"
   } ]
 }, {
-  "@id" : "_:genid125",
+  "@id" : "_:genid122",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
     }, {
-      "@id" : "_:genid127"
+      "@id" : "_:genid124"
     } ]
   } ]
 }, {
-  "@id" : "_:genid127",
+  "@id" : "_:genid124",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "_:genid131"
+      "@id" : "_:genid128"
     }, {
-      "@id" : "_:genid129"
+      "@id" : "_:genid126"
     } ]
   } ]
 }, {
-  "@id" : "_:genid129",
+  "@id" : "_:genid126",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#recordsWeakness"
@@ -207,7 +188,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#CWE"
   } ]
 }, {
-  "@id" : "_:genid131",
+  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#recordsVulnerability"
@@ -216,7 +197,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#CVE"
   } ]
 }, {
-  "@id" : "_:genid133",
+  "@id" : "_:genid130",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#cve_cwe_disclosure"
@@ -225,7 +206,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#supportsControlTheme"
   } ]
 }, {
-  "@id" : "_:genid134",
+  "@id" : "_:genid131",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#governedBy"
@@ -234,7 +215,7 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Art21Par2-e-Entity"
   } ]
 }, {
-  "@id" : "_:genid135",
+  "@id" : "_:genid132",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "6.10"
@@ -243,7 +224,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"
   } ]
 }, {
-  "@id" : "_:genid136",
+  "@id" : "_:genid133",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
   "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
     "@list" : [ {
@@ -257,16 +238,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#hasSeverity"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid15"
-  } ]
-}, {
-  "@id" : "_:genid141",
+  "@id" : "_:genid138",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
   "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
     "@list" : [ {
@@ -280,6 +252,15 @@
     }, {
       "@id" : "https://w3id.org/nis2onto-ops#n_a"
     } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#hasSeverity"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "_:genid15",
@@ -596,43 +577,16 @@
   } ]
 }, {
   "@id" : "_:genid60",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#hasFileFormat"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#FileFormat"
-  } ]
-}, {
-  "@id" : "_:genid61",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#hasFileName"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid62",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#hasURL"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
     }, {
-      "@id" : "_:genid65"
+      "@id" : "_:genid62"
     } ]
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#recordsDocument"
@@ -641,7 +595,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#Document"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#governedBy"
@@ -650,7 +604,7 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Art21Par2-b-Entity"
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "3.4"
@@ -659,17 +613,17 @@
     "@id" : "https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"
   } ]
 }, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
     }, {
-      "@id" : "_:genid71"
+      "@id" : "_:genid68"
     } ]
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#recordsEvent"
@@ -678,16 +632,16 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Event"
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#producedBy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid74"
+    "@id" : "_:genid71"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -699,7 +653,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasID"
@@ -708,7 +662,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid79",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasTimestamp"
@@ -717,7 +671,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hashedUsing"
@@ -726,7 +680,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#HashAlgorithm"
   } ]
 }, {
-  "@id" : "_:genid81",
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasHashValue"
@@ -735,7 +689,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid82",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#governedBy"
@@ -744,7 +698,7 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Art21Par2-b-Entity"
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "3.2"
@@ -753,7 +707,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"
   } ]
 }, {
-  "@id" : "_:genid84",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#governedBy"
@@ -762,7 +716,7 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#Art21Par2-b-Entity"
   } ]
 }, {
-  "@id" : "_:genid85",
+  "@id" : "_:genid82",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "3.5"
@@ -771,27 +725,45 @@
     "@id" : "https://w3id.org/nis2onto-ops#relatedToENISATechnicalGuideSection"
   } ]
 }, {
-  "@id" : "_:genid86",
+  "@id" : "_:genid83",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
     }, {
-      "@id" : "_:genid92"
+      "@id" : "_:genid89"
     }, {
-      "@id" : "_:genid90"
+      "@id" : "_:genid87"
     }, {
-      "@id" : "_:genid88"
+      "@id" : "_:genid85"
     } ]
   } ]
 }, {
-  "@id" : "_:genid88",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#hasBlockchainTxID"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid87",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#recordedOnLedger"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#Ledger"
+  } ]
+}, {
+  "@id" : "_:genid89",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#hasHashDigest"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#HashDigest"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -804,25 +776,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid90",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#recordedOnLedger"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#Ledger"
-  } ]
-}, {
-  "@id" : "_:genid92",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#hasHashDigest"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/nis2onto-ops#HashDigest"
-  } ]
-}, {
-  "@id" : "_:genid94",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#ledger_evidence_recording"
@@ -831,17 +785,17 @@
     "@id" : "https://w3id.org/nis2onto-ops#supportsControlTheme"
   } ]
 }, {
-  "@id" : "_:genid95",
+  "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
     }, {
-      "@id" : "_:genid97"
+      "@id" : "_:genid94"
     } ]
   } ]
 }, {
-  "@id" : "_:genid97",
+  "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#recordsMonitoringOutcome"
@@ -850,13 +804,32 @@
     "@id" : "https://w3id.org/nis2onto-ops#MonitoringOutcome"
   } ]
 }, {
-  "@id" : "_:genid99",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#component_integrity_evaluation"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#supportsControlTheme"
+  } ]
+}, {
+  "@id" : "_:genid97",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
+    }, {
+      "@id" : "_:genid99"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid99",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#recordsExecutionOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/nis2onto-ops#DCOPlaybook"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops",
@@ -2172,12 +2145,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#NIS2GeneralOntologicalEntity"
-  }, {
-    "@id" : "_:genid60"
-  }, {
-    "@id" : "_:genid61"
-  }, {
-    "@id" : "_:genid62"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#DocumentEvidenceRecord",
@@ -2194,7 +2161,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid63"
+    "@id" : "_:genid60"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#EventAnalysisAndClassification",
@@ -2210,9 +2177,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#ControlTheme"
   }, {
-    "@id" : "_:genid67"
+    "@id" : "_:genid64"
   }, {
-    "@id" : "_:genid68"
+    "@id" : "_:genid65"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#EventEvidenceRecord",
@@ -2229,7 +2196,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid69"
+    "@id" : "_:genid66"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord",
@@ -2243,11 +2210,11 @@
     "@value" : "Evidence Record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid73"
+    "@id" : "_:genid70"
   }, {
-    "@id" : "_:genid78"
+    "@id" : "_:genid75"
   }, {
-    "@id" : "_:genid79"
+    "@id" : "_:genid76"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#FileFormat",
@@ -2305,9 +2272,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#HashComponent"
   }, {
-    "@id" : "_:genid80"
+    "@id" : "_:genid77"
   }, {
-    "@id" : "_:genid81"
+    "@id" : "_:genid78"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#IOCMatching",
@@ -2351,9 +2318,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#ControlTheme"
   }, {
-    "@id" : "_:genid82"
+    "@id" : "_:genid79"
   }, {
-    "@id" : "_:genid83"
+    "@id" : "_:genid80"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#IncidentResponseProcedure",
@@ -2369,9 +2336,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#ControlTheme"
   }, {
-    "@id" : "_:genid84"
+    "@id" : "_:genid81"
   }, {
-    "@id" : "_:genid85"
+    "@id" : "_:genid82"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#InjectionAttack",
@@ -2429,10 +2396,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
   }, {
-    "@id" : "_:genid94"
+    "@id" : "_:genid91"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid86"
+    "@id" : "_:genid83"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#MISP",
@@ -2478,10 +2445,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
   }, {
-    "@id" : "_:genid99"
+    "@id" : "_:genid96"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid95"
+    "@id" : "_:genid92"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#MonitoringOutcome",
@@ -2539,10 +2506,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
   }, {
-    "@id" : "_:genid104"
+    "@id" : "_:genid101"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid100"
+    "@id" : "_:genid97"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#PolicyBasedScan",
@@ -2572,9 +2539,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#RiskRating"
   }, {
-    "@id" : "_:genid105"
+    "@id" : "_:genid102"
   }, {
-    "@id" : "_:genid106"
+    "@id" : "_:genid103"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#PostureScoreEvidenceRecord",
@@ -2590,10 +2557,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#EvidenceRecord"
   }, {
-    "@id" : "_:genid111"
+    "@id" : "_:genid108"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid107"
+    "@id" : "_:genid104"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#RemediationScore",
@@ -2609,7 +2576,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#RiskRating"
   }, {
-    "@id" : "_:genid112"
+    "@id" : "_:genid109"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#RiskRating",
@@ -2678,9 +2645,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#ControlTheme"
   }, {
-    "@id" : "_:genid113"
+    "@id" : "_:genid110"
   }, {
-    "@id" : "_:genid114"
+    "@id" : "_:genid111"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#Severity",
@@ -2796,9 +2763,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#ControlTheme"
   }, {
-    "@id" : "_:genid115"
+    "@id" : "_:genid112"
   }, {
-    "@id" : "_:genid116"
+    "@id" : "_:genid113"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#Suricata",
@@ -2831,7 +2798,7 @@
     "@id" : "https://w3id.org/nis2onto-ops#CTIEnrichedEvidenceRecord"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid117"
+    "@id" : "_:genid114"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#VulnerabilityEvidenceRecord",
@@ -2847,10 +2814,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#CTIEnrichedEvidenceRecord"
   }, {
-    "@id" : "_:genid133"
+    "@id" : "_:genid130"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid125"
+    "@id" : "_:genid122"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#VulnerabilityHandlingAndDisclosure",
@@ -2866,9 +2833,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#ControlTheme"
   }, {
-    "@id" : "_:genid134"
+    "@id" : "_:genid131"
   }, {
-    "@id" : "_:genid135"
+    "@id" : "_:genid132"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#Wazuh",
@@ -2885,6 +2852,17 @@
     "@id" : "http://www.unict.it/nas-inf/nis2onto/nis2onto.owl#CybersecurityTool"
   }, {
     "@id" : "https://w3id.org/nis2onto-ops#CybersecuritySoftwareApplication"
+  } ]
+}, {
+  "@id" : "https://w3id.org/nis2onto-ops#YAML",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/nis2onto-ops#FileFormat" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "YAML Ain't Markup Language format."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "YAML"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#achievesAttackTactic",
@@ -3062,7 +3040,7 @@
     "@value" : "CAN Bus Rule Check"
   } ]
 }, {
-  "@id" : "https://w3id.org/nis2onto-ops#causedByVulnerability",
+  "@id" : "https://w3id.org/nis2onto-ops#causesVulnerability",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -3073,7 +3051,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "caused by vulnerability"
+    "@value" : "causes vulnerability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#CVE"
@@ -3856,20 +3834,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/nis2onto-ops#FileFormat"
-  } ]
-}, {
-  "@id" : "https://w3id.org/nis2onto-ops#hasFileName",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "File name string."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has file name"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#hasHashDigest",

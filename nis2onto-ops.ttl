@@ -43,13 +43,13 @@ nis2onto-ops:assessesAsset rdf:type owl:ObjectProperty ;
                            rdfs:label "assesses asset"@en .
 
 
-###  https://w3id.org/nis2onto-ops#causedByVulnerability
-nis2onto-ops:causedByVulnerability rdf:type owl:ObjectProperty ;
-                                   owl:inverseOf nis2onto-ops:hasCausalWeakness ;
-                                   rdfs:domain nis2onto-ops:CWE ;
-                                   rdfs:range nis2onto-ops:CVE ;
-                                   rdfs:comment "Underlying weakness causes a vulnerability."@en ;
-                                   rdfs:label "caused by vulnerability"@en .
+###  https://w3id.org/nis2onto-ops#causesVulnerability
+nis2onto-ops:causesVulnerability rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf nis2onto-ops:hasCausalWeakness ;
+                                 rdfs:domain nis2onto-ops:CWE ;
+                                 rdfs:range nis2onto-ops:CVE ;
+                                 rdfs:comment "Underlying weakness causes a vulnerability."@en ;
+                                 rdfs:label "causes vulnerability"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#communicatesWith
@@ -484,13 +484,6 @@ nis2onto-ops:hasEndpoint rdf:type owl:DatatypeProperty ;
                          rdfs:range xsd:string ;
                          rdfs:comment "Software endpoint string."@en ;
                          rdfs:label "has endpoint"@en .
-
-
-###  https://w3id.org/nis2onto-ops#hasFileName
-nis2onto-ops:hasFileName rdf:type owl:DatatypeProperty ;
-                         rdfs:range xsd:string ;
-                         rdfs:comment "File name string."@en ;
-                         rdfs:label "has file name"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#hasHashValue
@@ -1240,19 +1233,7 @@ nis2onto-ops:DetectionRule rdf:type owl:Class ;
 
 ###  https://w3id.org/nis2onto-ops#Document
 nis2onto-ops:Document rdf:type owl:Class ;
-                      rdfs:subClassOf nis2onto:NIS2GeneralOntologicalEntity ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty nis2onto-ops:hasFileFormat ;
-                                        owl:someValuesFrom nis2onto-ops:FileFormat
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty nis2onto-ops:hasFileName ;
-                                        owl:someValuesFrom xsd:string
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty nis2onto-ops:hasURL ;
-                                        owl:someValuesFrom xsd:string
-                                      ] ;
+                      rdfs:subClassOf nis2onto:NIS2GeneralOntologicalEntity ;
                       rdfs:comment "A documentary artifact, e.g. a policy, procedure, certificate, or report."@en ;
                       rdfs:label "Document"@en .
 
@@ -1861,6 +1842,13 @@ nis2onto-ops:CYRESCUE rdf:type owl:NamedIndividual ,
                       nis2onto-ops:hasID "CYRESCUE" ;
                       rdfs:comment "CYberSynchrony module that enhances resilience by identifying vulnerabilities in critical systems and streamlining incident response. Automated tools and secure digital vaults protect systems and data, enabling rapid response to threats."@en ;
                       rdfs:label "CYRESCUE"@en .
+
+
+###  https://w3id.org/nis2onto-ops#YAML
+nis2onto-ops:YAML rdf:type owl:NamedIndividual ,
+                           nis2onto-ops:FileFormat ;
+                  rdfs:comment "YAML Ain't Markup Language format."@en ;
+                  rdfs:label "YAML"@en .
 
 
 ###  https://w3id.org/nis2onto-ops#adversarial_perturbation_detection
