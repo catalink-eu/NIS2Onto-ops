@@ -2622,16 +2622,6 @@
     
 
 
-    <!-- https://w3id.org/nis2onto-ops#YAML -->
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#YAML">
-        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#FileFormat"/>
-        <rdfs:comment xml:lang="en">YAML Ain&apos;t Markup Language format.</rdfs:comment>
-        <rdfs:label xml:lang="en">YAML</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://w3id.org/nis2onto-ops#adversarial_perturbation_detection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#adversarial_perturbation_detection">
@@ -3221,6 +3211,16 @@
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#Severity"/>
         <rdfs:comment xml:lang="en">Severity level indicating a serious issue requiring prompt attention.</rdfs:comment>
         <rdfs:label xml:lang="en">High</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#html_format -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#html_format">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#FileFormat"/>
+        <rdfs:comment xml:lang="en">HyperText Markup Language format.</rdfs:comment>
+        <rdfs:label xml:lang="en">HTML</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4002,6 +4002,16 @@
         <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#FileFormat"/>
         <rdfs:comment xml:lang="en">Extensible Markup Language format.</rdfs:comment>
         <rdfs:label xml:lang="en">XML</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/nis2onto-ops#yaml_format -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/nis2onto-ops#yaml_format">
+        <rdf:type rdf:resource="https://w3id.org/nis2onto-ops#FileFormat"/>
+        <rdfs:comment xml:lang="en">YAML Ain&apos;t Markup Language format.</rdfs:comment>
+        <rdfs:label xml:lang="en">YAML</rdfs:label>
     </owl:NamedIndividual>
     
 

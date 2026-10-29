@@ -2854,17 +2854,6 @@
     "@id" : "https://w3id.org/nis2onto-ops#CybersecuritySoftwareApplication"
   } ]
 }, {
-  "@id" : "https://w3id.org/nis2onto-ops#YAML",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/nis2onto-ops#FileFormat" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "YAML Ain't Markup Language format."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "YAML"
-  } ]
-}, {
   "@id" : "https://w3id.org/nis2onto-ops#achievesAttackTactic",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4132,6 +4121,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "High"
+  } ]
+}, {
+  "@id" : "https://w3id.org/nis2onto-ops#html_format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/nis2onto-ops#FileFormat" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "HyperText Markup Language format."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "HTML"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#iac_policy_scan",
@@ -5446,6 +5446,17 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "XML"
+  } ]
+}, {
+  "@id" : "https://w3id.org/nis2onto-ops#yaml_format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/nis2onto-ops#FileFormat" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "YAML Ain't Markup Language format."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "YAML"
   } ]
 }, {
   "@id" : "https://w3id.org/nis2onto-ops#zip_format",

@@ -616,9 +616,6 @@
         <NamedIndividual IRI="#CYRESCUE"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#YAML"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#adversarial_perturbation_detection"/>
     </Declaration>
     <Declaration>
@@ -791,6 +788,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#high_severity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#html_format"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#iac_policy_scan"/>
@@ -1022,6 +1022,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#xml_format"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#yaml_format"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#zip_format"/>
@@ -2051,10 +2054,6 @@
         <NamedIndividual IRI="#CYRESCUE"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#FileFormat"/>
-        <NamedIndividual IRI="#YAML"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#AnomalyDetection"/>
         <NamedIndividual IRI="#adversarial_perturbation_detection"/>
     </ClassAssertion>
@@ -2337,6 +2336,10 @@
     <ClassAssertion>
         <Class IRI="#Severity"/>
         <NamedIndividual IRI="#high_severity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FileFormat"/>
+        <NamedIndividual IRI="#html_format"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#PolicyBasedScan"/>
@@ -2689,6 +2692,10 @@
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
         <NamedIndividual IRI="#xml_format"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FileFormat"/>
+        <NamedIndividual IRI="#yaml_format"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#FileFormat"/>
@@ -4670,16 +4677,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#YAML</IRI>
-        <Literal xml:lang="en">YAML Ain&apos;t Markup Language format.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#YAML</IRI>
-        <Literal xml:lang="en">YAML</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#achievesAttackTactic</IRI>
         <Literal xml:lang="en">Technique that serves a MITRE ATT&amp;CK tactic.</Literal>
     </AnnotationAssertion>
@@ -5637,6 +5634,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#high_severity</IRI>
         <Literal xml:lang="en">High</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#html_format</IRI>
+        <Literal xml:lang="en">HyperText Markup Language format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#html_format</IRI>
+        <Literal xml:lang="en">HTML</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -6687,6 +6694,16 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#xml_format</IRI>
         <Literal xml:lang="en">XML</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#yaml_format</IRI>
+        <Literal xml:lang="en">YAML Ain&apos;t Markup Language format.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#yaml_format</IRI>
+        <Literal xml:lang="en">YAML</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
